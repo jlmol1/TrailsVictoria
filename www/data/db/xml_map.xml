@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+       <Trails>Smith</Trails>
+       <Distance>16753</Distance>
+       <Activity>UK</Activity>
+	   <Difficulty>11</Difficulty>
+    </record>
+    <record>
+       <Trails>Johnson</Trails>
+       <Distance>14808</Distance>
+       <Activity>USA</Activity>
+	   <Difficulty>11</Difficulty>
+    </record>
+</data-set>

@@ -1,0 +1,37 @@
+<ion-view view-title="Search">
+  <ion-nav-bar class="bar-balanced">
+  </ion-nav-bar>
+
+  <ion-content class="padding">
+    <form ng-submit="doSearch()">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="keyword.first">
+        </label>
+      </div>
+    </form>
+
+    <div class="card" id="normal_display">
+      <div class="item item-text-wrap">
+        <ion-list class="padding">
+          <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="trail in results" ng-click="display_map(trail.name)">
+            <img ng-src={{trail.img}}>
+            <h2>{{trail.name}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <ion-option-button class="button-assertive" >
+              Delete
+            </ion-option-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="card" hidden="true" id="error_display">
+      <div class="item item-text-wrap">
+        {{errMsg}}
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

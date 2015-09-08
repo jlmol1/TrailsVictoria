@@ -1,0 +1,22 @@
+<ion-view view-title="Activities">
+  <ion-nav-bar class="bar-balanced">
+  </ion-nav-bar>
+
+<ion-content class="padding">
+  <div class="card" id="normal_display">
+    <div class="item item-text-wrap">
+      <ion-list class="padding">
+        <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="act in acts" ng-click="display_map(act.name)">
+          <img ng-src={{act.img}}>
+          <h2>{{act.name}}</h2>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+          <ion-option-button class="button-assertive" >
+            Delete
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+
+</ion-view>

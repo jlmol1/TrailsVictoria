@@ -1,0 +1,75 @@
+<ion-view title="Welcome to Trails - Victoria" >
+
+  <ion-nav-bar class="bar-balanced">
+  </ion-nav-bar>
+
+  <ion-content class="padding">
+
+    <ul class="list" >
+      <h4>Activities</h4>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="search.walking">
+
+        </label>
+        Walking
+        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Walking.png"/>
+      </li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="search.cycling">
+          <i class="icon icon-right"></i>
+        </label>
+        Cycling
+        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Cycling.png"/>
+
+      </li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="search.mountain_biking">
+          <i class="icon icon-right"></i>
+        </label>
+        Mountain biking
+        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Mountain biking.png"/>
+
+      </li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="search.horse_riding">
+          <i class="icon icon-right"></i>
+        </label>
+        Horse riding
+        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Horse riding.png"/>
+
+      </li>
+    </ul>
+
+    <div class="list">
+      <div class="item range range-positive">Time to Trail:
+        <i class="icon ion-ios-time-outline"></i>
+        <label>
+          <input ng-model="search.time" type="range" name="time" min="0.5" max="48"  align="right">
+        </label>
+        <i class="ion-ios-time"></i>
+      </div>
+      <div class="item range range-positive">Trail Distance:
+        <i class="icon ion-ios-location-outline"></i>
+        <label>
+          <input ng-model="search.distance" type="range" name="time" min="1" max="250"  align="right">
+        </label>
+        <i class="icon ion-ios-location"></i>
+      </div>
+      <div class="item range range-positive">Trail Difficulty:
+        <i class="icon ion-arrow-graph-down-right"></i>
+        <label>
+          <input ng-model="search.difficulty" type="range" name="difficulty" min="1"  max="7" align="right">
+        </label>
+        <i class="icon ion-arrow-graph-up-right"></i></div>
+    </div>
+    <a class="button button-block button-positive" ng-click="searchByMul()" >
+      Search
+    </a>
+
+
+  </ion-content>
+</ion-view>

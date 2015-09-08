@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<Trails>East Gippsland Rail Trail</Trails>
+		<Distance>121</Distance>
+		<Activity>Cycling</Activity>
+		<Difficulty>Easy</Difficulty>
+	</record>
+	<record>
+		<Trails>Forrest Mountain Bike Trails</Trails>
+		<Distance>60</Distance>
+		<Activity>Mountain biking</Activity>
+		<Difficulty>Easy,More difficult,Very difficult</Difficulty>
+	</record>
+	<record>
+		<Trails>Gippsland Plains Rail Trail</Trails>
+		<Distance>63</Distance>
+		<Activity>Cycling</Activity>
+		<Difficulty>Easy</Difficulty>
+	</record>
+	<record>
+		<Trails>Goldfields Track</Trails>
+		<Distance>210</Distance>
+		<Activity>Mountain biking</Activity>
+		<Difficulty>Ungraded</Difficulty>
+	</record>
+	<record>
+		<Trails>Great Ocean Walk</Trails>
+		<Distance>100</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Difficult </Difficulty>
+	</record>
+	<record>
+		<Trails>Great South West Walk</Trails>
+		<Distance>250</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Difficult </Difficulty>
+	</record>
+	<record>
+		<Trails>Great Victorian Rail Trail</Trails>
+		<Distance>134</Distance>
+		<Activity>Cycling</Activity>
+		<Difficulty>Easy</Difficulty>
+	</record>
+	<record>
+		<Trails>Great Walhalla Alpine Trail</Trails>
+		<Distance>40</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Difficult </Difficulty>
+	</record>
+	<record>
+		<Trails>Lilydale to Warburton Rail Trail</Trails>
+		<Distance>40</Distance>
+		<Activity>Cycling</Activity>
+		<Difficulty>Easy,Moderate</Difficulty>
+	</record>
+	<record>
+		<Trails>Mornington Peninsula Walk</Trails>
+		<Distance>100</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Very easy,Easy,Moderate</Difficulty>
+	</record>
+	<record>
+		<Trails>Mt Buller Bike Park</Trails>
+		<Distance>100</Distance>
+		<Activity>Mountain biking</Activity>
+		<Difficulty>Easy,More difficult,Very difficult</Difficulty>
+	</record>
+	<record>
+		<Trails>Murray to Mountains Rail Trail</Trails>
+		<Distance>100</Distance>
+		<Activity>Cycling</Activity>
+		<Difficulty>Easy</Difficulty>
+	</record>
+	<record>
+		<Trails>Surf Coast Walk</Trails>
+		<Distance>44</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Very easy,Easy,Moderate,Difficult</Difficulty>
+	</record>
+	<record>
+		<Trails>Wilsons Promontory Southern Circuit</Trails>
+		<Distance>59</Distance>
+		<Activity>Walking</Activity>
+		<Difficulty>Difficult </Difficulty>
+	</record>
+	<record>
+		<Trails>You Yangs Mountain Bike Park</Trails>
+		<Distance>44</Distance>
+		<Activity>Mountain biking</Activity>
+		<Difficulty>Easy,More difficult,Very difficult,Extremely difficult</Difficulty>
+	</record>
+</data-set>

@@ -1,0 +1,49 @@
+/* Empty. Add your own CSS if you like */
+div.dg {
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+#map {
+    width: calc(100% - 1px);
+    height: 500px;
+}
+
+.bg {
+    background: url("../img/clouds-and-blue-sky-1024x600-digital-art-wallpaper.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+
+.list.list_trns {
+    /*18, 65, 28 green; 0, 204, 255 calm*/
+    background: rgba(18, 65, 28, 0.4);
+    border: 1px solid rgba(255,255,255,0.9);
+    color: white;
+}
+
+.item.item-trns {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.side_menu {
+    position: relative;
+    left: calc(100% - 2px);
+    right: 2px;
+}
+
+.map-labels {
+  color: red;
+  background-color: white;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+  border: 2px solid black;
+  white-space: nowrap;
+}
