@@ -5,14 +5,14 @@ angular.module('starter.services', [])
     var map = null;
     /**
      * a collection  of trails and respective markers
-     * id is the trail_name
+     * id is the IndividualTrail
      * sample data structure
      * trails = [
-     * {trail_name: 'name1', difficulty: 'diff',distance: int, activity: 'act', google_poly: [{google_poly, google_poly}, {google_poly, google_poly}], markers:[
+     * {MainTrail: 'name1', IndividualTrail: 'name1', difficulty: 'diff',distance: int, activity: 'act', google_poly: [{google_poly, google_poly}, {google_poly, google_poly}], markers:[
      *    {google_marker: google_marker},
      *    {google_marker: google_marker}
      *    ], title_marker: google_marker, weather_marker: google_marker, max_lat: lat, min_lat: lat, mean_lon: lon},
-     * {trail_name: 'name2', difficulty: 'diff',distance: int, activity: 'act',google_poly: [{google_poly, google_poly}, {google_poly, google_poly}], markers:[], , title_marker: google_marker, weather_marker: google_marker, max_lat: lat, min_lat: lat, mean_lon: lon}
+     * {MainTrail: 'name1', IndividualTrail: 'name2', difficulty: 'diff',distance: int, activity: 'act',google_poly: [{google_poly, google_poly}, {google_poly, google_poly}], markers:[], , title_marker: google_marker, weather_marker: google_marker, max_lat: lat, min_lat: lat, mean_lon: lon}
      * ]
      */
     var trails = [];
@@ -37,18 +37,18 @@ angular.module('starter.services', [])
       return "img/gpx_icons/" + markerName + ".png";
     };
 
-    var getGpxUrl = function (trailName){
-      return "data/gpx/" + trailName + ".gpx";
+    var getGpxUrl = function (MainTrail, IndividualTrail){
+        return "data/gpx/" + IndividualTrail + ".gpx";
     };
 
     var getActivitiesIconUrl = function(actName) {
-      return "img/activities_icons/" + actName + ".png";
+      return "img/activities_icons/" + (actName.toLocaleString().split(","))[0] + ".png";
     };
 
     var getTrailsByName = function (name) {
       var res_trails = [];
       for (var i = 0; i < trails.length; i++){
-        if (trails[i].trail_name.toLocaleLowerCase() === name.toLocaleLowerCase()){
+        if (trails[i].IndividualTrail.toLocaleLowerCase() === name.toLocaleLowerCase()){
           res_trails.push(trails[i]);
         }
       }
@@ -69,7 +69,7 @@ angular.module('starter.services', [])
     var load_data = function(trail) {
       $.ajax({
         type: "GET",
-        url: "data/gpx/" + trail.trail_name + ".gpx",
+        url: "data/gpx/" + trail.IndividualTrail + ".gpx",
         dataType: "xml",
         async: false,
         success: function (xml) {
@@ -178,19 +178,20 @@ angular.module('starter.services', [])
       preload_dis_act_diff: function (){
         // load distance,difficulty and activity
         //  is not here yet
-        var src = "data/db/trails_dis_act.xml";
+        var src = "data/db/Data.xml";
         $.ajax({
           type: "GET",
           url: src,
           dataType: "xml",
           async: false,
           success: function (xml) {
-            $(xml).find("record").each(function () {
+            $(xml).find("ROW").each(function () {
 
               trails.push({
-                trail_name: $(this).find("Trails").text(),
+                MainTrail: $(this).find("MainTrail").text(),
+                IndividualTrail: $(this).find("IndividualTrail").text(),
                 difficulty: $(this).find("Difficulty").text(),
-                activity: $(this).find("Activity").text(),
+                activity: $(this).find("Activities").text(),
                 distance: parseInt($(this).find("Distance").text()),
                 google_poly: [],
                 markers:[],
@@ -209,7 +210,7 @@ angular.module('starter.services', [])
       },
 
       preload_title_marker: function(trail) {
-        var src = getGpxUrl(trail.trail_name);
+        var src = getGpxUrl(trail.MainTrail, trail.IndividualTrail);
         $.ajax({
           type: "GET",
           url: src,
@@ -227,11 +228,11 @@ angular.module('starter.services', [])
             trail.title_marker = new google.maps.Marker({
               position: new google.maps.LatLng(max_lat, trail.mean_lon),
               animation: google.maps.Animation.DROP,
-              title: trail.trail_name,
+              title: trail.IndividualTrail,
               icon: getActivitiesIconUrl(trail.activity)
             });
             var iw1 = new google.maps.InfoWindow({
-              content: trail.trail_name +  '<br/>' +
+              content: trail.IndividualTrail +  '<br/>' +
                 'Distance: ' + trail.distance + 'km<br/>' +
                 'Activity: ' + trail.activity + '<br/>' +
                 'Difficulty: ' + trail.difficulty + '<br/>'
@@ -244,7 +245,7 @@ angular.module('starter.services', [])
       load_data: function(trail) {
         $.ajax({
           type: "GET",
-          url: "data/gpx/" + trail.trail_name + ".gpx",
+          url: "data/gpx/" + trail.IndividualTrail + ".gpx",
           dataType: "xml",
           async: false,
           success: function (xml) {
@@ -309,7 +310,7 @@ angular.module('starter.services', [])
       },
       get_index_by_trail_name: function (trail_name) {
         for (var i = 0; i < trails.length; i++){
-          if (trails[i].trail_name === trail_name){
+          if (trails[i].IndividualTrail === trail_name){
             return i;
           }
         }
@@ -427,7 +428,7 @@ angular.module('starter.services', [])
         var res_trails = [];
         for (var i = 0; i < trails.length; i++){
           for (var z = 0; z < array_acts.length; z++){
-            if (trails[i].activity.toLocaleLowerCase() === array_acts[z].toLocaleLowerCase()){
+            if (trails[i].activity.toLocaleLowerCase().indexOf(array_acts[z].toLocaleLowerCase()) !== -1 ){
               // for now activity matched, next do difficulty
               var difficulties = trails[i].difficulty.toLocaleString().split(",");
               for (var j = 0; j < difficulties.length; j++){
@@ -601,9 +602,9 @@ angular.module('starter.services', [])
       searchTrailsByName : function (keyword) {
         var res_trails = [];
         for (var i = 0; i < trails.length; i++) {
-          if (trails[i].trail_name.toLocaleLowerCase().indexOf(keyword.toLocaleString().toLocaleLowerCase()) !== -1){
+          if (trails[i].IndividualTrail.toLocaleLowerCase().indexOf(keyword.toLocaleString().toLocaleLowerCase()) !== -1){
             res_trails.push({
-              name: trails[i].trail_name,
+              name: trails[i].IndividualTrail,
               img: getActivitiesIconUrl(trails[i].activity)
             });
           }
