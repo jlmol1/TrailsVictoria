@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.services'])
 
     .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -85,7 +85,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             views: {
               'tab-search_by_name' : {
                 templateUrl: 'templates/map_page.html',
-                controller: 'MapPageNameCtrl'
+                controller: 'MapPageCtrl'
               }
             }
           })
@@ -95,7 +95,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             views: {
               'tab-activities' : {
                 templateUrl: 'templates/map_page.html',
-                controller: 'MapPageActCtrl'
+                controller: 'MapPageCtrl'
               }
             }
           })
@@ -126,3 +126,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         $urlRouterProvider.otherwise('/tab/index');
 
     });
+
+angular.module('starter.controllers', ['ionic']);
