@@ -1,4 +1,4 @@
-<ion-view view-title="Search">
+<ion-view view-title="Search by Name">
   <ion-nav-bar class="bar-balanced">
   </ion-nav-bar>
 
@@ -7,7 +7,7 @@
       <div class="list list-inset">
         <label class="item item-input">
           <i class="icon ion-search placeholder-icon"></i>
-          <input type="text" placeholder="Search" ng-model="keyword.first">
+          <input type="text" placeholder="Search by Name" ng-model="keyword.first">
         </label>
       </div>
     </form>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="card" hidden="true" id="error_display">
+    <div class="card"  id="error_display">
       <div class="item item-text-wrap">
         {{errMsg}}
       </div>

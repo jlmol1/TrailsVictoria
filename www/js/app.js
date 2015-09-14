@@ -1,12 +1,14 @@
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'trails_app' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.services'])
+// services (factories) are in services folder
+// controllers are in controllers folder
 
+var trails_app = angular.module('trails_app', ['ionic']);
+
+trails_app
     .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -39,8 +41,19 @@ angular.module('starter', ['ionic', 'starter.services'])
                 controller: 'TabCtrl'
             })
 
-
+            /**
+             * Below 3 state used the exactly same template, then a bug occurred.
+             *  When user switched to another page while the previous page still
+             *  stayed in map page, and user direct to map page again from current page,
+             *  then map page will show nothing. When user came back to previous mag page
+             *  and go back to this map page's previous page, then other pages can direct
+             *  to map page again.
+             *
+             * Tried to create 3 different files yet same codes controllers and templates
+             *  for those, but failed. (see version 1.2)
+             * */
             .state('tab.map_page', {
+                // used by complex search, home
                 url: '/map_page/',
                 views: {
                     'tab-pages': {
@@ -49,6 +62,29 @@ angular.module('starter', ['ionic', 'starter.services'])
                     }
                 }
             })
+
+            .state('tab.display_map', {
+                // used by search by name
+                url: '/display_map',
+                views: {
+                    'tab-search_by_name' : {
+                        templateUrl: 'templates/map_page.html',
+                        controller: 'MapPageCtrl'
+                    }
+                }
+            })
+
+            .state('tab.search_by_act_display_map', {
+                // used by activities
+                url: '/search_by_acts/display_map',
+                views: {
+                    'tab-activities' : {
+                        templateUrl: 'templates/map_page.html',
+                        controller: 'MapPageCtrl'
+                    }
+                }
+            })
+
 
             .state('tab.dummy', {
                 url: '/dummy',
@@ -59,56 +95,34 @@ angular.module('starter', ['ionic', 'starter.services'])
                 }
             })
 
-          .state('tab.front_page', {
-            url: '/index',
-            views: {
-              'tab-pages': {
-                templateUrl: 'templates/front_page.html'
-              }
-            }
-          })
+            .state('tab.front_page', {
+                url: '/index',
+                views: {
+                    'tab-pages': {
+                        templateUrl: 'templates/front_page.html'
+                    }
+                }
+            })
 
-          .state('tab.search_by_name', {
-            url: '/search_by_name',
-            views: {
-              'tab-search_by_name' : {
-                templateUrl: 'templates/search_by_name.html',
-                controller: 'SearchByNameCtrl'
-              }
-            }
-          })
+            .state('tab.search_by_name', {
+                url: '/search_by_name',
+                views: {
+                    'tab-search_by_name' : {
+                        templateUrl: 'templates/search_by_name.html',
+                        controller: 'SearchByNameCtrl'
+                    }
+                }
+            })
 
-
-
-          .state('tab.display_map', {
-            url: '/display_map',
-            views: {
-              'tab-search_by_name' : {
-                templateUrl: 'templates/map_page.html',
-                controller: 'MapPageCtrl'
-              }
-            }
-          })
-
-          .state('tab.search_by_act_display_map', {
-            url: '/search_by_acts/display_map',
-            views: {
-              'tab-activities' : {
-                templateUrl: 'templates/map_page.html',
-                controller: 'MapPageCtrl'
-              }
-            }
-          })
-
-          .state('tab.activities_page', {
-
-            views: {
-              'tab-activities' : {
-                templateUrl: 'templates/activity_page.html',
-                controller: 'ActivityPageCtrl'
-              }
-            }
-          })
+            .state('tab.activities_page', {
+                url: '/activities',
+                views: {
+                    'tab-activities' : {
+                        templateUrl: 'templates/activity_page.html',
+                        controller: 'ActivityPageCtrl'
+                    }
+                }
+            })
 
             .state('tab.terms_of_use',{
                 url: '/terms_of_use',
@@ -127,4 +141,5 @@ angular.module('starter', ['ionic', 'starter.services'])
 
     });
 
-angular.module('starter.controllers', ['ionic']);
+
+

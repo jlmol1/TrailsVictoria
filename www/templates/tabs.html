@@ -6,34 +6,34 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-balanced tabs-icon-only">
 
 
-  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/first_page" ng-click="home()">
+  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/index">
     <ion-nav-view name="tab-pages"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab ng-if="mainCtrl.showMapPageButtons" id="weather" title="Weather"  icon-off="ion-ios-partlysunny-outline" icon-on="ion-ios-partlysunny" ng-click="display_weather()" href="#/tab/dummy">
-    <ion-nav-view name="tab-dummy"></ion-nav-view>
-  </ion-tab>
 
-  <ion-tab ng-if="mainCtrl.showMapPageButtons" id="locateMe" title="Find Me" icon-off="ion-ios-navigate-outline" icon-on="ion-ios-navigate" ng-click="fineMe()" href="#/tab/dummy">
-    <ion-nav-view name="tab-dummy"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab ng-if="mainCtrl.showMapPageButtons" id="reserved" title="Reserved" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" ng-click="alert('Reserved for future use')" href="#/tab/dummy">
-    <ion-nav-view name="tab-dummy"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab  id="activities" title="Activities" icon="ion-android-walk" ng-click="showActionSheet()" href="#/tab/dummy">
+  <ion-tab  id="activities" title="Activities" icon="ion-android-walk" href="#/tab/activities">
     <ion-nav-view name="tab-activities"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab id="searchByName" title="Search By Name" icon="ion-search"  ng-click="searchByName()">
+  <ion-tab id="searchByName" title="Search By Name" icon="ion-search" href="#/tab/search_by_name" >
     <ion-nav-view name="tab-search_by_name"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab ng-if="mainCtrl.showFrontPageButtons" id="terms" title="Terms Of Use" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" href="#/tab/terms_of_use">
+  <ion-tab id="terms" title="Terms Of Use" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" href="#/tab/terms_of_use">
     <ion-nav-view name="tab-terms_of_use"></ion-nav-view>
   </ion-tab>
 
+  <ion-tab id="weather" title="Weather"  icon-off="ion-ios-partlysunny-outline" icon-on="ion-ios-partlysunny" ng-click="display_weather()" href="#/tab/dummy">
+    <ion-nav-view name="tab-dummy"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab id="locateMe" title="Find Me" icon-off="ion-ios-navigate-outline" icon-on="ion-ios-navigate" ng-click="fineMe()" href="#/tab/dummy">
+    <ion-nav-view name="tab-dummy"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab  id="reserved" title="Reserved" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" ng-click="alert('Reserved for future use')" href="#/tab/dummy">
+    <ion-nav-view name="tab-dummy"></ion-nav-view>
+  </ion-tab>
 
 
   <ion-tab hidden="true" >
