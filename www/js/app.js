@@ -51,6 +51,9 @@ trails_app
              *
              * Tried to create 3 different files yet same codes controllers and templates
              *  for those, but failed. (see version 1.2)
+             *
+             * Tried to create 3 different templates but different name of div of the map,
+             *  and specify on the same controller. But failed (see version 1.2.1)
              * */
             .state('tab.map_page', {
                 // used by complex search, home

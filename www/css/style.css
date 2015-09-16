@@ -64,3 +64,27 @@ div.dg {
 .list .item.item-accordion.ng-hide-remove {
     display: block !important;
 }
+
+#direction-button {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+
+    z-index: 5;
+}
+
+#watch-on {
+    position: absolute;
+    bottom: 100px;
+    left: 300px;
+
+    z-index: 5;
+}
+
+#buttons-panel {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+
+    z-index: 5;
+}

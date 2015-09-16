@@ -8,7 +8,19 @@
 trails_app
 
 
-    .controller('MapPageCtrl', function($scope, cacheDataService, $ionicLoading, $stateParams, $state, geolocationService, loadingService, searchService) {
+    .controller('MapPageCtrl', function(
+        $scope,
+        cacheDataService,
+        $ionicLoading,
+        $stateParams,
+        $state,
+        geolocationService,
+        loadingService,
+        searchService,
+        googleMapsService,
+        $ionicActionSheet) {
+
+
         // testing purpose
         console.log("Test msg, shown means MapPageCtrl is working");
 
@@ -17,24 +29,12 @@ trails_app
         $scope.title = "Search Results";
 
 
-
         // when zoom in level greater than this level, markers will display
         var minFTZoomLevel = 10;
 
 
-        var latLng_vic = new google.maps.LatLng(-37, 144);
-
-        var myOptions = {
-            zoom: 7,
-            center: latLng_vic,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        var map = new google.maps.Map(
-            document.getElementById("map"),
-            myOptions
-        );
-        cacheDataService.setMap(map);
+        var google_map = googleMapsService.getGoogleMap();
+        cacheDataService.setMap(google_map);
 
 
         // should be deleted
@@ -48,8 +48,8 @@ trails_app
         $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService);
 
         // display markers
-        google.maps.event.addListener(map, 'zoom_changed', function() {
-            zoomLevel = map.getZoom();
+        google.maps.event.addListener(google_map, 'zoom_changed', function() {
+            zoomLevel = google_map.getZoom();
             if (zoomLevel >= minFTZoomLevel) {
                 cacheDataService.display_markers();
             } else {
@@ -57,10 +57,96 @@ trails_app
             }
         });
 
+        // used to show direction from current location to a trail
+        // it first show every trail's name, user choose one, then
+        // a route will display
+        $scope.googleDirection = function () {
+            var searchResult = cacheDataService.getRes();
+            var buttons = [];
+            for (var i = 0; i < searchResult.length; i++){
+                buttons.push(
+                    {text : searchResult[i].IndividualTrail}
+                );
+            }
+
+            $ionicActionSheet.show({
+                buttons: buttons,
+                titleText: 'Choose a trail',
+                cancelText: 'Cancel',
+                cancel: function() {
+                },
+                buttonClicked: function(index) {
+                    googleDirection(buttons[index].text);
+
+                }
+            });
+        };
 
 
+        var googleDirection = function (trailName){
+            loadingService.startLoading();
+            var trail = cacheDataService.getTrailsByName(trailName);
+            if (trail.length != 1){
+                // error occurs, more than one trail matched or no trail matched
+                // both are not allowed
+                // some error msg must be shown
+                return;
+            }
+            geolocationService.getLocation().then(function(result) {
+                var start = new google.maps.LatLng(result.lat, result.lng);
+                var end = trail[0].google_poly[0].getPath().getAt(0);
+                googleMapsService.calculateAndDisplayRoute(start, end);
+                loadingService.finishLoading();
+            });
 
+        };
 
+        var isWatchingOn = false;
+        $scope.watchOn = function() {
+            if (isWatchingOn) {
+                isWatchingOn = false;
+                stop_watchlocation();
+            } else {
+                isWatchingOn = true;
+                initiate_watchlocation();
+            }
+        };
 
+        var watchProcess = null;
+        function initiate_watchlocation() {
+            if (watchProcess == null) {
+                loadingService.startLoading();
+                watchProcess = navigator.geolocation.watchPosition(handle_geolocation_query, handle_errors);
+            }
+        }
+        function stop_watchlocation() {
+            if (watchProcess != null)
+            {
+                navigator.geolocation.clearWatch(watchProcess);
+                watchProcess = null;
+            }
+        }
+        function handle_errors(error)
+        {
+            switch(error.code)
+            {
+                case error.PERMISSION_DENIED: alert("user did not share geolocation data");
+                    break;
+                case error.POSITION_UNAVAILABLE: alert("could not detect current position");
+                    break;
+                case error.TIMEOUT: alert("retrieving position timedout");
+                    break;
+                default: alert("unknown error");
+                    break;
+            }
+        }
+        function handle_geolocation_query(position) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                map: google_map
+            });
+            google_map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+            loadingService.finishLoading();
+        }
 
     });
