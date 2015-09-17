@@ -507,7 +507,7 @@ trails_app
                     display_trails(res);
                     fit_bounds();
                     clear_bounds();
-                    //loading.finishLoading();
+                    loading.finishLoading();
                     return true;
                 } else {
                     return false;

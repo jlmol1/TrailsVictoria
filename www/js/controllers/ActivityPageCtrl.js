@@ -20,7 +20,7 @@ trails_app
         }
 
         $scope.display_map = function (act) {
-            loadingService.startLoading();
+
             searchService.setSearchOption("act");
             searchService.setAct(act);
 

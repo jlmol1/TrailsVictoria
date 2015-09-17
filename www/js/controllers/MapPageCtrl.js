@@ -141,8 +141,14 @@ trails_app
                     break;
             }
         }
+        // for collect marker watch and erase previous one
+        var marker_watch = null;
         function handle_geolocation_query(position) {
-            var marker = new google.maps.Marker({
+            if (marker_watch != null){
+                marker_watch.setMap(null);
+            }
+
+            marker_watch = new google.maps.Marker({
                 position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                 map: google_map
             });
