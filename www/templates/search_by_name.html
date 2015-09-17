@@ -3,12 +3,23 @@
   </ion-nav-bar>
 
   <ion-content class="padding">
+    <div id="name-outline">
     <form ng-submit="doSearch()">
       <div class="list list-inset">
         <label class="item item-input">
           <i class="icon ion-search placeholder-icon"></i>
-          <input type="text" placeholder="Search by Name" ng-model="keyword.first">
+          <input id="name_input" type="text" placeholder="Search by Name" ng-model="keyword.first" ng-change="input_changed()">
         </label>
+        <div id="suggestion_name">
+          <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="name in partialMatchedNames" ng-click="suggestSearch(name.trailName)">
+            <img ng-src={{name.activityImgUrl}}>
+            <span>{{name.trailName}}</span>
+
+            <ion-option-button class="button-assertive" >
+              Delete
+            </ion-option-button>
+          </ion-item>
+        </div>
       </div>
     </form>
 
@@ -32,6 +43,6 @@
         {{errMsg}}
       </div>
     </div>
-
+    </div>
   </ion-content>
 </ion-view>

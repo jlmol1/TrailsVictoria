@@ -30,5 +30,34 @@ trails_app
             searchService.setName(name);
 
             $state.go("tab.display_map");
-        }
+        };
+
+
+        $scope.partialMatchedNames = [];
+        $scope.getNames = function() {
+            $scope.partialMatchedNames = cacheDataService.getTrailNamesByNameWithActivity($scope.keyword.first);
+        };
+        $scope.input_changed = function() {
+            // for debugging
+            console.log("name search input changed to " + $scope.keyword.first);
+            if ($scope.keyword.first.trim(' ').length == 0) {
+                $scope.partialMatchedNames = [];
+                $('#suggestion_name').hide("fast");
+                return;
+            }
+            $scope.getNames();
+
+            $('#suggestion_name').show(100);
+
+            $('#name-outline').click(function() {
+                $('#suggestion_name').hide("fast");
+            });
+        };
+
+        $scope.suggestSearch = function(name) {
+            $scope.keyword.first = name;
+            $('#name_input').val(name);
+            $('#suggestion_name').hide("fast");
+            $scope.doSearch();
+        };
     });

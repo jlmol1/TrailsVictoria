@@ -142,6 +142,29 @@ trails_app.controller('DestSearchCtrl', function(
         googleMapsService.getAddressByAddress($scope.keyword.address).then(function(results) {
             $scope.partialMatchedAddresses = results;
         });
+    };
+
+    $scope.input_changed = function() {
+        // for debugging
+        console.log("des search input changed to " + $scope.keyword.address);
+        if ($scope.keyword.address.trim(' ').length == 0) {
+            $scope.partialMatchedAddresses = [];
+            $('#suggestion_des').hide("fast");
+            return;
+        }
+        $scope.getAddress();
+
+        $('#suggestion_des').show(100);
+
+        $('#dest_search_map').click(function() {
+            $('#suggestion_des').hide("fast");
+        });
+    };
+
+    $scope.suggestSearch = function(address) {
+        $scope.keyword.address = address;
+        $('#suggestion_des').hide("fast");
+        $scope.doSearch();
     }
 
 });

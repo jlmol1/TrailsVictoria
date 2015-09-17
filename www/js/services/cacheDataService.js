@@ -38,6 +38,20 @@ trails_app
         //var symbols = [];
 
         // functions
+        var getTrailNamesByNameWithActivity = function(name) {
+          var results_trailNameWithActivity = [];
+
+            for (var i = 0; i < trails.length; i++){
+                if (trails[i].IndividualTrail.indexOf(name) != -1) {
+                    results_trailNameWithActivity.push({
+                        'trailName' : trails[i].IndividualTrail,
+                        'activityImgUrl' : getActivitiesIconUrl((trails[i].activity.split(','))[0])
+                        });
+                }
+            }
+
+          return results_trailNameWithActivity;
+        };
         var addRes = function(newRes) {
             if (res.indexOf(newRes) == -1){
                 res.push(newRes);
@@ -576,7 +590,8 @@ trails_app
             },
             getAllTrailsLatLngWithTrailName : getAllTrailsLatLngWithTrailName,
             addRes : addRes,
-            clearRes : clearRes
+            clearRes : clearRes,
+            getTrailNamesByNameWithActivity : getTrailNamesByNameWithActivity
 
         };
     });

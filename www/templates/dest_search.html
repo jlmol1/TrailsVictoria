@@ -12,8 +12,17 @@
             <div id="dest-search-panel" class="list list-inset">
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
-                    <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address">
+                    <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address" ng-change="input_changed()">
                 </label>
+                <div id="suggestion_des">
+                    <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="add in partialMatchedAddresses" ng-click="suggestSearch(add)">
+                        <span>{{add}}</span>
+
+                        <ion-option-button class="button-assertive" >
+                            Delete
+                        </ion-option-button>
+                    </ion-item>
+                </div>
             </div>
         </form>
 

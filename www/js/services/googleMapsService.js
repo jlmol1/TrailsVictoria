@@ -161,11 +161,17 @@ trails_app
 
                 var geoCoder = new google.maps.Geocoder();
                 geoCoder.geocode(
-                    {'address' : address},
+                    {
+                        'address' : address
+                    },
                     function(results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             var addresses = [];
                             for (var i = 0; i < results.length; i++) {
+                                if (results[i] == "ZERO_RESULTS"){
+                                    q.resolve(addresses);
+                                    return q.promise;
+                                }
                                 addresses.push(results[i].formatted_address);
                             }
                             q.resolve(addresses);
