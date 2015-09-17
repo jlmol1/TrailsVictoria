@@ -29,12 +29,15 @@ trails_app
         // title of this page, dynamic
         $scope.title = "Search Results";
 
+        // id of div of google map
+        $scope.mapDivID = searchService.getSearchOption() + "_map";
+
 
         // when zoom in level greater than this level, markers will display
         var minFTZoomLevel = 10;
 
 
-        var google_map = googleMapsService.getGoogleMap();
+        var google_map = googleMapsService.createAGoogleMapByName($scope.mapDivID);
         cacheDataService.setMap(google_map);
 
 
@@ -96,7 +99,7 @@ trails_app
             geolocationService.getLocation().then(function(result) {
                 var start = new google.maps.LatLng(result.lat, result.lng);
                 var end = trail[0].google_poly[0].getPath().getAt(0);
-                googleMapsService.calculateAndDisplayRoute(start, end);
+                googleMapsService.calculateAndDisplayRoute(start, end, google_map);
                 loadingService.finishLoading();
             });
 

@@ -7,7 +7,6 @@ trails_app
 
 .factory('googleMapsService', ['$q', function($q) {
         // variables
-        var google_map;
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var destinationAddress = "";
@@ -44,7 +43,7 @@ trails_app
         function clearBounds() {
             bounds = new google.maps.LatLngBounds();
         }
-        function calculateAndDisplayRoute(start, end) {
+        function calculateAndDisplayRoute(start, end, google_map) {
             // pass lat and lng of start and end to display route
             directionsService.route({
                 origin: start,
@@ -62,9 +61,7 @@ trails_app
         var getGoogleMap = function() {
           return createAGoogleMap();
         };
-        var setGoogleMap = function(new_google_map) {
-            google_map = new_google_map;
-        };
+
 
         var createAGoogleMap = function() {
             var latLng_vic = new google.maps.LatLng(-37, 144);
@@ -152,6 +149,29 @@ trails_app
                             }
 
                             q.resolve(resTrailName);
+                        }
+                    }
+                );
+
+                return q.promise;
+            },
+
+            getAddressByAddress : function(address){
+                var q = $q.defer();
+
+                var geoCoder = new google.maps.Geocoder();
+                geoCoder.geocode(
+                    {'address' : address},
+                    function(results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            var addresses = [];
+                            for (var i = 0; i < results.length; i++) {
+                                addresses.push(results[i].formatted_address);
+                            }
+                            q.resolve(addresses);
+
+                        } else {
+                            console.log('Geocode was not successful for the following reason: ' + status);
                         }
                     }
                 );

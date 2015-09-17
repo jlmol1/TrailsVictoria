@@ -21,7 +21,7 @@ trails_app
         var search_option = "mul";
 
         // functions
-        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService) {
+        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService) {
             // distance from des to trails, should be defined by user,
             //  temporary using
             var distance = 500;
@@ -48,15 +48,19 @@ trails_app
 
             cacheDataService.setMap(google_map);
             googleMapsService.clearBounds();
+            cacheDataService.clearRes();
             for (i = 0; i < separatedTrailsLatLngWithName.length; i++) {
-
+                loadingService.startLoading();
                 googleMapsService.getDistancesFromDestination(des_address, separatedTrailsLatLngWithName[i], distance, cacheDataService).then(function(result) {
                     for (var i = 0; i < result.length; i++){
-                        cacheDataService.load_data((cacheDataService.getTrailsByName(result[i].trailName)[0]));
-                        googleMapsService.dispalyTrailsOnGoogleMap(cacheDataService.getTrailsByName(result[i].trailName), google_map);
+                        var resTrails = cacheDataService.getTrailsByName(result[i].trailName);
+                        cacheDataService.load_data(resTrails[0]);
+                        googleMapsService.dispalyTrailsOnGoogleMap(resTrails, google_map);
+                        cacheDataService.addRes(resTrails[0]);
                     }
                     googleMapsService.fitBounds(google_map);
                     $('#address').val(googleMapsService.getDestinationAdress());
+                    loadingService.finishLoading();
                 });
             }
 

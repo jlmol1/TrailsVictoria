@@ -1,0 +1,22 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+    <ion-content class="bg">
+      <div id="act_map" class="google-map" data-tap-disable="true"></div>
+
+      <div id="buttons-panel-act" class="buttons-panel">
+        <button  class="button icon ion-compass" ng-click="googleDirection()"></button>
+
+        <button  class="button icon ion-navigate" ng-click="watchOn()"></button>
+
+        <button  class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
+      </div>
+
+
+      <!--Testing info, shown means this template is working.-->
+
+    </ion-content>
+</ion-view>

@@ -54,13 +54,19 @@ trails_app
              *
              * Tried to create 3 different templates but different name of div of the map,
              *  and specify on the same controller. But failed (see version 1.2.1)
+             *
+             * Bug fixed, previous try is correct, one thing was wrong was it changed the
+             *  id of the div, but css relayed the id, that why nothing appear.
+             *
+             * Another kind of bug occurs, if two map or more try to display the same trail, this
+             *  trail will only be display on the last map
              * */
             .state('tab.map_page', {
                 // used by complex search, home
                 url: '/map_page/',
                 views: {
                     'tab-pages': {
-                        templateUrl: 'templates/map_page.html',
+                        templateUrl: 'templates/map_page_mul.html',
                         controller: 'MapPageCtrl'
                     }
                 }
@@ -71,7 +77,7 @@ trails_app
                 url: '/display_map',
                 views: {
                     'tab-search_by_name' : {
-                        templateUrl: 'templates/map_page.html',
+                        templateUrl: 'templates/map_page_name.html',
                         controller: 'MapPageCtrl'
                     }
                 }
@@ -82,7 +88,7 @@ trails_app
                 url: '/search_by_acts/display_map',
                 views: {
                     'tab-activities' : {
-                        templateUrl: 'templates/map_page.html',
+                        templateUrl: 'templates/map_page_act.html',
                         controller: 'MapPageCtrl'
                     }
                 }

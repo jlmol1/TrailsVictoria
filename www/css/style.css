@@ -6,10 +6,6 @@ div.dg {
     background-size: cover;
 }
 
-#map {
-    width: calc(100% - 1px);
-    height: 500px;
-}
 
 .bg {
     background: url("../img/clouds-and-blue-sky-1024x600-digital-art-wallpaper.jpg") no-repeat center center fixed;
@@ -65,7 +61,7 @@ div.dg {
     display: block !important;
 }
 
-#buttons-panel {
+.buttons-panel {
     position: absolute;
     bottom: 70px;
     left: 10px;

@@ -38,6 +38,15 @@ trails_app
         //var symbols = [];
 
         // functions
+        var addRes = function(newRes) {
+            if (res.indexOf(newRes) == -1){
+                res.push(newRes);
+            }
+
+        };
+        var clearRes = function() {
+            res = [];
+        };
         var getAllTrailsLatLngWithTrailName = function() {
             var latLng = [];
 
@@ -565,7 +574,9 @@ trails_app
 
                 return res;
             },
-            getAllTrailsLatLngWithTrailName : getAllTrailsLatLngWithTrailName
+            getAllTrailsLatLngWithTrailName : getAllTrailsLatLngWithTrailName,
+            addRes : addRes,
+            clearRes : clearRes
 
         };
     });
