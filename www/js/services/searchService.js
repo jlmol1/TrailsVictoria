@@ -8,7 +8,7 @@
 
 trails_app
 
-    .factory('searchService', function() {
+    .factory('searchService', [function() {
         var distance, time, difficulty, activities;
 
         var IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH;
@@ -17,10 +17,55 @@ trails_app
 
         var act;
 
-        // for options are search by name, search by activities, search by multiple conditions
+        // for options are search by name(name), search by activities(act), search by multiple conditions(mul)
         var search_option = "mul";
 
+        // functions
+        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService) {
+            // distance from des to trails, should be defined by user,
+            //  temporary using
+            var distance = 500;
+
+            // the reason why trails LatLng with name divided to several parts
+            // is because google map api only allow 70 arguments max
+            var trailsLatLngWithName = cacheDataService.getAllTrailsLatLngWithTrailName();
+
+            var separatedTrailsLatLngWithName = [];
+            var currentPosition = 0;
+            for (var i = 0; i < trailsLatLngWithName.length; i++) {
+                if (i % 25 == 0) {
+                    if (i == 0){
+                        separatedTrailsLatLngWithName[currentPosition] = [];
+                    } else {
+                        separatedTrailsLatLngWithName[++currentPosition] = [];
+                    }
+
+
+                }
+                separatedTrailsLatLngWithName[currentPosition].push(trailsLatLngWithName[i]);
+            }
+
+
+            cacheDataService.setMap(google_map);
+            googleMapsService.clearBounds();
+            for (i = 0; i < separatedTrailsLatLngWithName.length; i++) {
+
+                googleMapsService.getDistancesFromDestination(des_address, separatedTrailsLatLngWithName[i], distance, cacheDataService).then(function(result) {
+                    for (var i = 0; i < result.length; i++){
+                        cacheDataService.load_data((cacheDataService.getTrailsByName(result[i].trailName)[0]));
+                        googleMapsService.dispalyTrailsOnGoogleMap(cacheDataService.getTrailsByName(result[i].trailName), google_map);
+                    }
+                    googleMapsService.fitBounds(google_map);
+                    $('#address').val(googleMapsService.getDestinationAdress());
+                });
+            }
+
+            googleMapsService.clearBounds();
+
+        };
+
         return {
+            searchOnDestination : searchOnDestination,
             getDistance : function() {
                 return distance;
             },
@@ -94,4 +139,4 @@ trails_app
             }
 
         }
-    });
+    }]);

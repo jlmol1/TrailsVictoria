@@ -1,0 +1,20 @@
+<ion-view view-title="Search on Destination">
+
+    <ion-nav-bar class="bar-balanced">
+        <ion-nav-back-button >
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="padding">
+        <div id="dest_search_map" class="google-map" data-tap-disable="true"></div>
+
+        <form ng-submit="doSearch()">
+            <div id="dest-search-panel" class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address">
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

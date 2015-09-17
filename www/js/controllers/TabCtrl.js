@@ -46,17 +46,7 @@ trails_app
             cacheDataService.getTrailsByConditions(63, "Easy", "Cycling", 4);
         };
 
-        $scope.display_weather = function() {
-            loadingService.startLoading($ionicLoading);
-            var trails = cacheDataService.getRes();
-            var map = cacheDataService.getMap();
-            for (var i = 0; i < trails.length; i++){
-                // get weather condition
-                weatherService.getWeather( map, trails[i], $ionicLoading, loadingService);
 
-            }
-
-        };
 
         $scope.searchByMul  = function () {
             // get search info

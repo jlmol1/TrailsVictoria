@@ -18,7 +18,8 @@ trails_app
         loadingService,
         searchService,
         googleMapsService,
-        $ionicActionSheet) {
+        $ionicActionSheet,
+        weatherService) {
 
 
         // testing purpose
@@ -148,5 +149,17 @@ trails_app
             google_map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
             loadingService.finishLoading();
         }
+
+        $scope.display_weather = function() {
+            loadingService.startLoading($ionicLoading);
+            var trails = cacheDataService.getRes();
+            var map = cacheDataService.getMap();
+            for (var i = 0; i < trails.length; i++){
+                // get weather condition
+                weatherService.getWeather( map, trails[i], $ionicLoading, loadingService);
+
+            }
+
+        };
 
     });

@@ -38,6 +38,20 @@ trails_app
         //var symbols = [];
 
         // functions
+        var getAllTrailsLatLngWithTrailName = function() {
+            var latLng = [];
+
+            for (var i = 0; i < trails.length; i++){
+                latLng.push(
+                    {
+                        trailName: trails[i].IndividualTrail,
+                        latLng: trails[i].title_marker.getPosition()
+                    }
+                );
+            }
+
+            return latLng;
+        };
         var getMarkerIcon = function (markerName) {
             return "img/gpx_icons/" + markerName + ".png";
         };
@@ -63,9 +77,14 @@ trails_app
         var getTrailsByActivity = function  (act) {
             var res_trails = [];
             for (var i = 0; i < trails.length; i++){
-                if (trails[i].activity.toLocaleLowerCase() === act.toLocaleLowerCase()){
-                    res_trails.push(trails[i]);
+                var activities = trails[i].activity.split(",");
+                for (var j = 0; j < activities.length; j++){
+                    if (activities[j].toLocaleLowerCase() === act.toLocaleLowerCase()){
+                        res_trails.push(trails[i]);
+                        break;
+                    }
                 }
+
             }
             return res_trails;
         };
@@ -488,7 +507,7 @@ trails_app
                     display_trails(res);
                     fit_bounds();
                     clear_bounds();
-                    loading.finishLoading();
+                    //loading.finishLoading();
                     return true;
                 } else {
                     return false;
@@ -535,13 +554,18 @@ trails_app
                 var res = [];
 
                 for (var i = 0; i < trails.length; i++) {
-                    if (res.indexOf(trails[i].activity) === -1) {
-                        res.push(trails[i].activity);
+                    var activities = trails[i].activity.split(",");
+                    for (var j = 0; j < activities.length; j++) {
+                        if (res.indexOf(activities[j]) === -1) {
+                            res.push(activities[j]);
+                        }
                     }
+
                 }
 
                 return res;
-            }
+            },
+            getAllTrailsLatLngWithTrailName : getAllTrailsLatLngWithTrailName
 
         };
     });

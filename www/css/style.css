@@ -65,26 +65,24 @@ div.dg {
     display: block !important;
 }
 
-#direction-button {
-    position: absolute;
-    bottom: 70px;
-    left: 10px;
-
-    z-index: 5;
-}
-
-#watch-on {
-    position: absolute;
-    bottom: 100px;
-    left: 300px;
-
-    z-index: 5;
-}
-
 #buttons-panel {
     position: absolute;
     bottom: 70px;
     left: 10px;
 
     z-index: 5;
+}
+
+#dest-search-panel {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    width: 90%;
+
+    z-index: 5;
+}
+
+.google-map {
+    width: calc(100% - 1px);
+    height: 500px;
 }

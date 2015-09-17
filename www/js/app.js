@@ -136,6 +136,16 @@ trails_app
                     }
                 }
 
+            })
+
+            .state('tab.dest_search', {
+                url: '/dest_search',
+                views: {
+                    'tab-dest_search' : {
+                        templateUrl: 'templates/dest_search.html',
+                        controller: 'DestSearchCtrl'
+                    }
+                }
             });
 
 
