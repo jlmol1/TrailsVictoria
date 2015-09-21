@@ -12,7 +12,7 @@ trails_app
         };
 
         return {
-            getWeather: function(map, trail, loading) {
+            getWeather: function(map, trail, loadingService) {
                 var lat = trail.min_lat;
                 var lng = trail.mean_lon;
                 var weather = { temp: {}, clouds: null, lat: null, lng: null };
@@ -43,7 +43,7 @@ trails_app
                         weather.clouds = data.clouds ? data.clouds.all : undefined;
                     }
                 });
-                loading.finishLoading();
+                loadingService.finishLoading();
                 return weather;
             }
         };

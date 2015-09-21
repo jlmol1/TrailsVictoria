@@ -160,12 +160,12 @@ trails_app
         }
 
         $scope.display_weather = function() {
-            loadingService.startLoading($ionicLoading);
+            loadingService.startLoading();
             var trails = cacheDataService.getRes();
             var map = cacheDataService.getMap();
             for (var i = 0; i < trails.length; i++){
                 // get weather condition
-                weatherService.getWeather( map, trails[i], $ionicLoading, loadingService);
+                weatherService.getWeather( map, trails[i], loadingService);
 
             }
 

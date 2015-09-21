@@ -41,7 +41,7 @@ trails_app.controller('DestSearchCtrl', function(
 
         $ionicActionSheet.show({
             buttons: buttons,
-            titleText: 'Choose a trail',
+            titleText: '<h1><b>Choose a trail</b></h1>',
             cancelText: 'Cancel',
             cancel: function() {
             },
@@ -62,12 +62,10 @@ trails_app.controller('DestSearchCtrl', function(
             // some error msg must be shown
             return;
         }
-        geolocationService.getLocation().then(function(result) {
-            var start = new google.maps.LatLng(result.lat, result.lng);
+            var start = $scope.keyword.address;
             var end = trail[0].google_poly[0].getPath().getAt(0);
             googleMapsService.calculateAndDisplayRoute(start, end, google_map);
             loadingService.finishLoading();
-        });
 
     };
 
