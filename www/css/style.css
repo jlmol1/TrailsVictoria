@@ -51,7 +51,8 @@ div.dg {
     line-height: 38px;
     padding-top: 0;
     padding-bottom: 0;
-    transition: 0.09s all linear;
+    transition: 0.09s;
+    white-space: pre-wrap;
 }
 .list .item.item-accordion.ng-hide {
     line-height: 0px;
@@ -80,5 +81,6 @@ div.dg {
 
 .google-map {
     width: calc(100% - 1px);
-    height: 500px;
+    height: 450px;
 }
+

@@ -6,7 +6,7 @@
 
 trails_app
 
-    .controller('TabCtrl', function($scope, cacheDataService, $ionicLoading, weatherService, loadingService, geolocationService, $state, $ionicActionSheet, searchService) {
+    .controller('TabCtrl', function($scope, cacheDataService, $ionicLoading, weatherService, loadingService, geolocationService, $state, $ionicActionSheet, searchService, preferencesDataService) {
 
         // application started, pre-load data from gpx and xml files
         cacheDataService.preload_dis_act_diff();
@@ -14,6 +14,9 @@ trails_app
         for (var i = 0; i < trails.length; i++){
             cacheDataService.preload_title_marker(trails[i]);
         }
+
+        // initial prefer data
+        preferencesDataService.init();
 
         // initial search info
         $scope.search = {

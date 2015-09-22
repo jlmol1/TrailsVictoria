@@ -30,8 +30,8 @@ trails_app
                             trail.weather_marker = marker;
                             var iw1 = new google.maps.InfoWindow({
                                 content: '<img src=\'' + getIconUrl(data.weather[0].icon) + ' \' width=\'50%\' height=\'50%\'><br/>' +
-                                'current: ' + data.main.temp + '<br/> max: ' +
-                                data.main.temp_max + ', min: ' + data.main.temp_min + '<br/>' +
+                                'current: ' + parseInt(data.main.temp) + '&#8451<br/> max: ' +
+                                parseInt(data.main.temp_max) + '&#8451, min: ' + parseInt(data.main.temp_min) + '&#8451<br/>' +
                                 data.weather[0].description
                             });
                             google.maps.event.addListener(marker, "mousedown", function (e) { iw1.open(map, this); });

@@ -1,40 +1,41 @@
-<ion-view view-title="Search on Destination">
+<ion-view view-title="Around Destination">
 
-    <ion-nav-bar class="bar-balanced">
-        <ion-nav-back-button >
-        </ion-nav-back-button>
-    </ion-nav-bar>
 
     <ion-content class="padding">
-        <div id="dest_search_map" class="google-map" data-tap-disable="true"></div>
+        <div >
 
-        <form ng-submit="doSearch()">
-            <div id="dest-search-panel" class="list list-inset">
-                <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address" ng-change="input_changed()">
-                </label>
-                <div id="suggestion_des">
-                    <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="add in partialMatchedAddresses" ng-click="suggestSearch(add)">
-                        <span>{{add}}</span>
 
-                        <ion-option-button class="button-assertive" >
-                            Delete
-                        </ion-option-button>
-                    </ion-item>
+            <div id="dest_search_map" class="google-map" data-tap-disable="true"></div>
+
+            <form ng-submit="doSearch()">
+                <div id="dest-search-panel" class="list list-inset">
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address" ng-change="input_changed()">
+                    </label>
+                    <div id="suggestion_des">
+                        <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="add in partialMatchedAddresses" ng-click="suggestSearch(add.address)">
+                            <span>{{add.address}}</span>
+
+                            <ion-option-button class="button-assertive" >
+                                Delete
+                            </ion-option-button>
+                        </ion-item>
+                    </div>
                 </div>
+            </form>
+
+            <div id="buttons-panel-dest" class="buttons-panel">
+                <button  class="button icon ion-map" ng-click="googleDirection()"></button>
+
+                <button  class="button icon ion-pinpoint" ng-click="watchOn()"></button>
+
+                <button  class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
+
+                <!-- for testing get partial matched addresses-->
+                <!--<button ng-click="getAddress()"></button>-->
             </div>
-        </form>
 
-        <div id="buttons-panel-dest" class="buttons-panel">
-            <button  class="button icon ion-compass" ng-click="googleDirection()"></button>
-
-            <button  class="button icon ion-navigate" ng-click="watchOn()"></button>
-
-            <button  class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
-
-            <!-- for testing get partial matched addresses-->
-            <!--<button ng-click="getAddress()"></button>-->
         </div>
     </ion-content>
 </ion-view>

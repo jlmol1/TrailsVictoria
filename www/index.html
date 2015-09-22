@@ -29,6 +29,8 @@
     <script src="js/controllers/TabCtrl.js"></script>
     <script src="js/controllers/TermCtrl.js"></script>
     <script src="js/controllers/DestSearchCtrl.js"></script>
+    <script src="js/controllers/SettingsMulCtrl.js"></script>
+    <script src="js/controllers/SettingsDesCtrl.js"></script>
 
     <!-- services -->
     <script src="js/services/cacheDataService.js"></script>
@@ -37,6 +39,7 @@
     <script src="js/services/loadingService.js"></script>
     <script src="js/services/searchService.js"></script>
     <script src="js/services/weatherService.js"></script>
+    <script src="js/services/preferencesDataService.js"></script>
 
 </head>
 <body ng-app="trails_app">
@@ -44,10 +47,14 @@
   The nav bar that will be updated as we navigate between views.
   ion-nav-back-button is costumed by different page
 -->
-<!--<ion-nav-bar class="bar-balanced">-->
-    <!--<ion-nav-back-button>-->
-    <!--</ion-nav-back-button>-->
-<!--</ion-nav-bar>-->
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button >
+    </ion-nav-back-button>
+
+    <ion-nav-buttons side="right">
+        <a class="button button-clear button-dark icon ion-ios-cog" href="#/tab/settings"></a>
+    </ion-nav-buttons>
+</ion-nav-bar>
 <!--
   The views will be rendered in the <ion-nav-view> directive below
   Templates are in the /templates folder (but you could also
@@ -56,7 +63,7 @@
 <ion-nav-view></ion-nav-view>
 
 <!-- google api-->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyrcRa9qk-yKDOwnAcpgh3eLk7fxuyyg&signed_in=true&region=AU"></script>
 
 </body>
 </html>

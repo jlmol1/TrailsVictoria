@@ -6,43 +6,30 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-balanced tabs-icon-only">
 
 
-  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/tab/index">
+  <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/index">
     <ion-nav-view name="tab-pages"></ion-nav-view>
   </ion-tab>
 
 
-  <ion-tab  id="activities" title="Activities" icon="ion-android-walk" href="#/tab/activities">
-    <ion-nav-view name="tab-activities"></ion-nav-view>
-  </ion-tab>
+  <!--<ion-tab  id="activities" title="Activities" icon="ion-android-walk" href="#/tab/activities">-->
+    <!--<ion-nav-view name="tab-activities"></ion-nav-view>-->
+  <!--</ion-tab>-->
 
-  <ion-tab id="searchByName" title="Search By Name" icon="ion-search" href="#/tab/search_by_name" >
+  <ion-tab id="searchByName" title="Search By Name" icon-off="ion-ios-search" icon-on="ion-ios-search-strong" href="#/tab/search_by_name" >
     <ion-nav-view name="tab-search_by_name"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab id="destSearch" title="Search on Destination" icon="ion-pin" href="#/tab/dest_search">
+  <ion-tab id="destSearch" title="Around" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" href="#/tab/dest_search">
     <ion-nav-view name="tab-dest_search"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab id="terms" title="Terms Of Use" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" href="#/tab/terms_of_use">
-    <ion-nav-view name="tab-terms_of_use"></ion-nav-view>
-  </ion-tab>
-
-  <!--<ion-tab id="weather" title="Weather"  icon-off="ion-ios-partlysunny-outline" icon-on="ion-ios-partlysunny" ng-click="display_weather()" href="#/tab/dummy">-->
-    <!--<ion-nav-view name="tab-dummy"></ion-nav-view>-->
-  <!--</ion-tab>-->
-
-  <!--<ion-tab id="locateMe" title="Find Me" icon-off="ion-ios-navigate-outline" icon-on="ion-ios-navigate" ng-click="fineMe()" href="#/tab/dummy">-->
-    <!--<ion-nav-view name="tab-dummy"></ion-nav-view>-->
-  <!--</ion-tab>-->
-
-  <ion-tab  id="reserved" title="Reserved" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" ng-click="alert('Reserved for future use')" href="#/tab/dummy">
-    <ion-nav-view name="tab-dummy"></ion-nav-view>
+  <ion-tab  id="facebook" title="Facebook" icon-off="ion-social-facebook-outline" icon-on="ion-social-facebook" href="#/tab/facebook">
+    <ion-nav-view name="tab-facebook"></ion-nav-view>
   </ion-tab>
 
 
-  <ion-tab hidden="true" >
-    <ion-nav-view name="tab-content"></ion-nav-view>
+  <ion-tab id="settings" title="Settings" icon="ion-ios-cog-outline" href="#/tab/settings" hidden="true">
+    <ion-nav-view name="tab-settings"></ion-nav-view>
   </ion-tab>
-
 
 </ion-tabs>

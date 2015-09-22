@@ -5,7 +5,7 @@
       <text>Garmin International</text>
     </link>
     <time>2014-12-19T03:21:24Z</time>
-    <bounds maxlat="-37.079732911661267" maxlon="146.49885660968721" minlat="-37.157691568136215" minlon="146.3690070156008" />
+    <bounds maxlat="-37.140306662768126" maxlon="146.45074549131095" minlat="-37.143827062100172" minlon="146.44053767435253" />
   </metadata>
 
   <wpt lat="-37.142724506556988" lon="146.44056273624301">
@@ -54,7 +54,7 @@
     <name>Abom Downhill</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkCyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>1828</gpxtrkx:Distance>

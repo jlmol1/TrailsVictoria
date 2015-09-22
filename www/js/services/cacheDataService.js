@@ -42,7 +42,7 @@ trails_app
           var results_trailNameWithActivity = [];
 
             for (var i = 0; i < trails.length; i++){
-                if (trails[i].IndividualTrail.indexOf(name) != -1) {
+                if (trails[i].IndividualTrail.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) != -1) {
                     results_trailNameWithActivity.push({
                         'trailName' : trails[i].IndividualTrail,
                         'activityImgUrl' : getActivitiesIconUrl((trails[i].activity.split(','))[0])
@@ -59,6 +59,20 @@ trails_app
 
         };
         var clearRes = function() {
+            var trails = res;
+            for (var x = 0; x < trails.length; x++){
+                trails[x].title_marker.setMap(null);
+                if (trails[x].weather_marker != null){
+                    trails[x].weather_marker.setMap(null);
+                }
+                for (var y = 0; y < trails[x].google_poly.length; y++){
+                    trails[x].google_poly[y].setMap(null);
+                }
+                for (y = 0; y < trails[x].markers.length; y++){
+                    trails[x].markers[y].setMap(null);
+                }
+            }
+
             res = [];
         };
         var getAllTrailsLatLngWithTrailName = function() {
@@ -389,8 +403,13 @@ trails_app
                 // default value is 2, and if the setting value is greater than number
                 //    trails, then the value will be the number of trails
                 MIN_LENGTH = typeof MIN_LENGTH !== 'undefined' ? (MIN_LENGTH > trails.length ? trails.length : MIN_LENGTH) : 2;
+                var array_acts;
+                if (activities.length != 0) {
+                    array_acts= activities.split(",");
+                } else {
+                    array_acts = [];
+                }
 
-                var array_acts = activities.split(",");
 
                 var res_trails = [];
                 for (var i = 0; i < trails.length; i++){
@@ -466,6 +485,12 @@ trails_app
 
                 var temp_res_trails = [];
 
+                // if nothing matched above here, then no need to perform time search
+                if (res_trails.length == 0) {
+                    loading.finishLoading();
+                    return "Nothing Found";
+                }
+
                 // get current position here
                 GeolocationService.getLocation().then(function(result) {
                     var curr_latLng = new google.maps.LatLng(result.lat, result.lng);
@@ -483,7 +508,7 @@ trails_app
                         avoidTolls: true
                     }, function(response, status) {
                         if (status !== google.maps.DistanceMatrixStatus.OK) {
-                            alert('Error was: ' + status);
+                            console.log('cacheDataService: google distance matrix Error was: ', status);
                         } else {
                             var originList = response.originAddresses;
                             var destinationList = response.destinationAddresses;
@@ -508,6 +533,7 @@ trails_app
                             fit_bounds();
                             clear_bounds();
                             loading.finishLoading();
+                            return res.length + " Search Results";
 
 
                         }

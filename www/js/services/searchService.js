@@ -11,7 +11,7 @@ trails_app
     .factory('searchService', [function() {
         var distance, time, difficulty, activities;
 
-        var IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH;
+        var isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH;
 
         var name;
 
@@ -21,48 +21,37 @@ trails_app
         var search_option = "mul";
 
         // functions
-        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService) {
-            // distance from des to trails, should be defined by user,
-            //  temporary using
-            var distance = 500;
+        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius) {
 
             // the reason why trails LatLng with name divided to several parts
-            // is because google map api only allow 70 arguments max
+            // is because arguments exceed google map api limitation
             var trailsLatLngWithName = cacheDataService.getAllTrailsLatLngWithTrailName();
 
-            var separatedTrailsLatLngWithName = [];
-            var currentPosition = 0;
-            for (var i = 0; i < trailsLatLngWithName.length; i++) {
-                if (i % 25 == 0) {
-                    if (i == 0){
-                        separatedTrailsLatLngWithName[currentPosition] = [];
-                    } else {
-                        separatedTrailsLatLngWithName[++currentPosition] = [];
-                    }
-
-
-                }
-                separatedTrailsLatLngWithName[currentPosition].push(trailsLatLngWithName[i]);
-            }
 
 
             cacheDataService.setMap(google_map);
             googleMapsService.clearBounds();
             cacheDataService.clearRes();
-            for (i = 0; i < separatedTrailsLatLngWithName.length; i++) {
                 loadingService.startLoading();
-                googleMapsService.getDistancesFromDestination(des_address, separatedTrailsLatLngWithName[i], distance, cacheDataService).then(function(result) {
-                    for (var i = 0; i < result.length; i++){
-                        var resTrails = cacheDataService.getTrailsByName(result[i].trailName);
-                        cacheDataService.load_data(resTrails[0]);
-                        googleMapsService.dispalyTrailsOnGoogleMap(resTrails, google_map);
-                        cacheDataService.addRes(resTrails[0]);
+
+                googleMapsService.getDistancesFromDestination(des_address, trailsLatLngWithName, searchRadius, cacheDataService).then(function(result) {
+                    if (result.length > 0){
+                        for (var i = 0; i < result.length; i++){
+                            var resTrails = cacheDataService.getTrailsByName(result[i].trailName);
+                            cacheDataService.load_data(resTrails[0]);
+                            googleMapsService.dispalyTrailsOnGoogleMap(resTrails, google_map);
+                            cacheDataService.addRes(resTrails[0]);
+                        }
+                        googleMapsService.fitBounds(google_map);
+                        $('#address').val(googleMapsService.getDestinationAdress());
+                        loadingService.finishLoading();
+                    } else{
+                        loadingService.finishLoading();
+                        alert("Nothing found");
                     }
-                    googleMapsService.fitBounds(google_map);
-                    $('#address').val(googleMapsService.getDestinationAdress());
-                    loadingService.finishLoading();
+
                 });
-            }
+
 
             googleMapsService.clearBounds();
 
@@ -70,6 +59,9 @@ trails_app
 
         return {
             searchOnDestination : searchOnDestination,
+            setIsPrecise : function(value) {
+                isPrecise = value;
+            },
             getDistance : function() {
                 return distance;
             },
@@ -115,11 +107,11 @@ trails_app
             doSearch : function (CacheData, GeolocationService, loading) {
                 switch (search_option) {
                     case "mul":
-                        CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
-                            IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
+                        return CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
+                            isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
                             GeolocationService, loading);
-                        return "Search Results";
-                        break;
+
+
                     case "name" :
                         if (CacheData.getAndDisplayTrailsByName(name, loading)) {
                             return name;
@@ -135,10 +127,10 @@ trails_app
                         }
                         break;
                     default :
-                        CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
-                            IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
+                        return CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
+                            isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
                             GeolocationService, loading);
-                        return "Search Results";
+
                 }
             }
 

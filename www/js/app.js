@@ -25,7 +25,9 @@ trails_app
         });
     })
 
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $sceProvider) {
+
+        $sceProvider.enabled(false);
 
         // Ionic uses AngularUI Router which uses the concept of states
         // Learn more here: https://github.com/angular-ui/ui-router
@@ -133,16 +135,6 @@ trails_app
                 }
             })
 
-            .state('tab.terms_of_use',{
-                url: '/terms_of_use',
-                views: {
-                    'tab-terms_of_use' : {
-                        templateUrl: 'templates/terms_of_use.html',
-                        controller: 'TermCtrl'
-                    }
-                }
-
-            })
 
             .state('tab.dest_search', {
                 url: '/dest_search',
@@ -152,7 +144,59 @@ trails_app
                         controller: 'DestSearchCtrl'
                     }
                 }
-            });
+            })
+
+            .state('tab.facebook', {
+                url: '/facebook',
+                views: {
+                    'tab-facebook' : {
+                        templateUrl : 'templates/facebook.html'
+
+                    }
+                }
+            })
+
+            .state('tab.settings', {
+                url: '/settings',
+                views: {
+                    'tab-settings' : {
+                        templateUrl : 'templates/settings.html'
+                    }
+                }
+            })
+
+
+            .state('tab.terms_of_use',{
+                url: '/settings/terms_of_use',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/terms_of_use.html',
+                        controller: 'TermCtrl'
+                    }
+                }
+
+            })
+
+            .state('tab.setting_mul', {
+                url: '/settings/mul',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/settings_mul.html',
+                        controller: 'SettingsMulCtrl'
+                    }
+                }
+            })
+
+            .state('tab.setting_des', {
+                url: '/settings/des',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/settings_des.html',
+                        controller: 'SettingsDesCtrl'
+                    }
+                }
+            })
+            ;
 
 
         // if none of the above states are matched, use this as the fallback

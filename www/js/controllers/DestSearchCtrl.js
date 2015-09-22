@@ -10,7 +10,8 @@ trails_app.controller('DestSearchCtrl', function(
     loadingService,
     $ionicActionSheet,
     weatherService,
-    geolocationService) {
+    geolocationService,
+    preferencesDataService) {
 
     // collect user input for search, des address
     $scope.keyword = {};
@@ -21,13 +22,31 @@ trails_app.controller('DestSearchCtrl', function(
     // initialize google map
     var google_map = googleMapsService.createAGoogleMapByName("dest_search_map");
 
+    // when zoom in level greater than this level, markers will display
+    var minFTZoomLevel = 10;
+
     $scope.doSearch = function() {
         $('#buttons-panel-dest').show(100);
         console.log("starting search on des");
-        searchService.searchOnDestination(google_map, $scope.keyword.address, googleMapsService, cacheDataService, loadingService);
+        searchService.searchOnDestination(google_map,
+            $scope.keyword.address,
+            googleMapsService,
+            cacheDataService,
+            loadingService,
+            preferencesDataService.getSeachRadius());
+
+        // display markers
+        google.maps.event.addListener(google_map, 'zoom_changed', function() {
+            zoomLevel = google_map.getZoom();
+            if (zoomLevel >= minFTZoomLevel) {
+                cacheDataService.display_markers();
+            } else {
+                cacheDataService.clear_markers();
+            }
+        });
     };
 
-    // used to show direction from current location to a trail
+    // used to show direction from specific location to a trail
     // it first show every trail's name, user choose one, then
     // a route will display
     $scope.googleDirection = function () {
@@ -41,7 +60,7 @@ trails_app.controller('DestSearchCtrl', function(
 
         $ionicActionSheet.show({
             buttons: buttons,
-            titleText: '<h1><b>Choose a trail</b></h1>',
+            titleText: 'Choose a trail',
             cancelText: 'Cancel',
             cancel: function() {
             },
@@ -98,13 +117,13 @@ trails_app.controller('DestSearchCtrl', function(
     {
         switch(error.code)
         {
-            case error.PERMISSION_DENIED: alert("user did not share geolocation data");
+            case error.PERMISSION_DENIED: console.log("DestSearchCtrl: watch on, user did not share geolocation data");
                 break;
-            case error.POSITION_UNAVAILABLE: alert("could not detect current position");
+            case error.POSITION_UNAVAILABLE: console.log("DestSearchCtrl: watch on, could not detect current position");
                 break;
-            case error.TIMEOUT: alert("retrieving position timedout");
+            case error.TIMEOUT: console.log("DestSearchCtrl: watch on, retrieving position timedout");
                 break;
-            default: alert("unknown error");
+            default: console.log("DestSearchCtrl: watch on, unknown error");
                 break;
         }
     }
@@ -126,6 +145,18 @@ trails_app.controller('DestSearchCtrl', function(
     $scope.display_weather = function() {
         loadingService.startLoading();
         var trails = cacheDataService.getRes();
+
+        if (trails[0].weather_marker != null) {
+            if (trails[0].weather_marker.getMap() != null){
+                loadingService.finishLoading();
+                for (var j = 0; trails.length; j++){
+                    trails[j].weather_marker.setMap(null);
+                }
+                return;
+            }
+
+        }
+
         var map = cacheDataService.getMap();
         for (var i = 0; i < trails.length; i++){
             // get weather condition

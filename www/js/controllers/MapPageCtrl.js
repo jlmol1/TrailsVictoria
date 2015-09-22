@@ -19,7 +19,8 @@ trails_app
         searchService,
         googleMapsService,
         $ionicActionSheet,
-        weatherService) {
+        weatherService,
+        preferencesDataService) {
 
 
         // testing purpose
@@ -49,6 +50,7 @@ trails_app
         //}
 
         // display trails first and then markers when zoom in at a certain level
+        searchService.setIsPrecise(preferencesDataService.getIsPrecise());
         $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService);
 
         // display markers
@@ -162,6 +164,16 @@ trails_app
         $scope.display_weather = function() {
             loadingService.startLoading();
             var trails = cacheDataService.getRes();
+            if (trails[0].weather_marker != null) {
+                if (trails[0].weather_marker.getMap() != null){
+                    loadingService.finishLoading();
+                    for (var j = 0; trails.length; j++){
+                        trails[j].weather_marker.setMap(null);
+                    }
+                    return;
+                }
+
+            }
             var map = cacheDataService.getMap();
             for (var i = 0; i < trails.length; i++){
                 // get weather condition

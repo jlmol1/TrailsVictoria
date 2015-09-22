@@ -1,0 +1,14 @@
+<ion-view view-title="Around Destination">
+
+    <ion-content class="padding">
+        <div class="outline">
+            <form ng-submit="saveData()">
+                <label class="item item-input">
+                    <span class="input-label">Search Radius(km)</span>
+                    <input id="settings_des_radius" type="number" ng-model="data.radius">
+                </label>
+                <span id="settings_des_radius_span">Current value is {{curr_radius}}km</span>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
