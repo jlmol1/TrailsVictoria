@@ -38,6 +38,18 @@ trails_app
         //var symbols = [];
 
         // functions
+        var getTrailAt = function(index){
+          if (index >= trails.length){ // over bound
+              return trails[0];
+          } else{
+              return trails[index];
+          }
+        };
+
+        var getActivityIconUrlByTrailName = function(trailName) {
+            return getActivitiesIconUrl((getTrailsByName(trailName)[0].activity.split(','))[0]);
+        };
+
         var getTrailNamesByNameWithActivity = function(name) {
           var results_trailNameWithActivity = [];
 
@@ -614,10 +626,15 @@ trails_app
 
                 return res;
             },
+            getTrailsLength : function(){
+              return trails.length;
+            },
             getAllTrailsLatLngWithTrailName : getAllTrailsLatLngWithTrailName,
             addRes : addRes,
             clearRes : clearRes,
-            getTrailNamesByNameWithActivity : getTrailNamesByNameWithActivity
+            getTrailNamesByNameWithActivity : getTrailNamesByNameWithActivity,
+            getActivityIconUrlByTrailName : getActivityIconUrlByTrailName,
+            getTrailAt : getTrailAt
 
         };
     });

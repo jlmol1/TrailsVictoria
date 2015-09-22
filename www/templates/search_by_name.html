@@ -22,6 +22,23 @@
       </div>
     </form>
     <div id="name-outline">
+
+      <div class="card" id="nearTrails">
+      <div class="item item-text-wrap">
+        <span>Guess You Like</span>
+        <ion-list class="padding">
+          <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="trail in nearTrails" ng-click="display_map(trail.name)">
+            <img ng-src={{trail.img}}>
+            <h2>{{trail.name}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <ion-option-button class="button-assertive" >
+              Delete
+            </ion-option-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
     <div class="card" id="normal_display">
       <div class="item item-text-wrap">
         <ion-list class="padding">

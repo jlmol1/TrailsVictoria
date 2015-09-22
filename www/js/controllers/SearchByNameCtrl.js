@@ -7,11 +7,46 @@
 
 trails_app
 
-    .controller('SearchByNameCtrl', function($scope, cacheDataService, searchService, $state){
-        $scope.results = [];
-        $scope.keyword = {};
+    .controller('SearchByNameCtrl', function($scope,
+                                             cacheDataService,
+                                             searchService,
+                                             $state,
+                                             searchService,
+                                             geolocationService,
+                                             googleMapsService,
+                                             preferencesDataService){
+        // hide these area when its empty
         $("#normal_display").hide("fast");
         $("#error_display").hide("fast");
+        $("#nearTrails").hide("fast");
+
+        $scope.results = [];
+        $scope.keyword = {};
+        $scope.nearTrails = [];
+        searchService.getTrailsNearCurrentLocation(geolocationService,
+            googleMapsService, cacheDataService, preferencesDataService.getSeachRadius(), 5).then(function(results) {
+                $("#nearTrails").show(100);
+                if (results.length != 0){
+                    for (var i = 0; i < results.length; i++){
+                        $scope.nearTrails.push({
+                            name : results[i],
+                            img : cacheDataService.getActivityIconUrlByTrailName(results[i])
+                        });
+                    }
+
+                } else {
+                    for ( i = 0; i < 5; i++){
+                        var trail = cacheDataService.getTrailAt(Math.floor((Math.random() * (cacheDataService.getTrailsLength() -1))));
+                        $scope.nearTrails.push({
+                            name : trail.trailName,
+                            img : cacheDataService.getActivityIconUrlByTrailName(trail.trailName)
+                        });
+                    }
+                }
+
+            });
+
+
         $scope.doSearch = function() {
             $scope.results = cacheDataService.searchTrailsByName($scope.keyword.first);
             if ($scope.results.length == 0){
@@ -21,6 +56,7 @@ trails_app
             } else {
                 $scope.errMsg = '';
                 $("#normal_display").hide("fast").show(100);
+                $("#nearTrails").hide("fast");
                 $("#error_display").hide("fast");
             }
         };
@@ -60,4 +96,6 @@ trails_app
             $('#suggestion_name').hide("fast");
             $scope.doSearch();
         };
+
+
     });

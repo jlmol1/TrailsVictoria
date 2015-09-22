@@ -8,7 +8,7 @@
 
 trails_app
 
-    .factory('searchService', [function() {
+    .factory('searchService', ['$q', function($q) {
         var distance, time, difficulty, activities;
 
         var isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH;
@@ -21,6 +21,26 @@ trails_app
         var search_option = "mul";
 
         // functions
+        var getTrailsNearCurrentLocation = function (geoLocationService, googleMapsService, cacheDataService, searchRadius, maxNumTrailsDisplay){
+            var q = $q.defer();
+            var resTrails = [];
+            geoLocationService.getLocation().then(function(position){
+                var currLatLng = new google.maps.LatLng(position.lat, position.lng);
+                var trailsLatLngWithName = cacheDataService.getAllTrailsLatLngWithTrailName();
+
+                googleMapsService.getDistancesFromDestination(currLatLng, trailsLatLngWithName, searchRadius, cacheDataService).then(function(results){
+                    for (var i = 0; i < results.length; i++){
+                        if (i == maxNumTrailsDisplay){
+                            break;
+                        }
+                        resTrails.push(results[i].trailName);
+                    }
+                    q.resolve(resTrails);
+                });
+            });
+            return q.promise;
+        };
+
         var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius) {
 
             // the reason why trails LatLng with name divided to several parts
@@ -59,6 +79,7 @@ trails_app
 
         return {
             searchOnDestination : searchOnDestination,
+            getTrailsNearCurrentLocation : getTrailsNearCurrentLocation,
             setIsPrecise : function(value) {
                 isPrecise = value;
             },
