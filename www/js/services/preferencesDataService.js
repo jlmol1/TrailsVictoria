@@ -14,12 +14,12 @@ trails_app.
         };
 
         function updateData() {
-            $window.localStorage.setItem("preData", JSON.stringify(preData));
+            //$window.localStorage.setItem("preData", JSON.stringify(preData));
             console.log("preferencesDataService: store to localStorage prefer data", preData);
         }
 
         function getData() {
-            preData = JSON.parse($window.localStorage.getItem("preData"));
+            //preData = JSON.parse($window.localStorage.getItem("preData"));
             console.log("preferencesDataService: get from localStorage prefer data", preData);
         }
 
@@ -45,12 +45,12 @@ trails_app.
                 updateData();
             },
             init : function() {
-                if (($window.localStorage['preData']).isPrecise == null) {
+                //if (($window.localStorage['preData']).isPrecise == null) {
                     console.log("preferencesDataService: initial prefer data", preData);
                     updateData();
-                } else {
-                    getData();
-                }
+                //} else {
+                //    getData();
+                //}
 
             }
         }
