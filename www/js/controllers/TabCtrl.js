@@ -18,18 +18,6 @@ trails_app
         // initial prefer data
         preferencesDataService.init();
 
-        // initial search info
-        $scope.search = {
-            'time' : '24',
-            'distance' : '125',
-            'difficulty' : '4',
-            'horse_riding' : false,
-            'walking' : false,
-            'cycling' : false,
-            'mountain_biking' : false
-        };
-
-
 
 
 
@@ -45,54 +33,9 @@ trails_app
             cacheDataService.centerOnMe($scope, $ionicLoading, loadingService, geolocationService);
         };
 
-        $scope.test = function() {
-            cacheDataService.getTrailsByConditions(63, "Easy", "Cycling", 4);
-        };
 
 
 
-        $scope.searchByMul  = function () {
-            // get search info
-            $scope.distance = $scope.search.distance;
-            $scope.time = $scope.search.time;
-            switch ($scope.search.difficulty){
-                case "1": $scope.difficulty = "Ungraded";
-                    break;
-                case "2": $scope.difficulty = "Very easy";
-                    break;
-                case "3": $scope.difficulty = "Easy";
-                    break;
-                case "4": $scope.difficulty = "Moderate";
-                    break;
-                case "5": $scope.difficulty = "Difficult";
-                    break;
-                case "6": $scope.difficulty = "More difficult";
-                    break;
-                case "7": $scope.difficulty = "Very difficult";
-                    break;
-                default : $scope.difficulty = "Ungraded";
-            }
-            $scope.activities = '';
-            if ($scope.search.horse_riding){
-                $scope.activities += ",Horse Riding";
-            }
-            if ($scope.search.walking){
-                $scope.activities += ",Walking";
-            }
-            if ($scope.search.cycling){
-                $scope.activities += ",Cycling";
-            }
-            if ($scope.search.mountain_biking){
-                $scope.activities += ",Mountain Biking";
-            }
-            var href = "#/tab/map_page/" + $scope.distance + "_" + $scope.difficulty + "_" + $scope.activities + "_" + $scope.time;
-            searchService.setActivities($scope.activities);
-            searchService.setDifficulty($scope.difficulty);
-            searchService.setDistance($scope.distance);
-            searchService.setTime($scope.time);
-            searchService.setSearchOption("mul");
-            $state.go("tab.map_page");
-        };
 
     });
 

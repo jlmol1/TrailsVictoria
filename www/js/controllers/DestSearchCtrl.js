@@ -93,6 +93,7 @@ trails_app.controller('DestSearchCtrl', function(
         if (isWatchingOn) {
             isWatchingOn = false;
             stop_watchlocation();
+            alert("Stop watching on.");
         } else {
             isWatchingOn = true;
             initiate_watchlocation();
@@ -143,10 +144,9 @@ trails_app.controller('DestSearchCtrl', function(
     }
 
     $scope.display_weather = function() {
-        loadingService.startLoading();
         var trails = cacheDataService.getRes();
 
-        if (trails[0].weather_marker != null) {
+        if (trails.length != 0 && trails[0].weather_marker != null) {
             if (trails[0].weather_marker.getMap() != null){
                 loadingService.finishLoading();
                 for (var j = 0; trails.length; j++){
@@ -158,11 +158,17 @@ trails_app.controller('DestSearchCtrl', function(
         }
 
         var map = cacheDataService.getMap();
-        for (var i = 0; i < trails.length; i++){
-            // get weather condition
-            weatherService.getWeather( map, trails[i], loadingService);
+        if (trails.length != 0){
+            loadingService.startLoading();
+            for (var i = 0; i < trails.length; i++){
+                // get weather condition
+                weatherService.getWeather( map, trails[i], loadingService);
 
+            }
+        } else {
+            alert("No search results, cannot display weather condition.");
         }
+
 
     };
 

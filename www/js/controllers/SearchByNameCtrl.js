@@ -38,8 +38,8 @@ trails_app
                     for ( i = 0; i < 5; i++){
                         var trail = cacheDataService.getTrailAt(Math.floor((Math.random() * (cacheDataService.getTrailsLength() -1))));
                         $scope.nearTrails.push({
-                            name : trail.trailName,
-                            img : cacheDataService.getActivityIconUrlByTrailName(trail.trailName)
+                            name : trail.IndividualTrail,
+                            img : cacheDataService.getActivityIconUrlByTrailName(trail.IndividualTrail)
                         });
                     }
                 }

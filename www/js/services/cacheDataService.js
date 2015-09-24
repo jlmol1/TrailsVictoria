@@ -385,13 +385,13 @@ trails_app
                 });
 
             },
-            getAndDisplayTrailsByConditions: function (distance, difficulty, activities, time, IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH, GeolocationService, loading){
+            getAndDisplayTrailsByConditions: function (mulSearchConditions, IsPrecise, MIN_LENGTH, GeolocationService, loading){
                 /**
                  *   MIN_LENGTH has problem
                  * IsPrecise is a trigger, when it is on(true), all results must be precise
                  *    (distance and time still has its allowance), when it is off(false),
                  *    some difficulty or activity not matched may be inserted into the results
-                 * IsPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH are for user
+                 * IsPrecise, MIN_LENGTH are for user
                  *    preference setting
                  * 1. get trails by the activity --> results
                  * 2. get trails by the difficulty from last results --> results
@@ -405,19 +405,14 @@ trails_app
 
                     // check deviation condition
                 IsPrecise = typeof IsPrecise !== 'undefined'? IsPrecise : false;
-                // it allow difference of 20km for distance
-                allowance_dis_diff = typeof allowance_dis_diff !== 'undefined' ? allowance_dis_diff : 20;
-
-                // allowance difference for time is 1.5hr
-                allowance_diff_time = typeof allowance_diff_time !== 'undefined' ? allowance_diff_time : 1.5;
 
                 // minimum number of results
                 // default value is 2, and if the setting value is greater than number
                 //    trails, then the value will be the number of trails
                 MIN_LENGTH = typeof MIN_LENGTH !== 'undefined' ? (MIN_LENGTH > trails.length ? trails.length : MIN_LENGTH) : 2;
                 var array_acts;
-                if (activities.length != 0) {
-                    array_acts= activities.split(",");
+                if (mulSearchConditions.activities.length != 0) {
+                    array_acts= mulSearchConditions.activities.slice(1).split(",");
                 } else {
                     array_acts = [];
                 }
@@ -430,63 +425,31 @@ trails_app
                             // for now activity matched, next do difficulty
                             var difficulties = trails[i].difficulty.toLocaleString().split(",");
                             for (var j = 0; j < difficulties.length; j++){
-                                if (difficulties[j].toLocaleLowerCase() === difficulty.toLocaleLowerCase()){
-                                    // for now difficulty matched, next do distance,
-                                    if ((trails[i].distance === distance) ||
-                                        (trails[i].distance <= (distance + allowance_dis_diff)
-                                        && (trails[i].distance >= (distance - allowance_dis_diff)))){
-                                        res_trails.push(trails[i]);
+                                // search condition of difficulties may be more than one level of difficulty
+                                //  so need another loop to iterate it
+                                var array_diffs = mulSearchConditions.difficulty.split(",");
+                                for (var x = 0; x < array_diffs.length; x++){
+                                    if (difficulties[j].toLocaleLowerCase() === array_diffs[x].toLocaleLowerCase()){
+                                        // for now difficulty matched, next do distance,
+                                        // in mulSearchConditions distance is a range from min to max
+                                        if (mulSearchConditions.distance.min <= trails[i].distance
+                                            && trails[i].distance <= mulSearchConditions.distance.max){
+                                            if (res_trails.indexOf(trails[i]) == -1){
+                                                res_trails.push(trails[i]);
+                                            }
+
+                                            break;
+                                        } // if -- distance
                                         break;
-                                    } // if -- distance
-                                    break;
-                                } // if -- difficulty
+                                    } // if -- difficulty
+                                }
+
                             } // for -- difficulty
                         } // if -- activity
                     }
 
                 } // for -- trails.length
-                // for now all precise matching is done, and then check on the number of result, if it is too small
-                // let's say it is less than 2, then add a closest distance matched trail into the results
-                if (!IsPrecise) {
-                    while (res_trails.length < MIN_LENGTH){
-                        /**
-                         * 1. find the maximum difference of distance in the result set
-                         * 2. iterate whole trails, find the minimum difference of distance for every trail
-                         * 3. if the difference is less than or equal the maximum difference of distance is the result set,
-                         *      then this trail must already in the result set, find another one
-                         * 4. if not, add this trail
-                         * 5. repeat until results have enough trails
-                         */
 
-                        var max_dis_diff_have = 0;
-                        for (var i = 0; i < res_trails.length; i++){
-                            if (Math.abs(res_trails[i].distance - distance) > max_dis_diff_have){
-                                max_dis_diff_have = Math.abs(res_trails[i].distance - distance);
-                            }
-                        } // for
-
-                        var searched_index = [];
-                        while (true){
-                            var min_dis_difference_trails = 9999999;
-                            var index_min_dis_difference_trails = -1;
-                            for (var i = 0; i < trails.length; i++){
-                                if (searched_index.indexOf(i) != -1){
-                                    continue;
-                                }
-                                if (Math.abs(trails[i].distance - distance) < min_dis_difference_trails){
-                                    min_dis_difference_trails = Math.abs(trails[i].distance - distance);
-                                    index_min_dis_difference_trails = i;
-                                }
-                            } // for
-                            searched_index.push(index_min_dis_difference_trails);
-                            if (min_dis_difference_trails > max_dis_diff_have){
-                                res_trails.push(trails[index_min_dis_difference_trails]);
-                                break;
-                            }
-                        } // while -- true
-
-                    } // while MIN_LENGTH
-                } // if -- IsPrecise
 
 
                 // distance, activity and difficulty have been matched, next do time
@@ -499,8 +462,85 @@ trails_app
 
                 // if nothing matched above here, then no need to perform time search
                 if (res_trails.length == 0) {
-                    loading.finishLoading();
-                    return "Nothing Found";
+                    // if results is too less
+                    // let's say it is less than 2, then add trails with the same activity as request into the results
+                    if (!IsPrecise) {
+                        /*while (res_trails.length < MIN_LENGTH){
+                         *
+                         * add in others trail based on distance
+                         *
+                         * 1. find the maximum difference of distance in the result set
+                         * 2. iterate whole trails, find the minimum difference of distance for every trail
+                         * 3. if the difference is less than or equal the maximum difference of distance is the result set,
+                         *      then this trail must already in the result set, find another one
+                         * 4. if not, add this trail
+                         * 5. repeat until results have enough trails
+
+                         var max_dis_diff_have = 0;
+                         for (var i = 0; i < res_trails.length; i++){
+                         if (Math.abs(res_trails[i].distance - distance) > max_dis_diff_have){
+                         max_dis_diff_have = Math.abs(res_trails[i].distance - distance);
+                         }
+                         } // for
+
+                         var searched_index = [];
+                         while (true){
+                         var min_dis_difference_trails = 9999999;
+                         var index_min_dis_difference_trails = -1;
+                         for (var i = 0; i < trails.length; i++){
+                         if (searched_index.indexOf(i) != -1){
+                         continue;
+                         }
+                         if (Math.abs(trails[i].distance - distance) < min_dis_difference_trails){
+                         min_dis_difference_trails = Math.abs(trails[i].distance - distance);
+                         index_min_dis_difference_trails = i;
+                         }
+                         } // for
+                         searched_index.push(index_min_dis_difference_trails);
+                         if (min_dis_difference_trails > max_dis_diff_have){
+                         res_trails.push(trails[index_min_dis_difference_trails]);
+                         break;
+                         }
+                         } // while -- true
+
+                         } // while MIN_LENGTH*/
+
+                        /**
+                         * add in other trails based on activities
+                         * according to request activity(ies), try to add trails of each request activity
+                         *
+                         * these code will be done again after time search
+                         */
+                        while (res_trails.length < MIN_LENGTH){
+                            for (var y = 0; y < (MIN_LENGTH-res_trails.length); y++){
+                                var actName;
+                                if (array_acts.length == 0){
+                                    actName = "Walking";
+                                } else {
+                                    var actIndex = 0;
+                                    if (y >= array_acts.length){
+                                        actIndex = array_acts.length - 1;
+                                    } else {
+                                        actIndex = y;
+                                    }
+                                    actName = array_acts[actIndex];
+                                }
+
+
+                                var trailsOfAct = getTrailsByActivity(actName);
+                                for (var c = 0; c < trailsOfAct.length; c++){
+                                    if (res_trails.indexOf(trailsOfAct[c]) == -1){
+                                        res_trails.push(trailsOfAct[c]);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    } else{
+                        loading.finishLoading();
+                        return "Nothing Found";
+                    } // if -- IsPrecise
+
                 }
 
                 // get current position here
@@ -521,6 +561,8 @@ trails_app
                     }, function(response, status) {
                         if (status !== google.maps.DistanceMatrixStatus.OK) {
                             console.log('cacheDataService: google distance matrix Error was: ', status);
+                            alert("Oops! google api denied...");
+                            loading.finishLoading();
                         } else {
                             var originList = response.originAddresses;
                             var destinationList = response.destinationAddresses;
@@ -528,7 +570,8 @@ trails_app
                                 var results = response.rows[i].elements;
                                 for (var j = 0; j < results.length; j++) {
 
-                                    if ((results[j].duration.value/3600 >= time - allowance_diff_time) && (results[j].duration.value/3600 <= time + allowance_diff_time)){
+                                    if ((results[j].duration.value/3600 >= mulSearchConditions.time.min)
+                                        && (results[j].duration.value/3600 <= mulSearchConditions.time.max)){
                                         temp_res_trails.push(res_trails[j]);
                                     }
                                 }
@@ -537,6 +580,83 @@ trails_app
                                 // to avoid get an empty results
                                 res_trails = temp_res_trails;
                             }
+
+                            // if results is too less
+                            // let's say it is less than 2, then add trails with the same activity as request into the results
+                            if (!IsPrecise && res_trails.length < MIN_LENGTH) {
+                                /*while (res_trails.length < MIN_LENGTH){
+                                 *
+                                 * add in others trail based on distance
+                                 *
+                                 * 1. find the maximum difference of distance in the result set
+                                 * 2. iterate whole trails, find the minimum difference of distance for every trail
+                                 * 3. if the difference is less than or equal the maximum difference of distance is the result set,
+                                 *      then this trail must already in the result set, find another one
+                                 * 4. if not, add this trail
+                                 * 5. repeat until results have enough trails
+
+                                 var max_dis_diff_have = 0;
+                                 for (var i = 0; i < res_trails.length; i++){
+                                 if (Math.abs(res_trails[i].distance - distance) > max_dis_diff_have){
+                                 max_dis_diff_have = Math.abs(res_trails[i].distance - distance);
+                                 }
+                                 } // for
+
+                                 var searched_index = [];
+                                 while (true){
+                                 var min_dis_difference_trails = 9999999;
+                                 var index_min_dis_difference_trails = -1;
+                                 for (var i = 0; i < trails.length; i++){
+                                 if (searched_index.indexOf(i) != -1){
+                                 continue;
+                                 }
+                                 if (Math.abs(trails[i].distance - distance) < min_dis_difference_trails){
+                                 min_dis_difference_trails = Math.abs(trails[i].distance - distance);
+                                 index_min_dis_difference_trails = i;
+                                 }
+                                 } // for
+                                 searched_index.push(index_min_dis_difference_trails);
+                                 if (min_dis_difference_trails > max_dis_diff_have){
+                                 res_trails.push(trails[index_min_dis_difference_trails]);
+                                 break;
+                                 }
+                                 } // while -- true
+
+                                 } // while MIN_LENGTH*/
+
+                                /**
+                                 * add in other trail based on activities
+                                 * according to request activity(ies), try to add trails of each request activity
+                                 *
+                                 * these code also did before time search
+                                 */
+                                while (res_trails.length < MIN_LENGTH){
+                                    for (var y = 0; y < (MIN_LENGTH-res_trails.length); y++){
+                                        var actName;
+                                        if (array_acts.length == 0){
+                                            actName = "Walking";
+                                        } else {
+                                            var actIndex = 0;
+                                            if (y >= array_acts.length){
+                                                actIndex = array_acts.length - 1;
+                                            } else {
+                                                actIndex = y;
+                                            }
+                                            actName = array_acts[actIndex];
+                                        }
+
+
+                                        var trailsOfAct = getTrailsByActivity(actName);
+                                        for (var c = 0; c < trailsOfAct.length; c++){
+                                            if (res_trails.indexOf(trailsOfAct[c]) == -1){
+                                                res_trails.push(trailsOfAct[c]);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
                             res = res_trails;
                             for ( i = 0; i < res.length; i++){
                                 load_data(res[i]);

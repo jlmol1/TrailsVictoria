@@ -110,7 +110,8 @@ trails_app
                 url: '/index',
                 views: {
                     'tab-pages': {
-                        templateUrl: 'templates/front_page.html'
+                        templateUrl: 'templates/front_page.html',
+                        controller: 'FrontPageCtrl'
                     }
                 }
             })

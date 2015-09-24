@@ -5,6 +5,7 @@
 "use strict";
 
 describe('googleMapsService', function() {
+
     beforeEach(module('trails_app'));
 
     var googleMapsService;

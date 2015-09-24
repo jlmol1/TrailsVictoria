@@ -13,6 +13,9 @@ trails_app
 
         var isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH;
 
+        // used for combine distance, time, difficulty, activities together
+        var mulSearchConditions;
+
         var name;
 
         var act;
@@ -80,6 +83,12 @@ trails_app
         return {
             searchOnDestination : searchOnDestination,
             getTrailsNearCurrentLocation : getTrailsNearCurrentLocation,
+            getMulSearchConditions : function() {
+              return mulSearchConditions;
+            },
+            setMulSearchConditions : function (vaule) {
+              mulSearchConditions = vaule;
+            },
             setIsPrecise : function(value) {
                 isPrecise = value;
             },
@@ -128,8 +137,8 @@ trails_app
             doSearch : function (CacheData, GeolocationService, loading) {
                 switch (search_option) {
                     case "mul":
-                        return CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
-                            isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
+                        return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
+                            isPrecise, MIN_LENGTH,
                             GeolocationService, loading);
 
 
@@ -148,8 +157,8 @@ trails_app
                         }
                         break;
                     default :
-                        return CacheData.getAndDisplayTrailsByConditions(distance, difficulty, activities, time,
-                            isPrecise, allowance_dis_diff, allowance_diff_time, MIN_LENGTH,
+                        return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
+                            isPrecise, MIN_LENGTH,
                             GeolocationService, loading);
 
                 }

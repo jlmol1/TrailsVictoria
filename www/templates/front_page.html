@@ -1,4 +1,4 @@
-<ion-view title="Welcome to Trails - Victoria" >
+<ion-view title="Trails - Victoria" >
 
 
 
@@ -44,26 +44,20 @@
     </ul>
 
     <div class="list">
-      <div class="item range range-positive">Time to Trail:
-        <i class="icon ion-ios-time-outline"></i>
-        <label>
-          <input ng-model="search.time" type="range" name="time" min="0.5" max="48"  align="right">
-        </label>
-        <i class="ion-ios-time"></i>
+
+      <div class="item">Time to Trail:
+        <input type="text" id="rangeTime" value="" name="range" />
       </div>
-      <div class="item range range-positive">Trail Distance:
-        <i class="icon ion-ios-location-outline"></i>
-        <label>
-          <input ng-model="search.distance" type="range" name="time" min="1" max="250"  align="right">
-        </label>
-        <i class="icon ion-ios-location"></i>
+
+      <div class="item">Trail Distance:
+        <input type="text" id="rangeDistance" value="" name="range" />
       </div>
-      <div class="item range range-positive">Trail Difficulty:
-        <i class="icon ion-arrow-graph-down-right"></i>
-        <label>
-          <input ng-model="search.difficulty" type="range" name="difficulty" min="1"  max="7" align="right">
-        </label>
-        <i class="icon ion-arrow-graph-up-right"></i></div>
+
+      <div class="item">Trail Difficulty:
+        <input type="text" id="rangeDifficulty" value="" name="range" />
+      </div>
+
+
     </div>
     <a class="button button-block button-positive" ng-click="searchByMul()" >
       Search
