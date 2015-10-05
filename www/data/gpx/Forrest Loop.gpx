@@ -8,6 +8,34 @@
     <bounds maxlat="-38.515342203900218" maxlon="143.72118609957397" minlat="-38.528920467942953" minlon="143.71302723884583" />
   </metadata>
 
+    <wpt lat="-38.515486624091864" lon="143.71606718748808">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Forrest Loop</name>
+      <cmt>Track: Forrest Loop
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Forrest Loop
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 3 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.523252792656422" lon="143.71329671703279">
     <ele>210.080536</ele>
     <time>2014-08-28T23:32:50Z</time>
@@ -68,7 +96,7 @@
   <wpt lat="-38.51847636513412" lon="143.71443338692188">
     <ele>203.642349</ele>
     <time>2014-08-28T23:28:30Z</time>
-    <name>POI Forrest Brewery Company</name>
+    <name>Forrest Brewery Company</name>
     <cmt>Equal parts Microbrewery, Eating Place and Mountain Biking Hang-out.</cmt>
     <desc>Equal parts Microbrewery, Eating Place and Mountain Biking Hang-out.</desc>
     <sym>Scenic Area</sym>
@@ -89,7 +117,7 @@
   <wpt lat="-38.518939968198538" lon="143.71696799062192">
     <ele>182.08845500000001</ele>
     <time>2014-08-28T23:22:02Z</time>
-    <name>POI The Corner Store</name>
+    <name>The Corner Store</name>
     <cmt>For Bike Hire, Coffee, Spares and Accessories</cmt>
     <desc>For Bike Hire, Coffee, Spares and Accessories</desc>
     <sym>Scenic Area</sym>
@@ -109,7 +137,7 @@
 
   <wpt lat="-38.515342203900218" lon="143.71535891667008">
     <time>2015-05-22T01:31:16Z</time>
-    <name>POI Tiger Rail Trail</name>
+    <name>Tiger Rail Trail</name>
     <cmt>The Tiger Trail will run from Birrequrra to Forrest.  A 7km section from Forrest is open for riding.  
 
 The Trail has been named after a Dodge auto-mobile that was converted to carry passengers on the Birregurra to Forrest Line between 1937 and 1952.</cmt>
@@ -173,7 +201,7 @@ The Trail has been named after a Dodge auto-mobile that was converted to carry p
     <name>Forrest Loop (1)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

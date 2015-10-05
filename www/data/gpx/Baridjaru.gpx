@@ -8,6 +8,34 @@
     <bounds maxlat="-38.528201300650835" maxlon="143.74519572593272" minlat="-38.55285725556314" minlon="143.71943101286888" />
   </metadata>
 
+  <wpt lat="-38.528201300650835" lon="143.71992814354599">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Baridjaru</name>
+      <cmt>Track: Baridjaru
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Baridjaru
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 6 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.550494061782956" lon="143.74515574425459">
     <time>2015-04-13T04:38:41Z</time>
     <name>Campground Lake Elizabeth</name>
@@ -95,7 +123,7 @@ Advance bookings and payment are required year round see Great Otway National Pa
 
   <wpt lat="-38.550355844199657" lon="143.74519572593272">
     <time>2014-08-29T00:35:22Z</time>
-    <name>POI Lake Elizabeth Walk</name>
+    <name>Lake Elizabeth Walk</name>
     <cmt>Lake Elizabeth Walk is a 2 km loop that allows walkers to take in the magestic beauty that is Lake Elizabeth. The walk follows the edge of the lake, and is best suited to those of a moderate walking ability.</cmt>
     <desc>Lake Elizabeth Walk is a 2 km loop that allows walkers to take in the magestic beauty that is Lake Elizabeth. The walk follows the edge of the lake, and is best suited to those of a moderate walking ability.</desc>
     <sym>Scenic Area</sym>
@@ -136,7 +164,7 @@ Advance bookings and payment are required year round see Great Otway National Pa
     <name>Baridjaru (2)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

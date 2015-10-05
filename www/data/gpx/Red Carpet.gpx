@@ -8,6 +8,34 @@
     <bounds maxlat="-38.52173013612628" maxlon="143.73890074901283" minlat="-38.551553785800934" minlon="143.72038378380239" />
   </metadata>
 
+  <wpt lat="-38.52173013612628" lon="143.72295510023832">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Red Carpet</name>
+      <cmt>Track: Red Carpet
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Red Carpet
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 3.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.530763145536184" lon="143.72108325362206">
     <ele>205.98436000000001</ele>
     <time>2014-08-28T23:50:40Z</time>
@@ -69,7 +97,7 @@
     <name>Red Carpet (3)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Green</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

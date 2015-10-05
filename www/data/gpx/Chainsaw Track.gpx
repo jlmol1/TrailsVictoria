@@ -8,11 +8,40 @@
     <bounds maxlat="-37.939206222072244" maxlon="144.41145988181233" minlat="-37.945200875401497" minlon="144.3931120634079" />
   </metadata>
 
+  <wpt lat="-37.939206222072244" lon="144.40917422063649">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Chainsaw Track</name>
+      <cmt>Track: Chainsaw Track
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Chainsaw Track
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 3.5 Km
+          &#xA; Web Page: http://www.youyangsmtbinc.com.au/pdf/kurrajong.pdf
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Chainsaw Track (15)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>3242</gpxtrkx:Distance>

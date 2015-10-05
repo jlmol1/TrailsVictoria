@@ -8,6 +8,34 @@
     <bounds maxlat="-37.827783403918147" maxlon="146.45223361440003" minlat="-37.953340038657188" minlon="146.26284434460104" />
   </metadata>
 
+    <wpt lat="-37.827783403918147" lon="146.2827208545059">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Great Walhalla Alpine Trail</name>
+      <cmt>Track: Great Walhalla Alpine Trail
+             &#xA; Trail: Great Walhalla Alpine Trail
+      </cmt>
+      <desc>Track: Great Walhalla Alpine Trail
+          &#xA; Trail: Great Walhalla Alpine Trail
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Difficult
+          &#xA; Distance: 40 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.924871826544404" lon="146.38427624478936">
     <ele>419</ele>
     <time>2014-09-11T08:45:01Z</time>
@@ -221,9 +249,9 @@
   <wpt lat="-37.84062908962369" lon="146.2653139885515">
     <ele>1475</ele>
     <time>2014-09-11T08:17:30Z</time>
-    <name>POI Information 12</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information 12</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -242,9 +270,9 @@
   <wpt lat="-37.941289376467466" lon="146.45214459858835">
     <ele>355</ele>
     <time>2014-09-11T12:51:42Z</time>
-    <name>POI Information 13</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information 13</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -263,9 +291,9 @@
   <wpt lat="-37.832461344078183" lon="146.277926992625">
     <ele>1478</ele>
     <time>2014-09-11T08:29:50Z</time>
-    <name>POI Junction 25</name>
-    <cmt>POI Junction</cmt>
-    <desc>POI Junction</desc>
+    <name>Junction 25</name>
+    <cmt>Junction</cmt>
+    <desc>Junction</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -284,9 +312,9 @@
   <wpt lat="-37.836480047553778" lon="146.30195933394134">
     <ele>1505</ele>
     <time>2014-10-08T02:21:49Z</time>
-    <name>POI Junction Lookout Mt St Gwinear</name>
-    <cmt>POI Junction Lookout Mt St Gwinear</cmt>
-    <desc>POI Junction Lookout Mt St Gwinear</desc>
+    <name>Junction Lookout Mt St Gwinear</name>
+    <cmt>Junction Lookout Mt St Gwinear</cmt>
+    <desc>Junction Lookout Mt St Gwinear</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -305,9 +333,9 @@
   <wpt lat="-37.939046043902636" lon="146.44919006153941">
     <ele>427</ele>
     <time>2014-09-11T09:05:01Z</time>
-    <name>POI Long Tunner Extension Mine</name>
-    <cmt>POI Long Tunnel Extension Mine</cmt>
-    <desc>POI Long Tunnel Extension Mine</desc>
+    <name>Long Tunner Extension Mine</name>
+    <cmt>Long Tunnel Extension Mine</cmt>
+    <desc>Long Tunnel Extension Mine</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -326,9 +354,9 @@
   <wpt lat="-37.838668897747993" lon="146.27574409358203">
     <ele>1559</ele>
     <time>2014-09-11T08:28:57Z</time>
-    <name>POI Lookout Mt Baw Baw</name>
-    <cmt>POI Lookout Mt Baw Baw</cmt>
-    <desc>POI Lookout Mt Baw Baw</desc>
+    <name>Lookout Mt Baw Baw</name>
+    <cmt>Lookout Mt Baw Baw</cmt>
+    <desc>Lookout Mt Baw Baw</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -347,9 +375,9 @@
   <wpt lat="-37.832132773473859" lon="146.31094347685575">
     <ele>1477</ele>
     <time>2014-09-11T08:32:39Z</time>
-    <name>POI Lookout Mt St Gwinear</name>
-    <cmt>POI Lookout Mt St Gwinear</cmt>
-    <desc>POI Lookout Mt St Gwinear</desc>
+    <name>Lookout Mt St Gwinear</name>
+    <cmt>Lookout Mt St Gwinear</cmt>
+    <desc>Lookout Mt St Gwinear</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -368,9 +396,9 @@
   <wpt lat="-37.831321069970727" lon="146.29512330517173">
     <ele>1569</ele>
     <time>2014-09-11T08:31:38Z</time>
-    <name>POI Lookout St Phillack Saddle</name>
-    <cmt>POI Lookout St Phillack Saddle</cmt>
-    <desc>POI Lookout St Phillack Saddle</desc>
+    <name>Lookout St Phillack Saddle</name>
+    <cmt>Lookout St Phillack Saddle</cmt>
+    <desc>Lookout St Phillack Saddle</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -389,9 +417,9 @@
   <wpt lat="-37.871534759178758" lon="146.34558454155922">
     <ele>1481.9609375</ele>
     <time>2014-09-11T08:35:54Z</time>
-    <name>POI Mt Erica Hut Ruins</name>
-    <cmt>POI Mt Erica Hut Ruins</cmt>
-    <desc>POI Mt Erica Hut Ruins</desc>
+    <name>Mt Erica Hut Ruins</name>
+    <cmt>Mt Erica Hut Ruins</cmt>
+    <desc>Mt Erica Hut Ruins</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -410,9 +438,9 @@
   <wpt lat="-37.885338412597775" lon="146.35697278194129">
     <ele>1238</ele>
     <time>2014-09-11T08:39:31Z</time>
-    <name>POI Mushroom Rocks</name>
-    <cmt>POI Mushroom Rocks</cmt>
-    <desc>POI Mushroom Rocks</desc>
+    <name>Mushroom Rocks</name>
+    <cmt>Mushroom Rocks</cmt>
+    <desc>Mushroom Rocks</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -431,9 +459,9 @@
   <wpt lat="-37.933524968102574" lon="146.42044298350811">
     <ele>241.81420900000001</ele>
     <time>2014-10-02T04:52:43Z</time>
-    <name>POI Poverty Point</name>
-    <cmt>POI Poverty Point</cmt>
-    <desc>POI Poverty Point</desc>
+    <name>Poverty Point</name>
+    <cmt>Poverty Point</cmt>
+    <desc>Poverty Point</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -452,9 +480,9 @@
   <wpt lat="-37.932047992944717" lon="146.41453701071441">
     <ele>218.450165</ele>
     <time>2014-10-02T04:44:41Z</time>
-    <name>POI Poverty Point Bridge</name>
-    <cmt>POI Poverty Point Bridge</cmt>
-    <desc>POI Poverty Point Bridge</desc>
+    <name>Poverty Point Bridge</name>
+    <cmt>Poverty Point Bridge</cmt>
+    <desc>Poverty Point Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -473,9 +501,9 @@
   <wpt lat="-37.840791614726186" lon="146.26450706273317">
     <ele>1476.6796875</ele>
     <time>2014-09-11T08:17:47Z</time>
-    <name>POI Village Restaurant</name>
-    <cmt>POI Village Restaurant</cmt>
-    <desc>POI Village Restaurant</desc>
+    <name>Village Restaurant</name>
+    <cmt>Village Restaurant</cmt>
+    <desc>Village Restaurant</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -494,9 +522,9 @@
   <wpt lat="-37.941201031208038" lon="146.45223361440003">
     <ele>356.7890625</ele>
     <time>2014-09-11T09:01:59Z</time>
-    <name>POI Walhalla Historical Township</name>
-    <cmt>POI Walhalla Historical Township</cmt>
-    <desc>POI Walhalla Historical Township</desc>
+    <name>Walhalla Historical Township</name>
+    <cmt>Walhalla Historical Township</cmt>
+    <desc>Walhalla Historical Township</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -684,7 +712,7 @@
     <name>Great Walhalla Alpine Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>blue</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

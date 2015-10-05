@@ -8,6 +8,34 @@
     <bounds maxlat="-37.150743473321199" maxlon="146.47213661111891" minlat="-37.15250987559557" minlon="146.4670691639185" />
   </metadata>
 
+  <wpt lat="-37.150743473321199" lon="146.4692344609648">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Clancys Run</name>
+      <cmt>Track: Clancys Run Link
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Clancys Run
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 2 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.151088640093803" lon="146.4670691639185">
     <ele>1521</ele>
     <time>2014-12-01T04:50:34Z</time>
@@ -33,7 +61,7 @@
     <name>Clancy's Run</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

@@ -8,6 +8,34 @@
     <bounds maxlat="-37.748216344043612" maxlon="145.68891674280167" minlat="-37.789099998772144" minlon="145.34984428435564" />
   </metadata>
 
+    <wpt lat="-37.748216344043612" lon="145.35806181840599">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Lilydale to Warburton Rail Trail</name>
+      <cmt>Track: Lilydale to Warburton Rail Trail
+             &#xA; Trail: Lilydale to Warburton Rail Trail
+      </cmt>
+      <desc>Track: Lilydale to Warburton Rail Trail
+          &#xA; Trail: Lilydale to Warburton Rail Trail
+          &#xA; Activities: Cycling, Horse riding, Walking
+          &#xA; Difficulty: Easy, Moderate
+          &#xA; Distance: 40 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.777610756456852" lon="145.4260029271245">
     <ele>172.79508999999999</ele>
     <time>2014-08-22T01:26:15Z</time>
@@ -431,9 +459,9 @@
   <wpt lat="-37.756708972156048" lon="145.35958103835583">
     <ele>146</ele>
     <time>2014-08-21T23:57:14Z</time>
-    <name>POI Bridge 1</name>
-    <cmt>POI Bridge</cmt>
-    <desc>POI Bridge</desc>
+    <name>Bridge 1</name>
+    <cmt>Bridge</cmt>
+    <desc>Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -452,9 +480,9 @@
   <wpt lat="-37.755654444918036" lon="145.68026670254767">
     <ele>151</ele>
     <time>2014-08-22T03:52:37Z</time>
-    <name>POI Bridge 2</name>
-    <cmt>POI Bridge</cmt>
-    <desc>POI Bridge</desc>
+    <name>Bridge 2</name>
+    <cmt>Bridge</cmt>
+    <desc>Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -473,9 +501,9 @@
   <wpt lat="-37.781863566488028" lon="145.4097758140415">
     <ele>156</ele>
     <time>2014-08-22T01:12:02Z</time>
-    <name>POI Bridge 3</name>
-    <cmt>POI Bridge</cmt>
-    <desc>POI Bridge</desc>
+    <name>Bridge 3</name>
+    <cmt>Bridge</cmt>
+    <desc>Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -494,9 +522,9 @@
   <wpt lat="-37.78853690251708" lon="145.38724207319319">
     <ele>222</ele>
     <time>2014-08-22T00:49:24Z</time>
-    <name>POI Cafe Penny Olive Sourdough</name>
-    <cmt>POI Cafe Penny Olive Sourdough</cmt>
-    <desc>POI Cafe Penny Olive Sourdough</desc>
+    <name>Cafe Penny Olive Sourdough</name>
+    <cmt>Cafe Penny Olive Sourdough</cmt>
+    <desc>Cafe Penny Olive Sourdough</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -515,9 +543,9 @@
   <wpt lat="-37.769159115850925" lon="145.45756171457469">
     <ele>129</ele>
     <time>2014-08-22T01:40:09Z</time>
-    <name>POI Carriage Cafe</name>
-    <cmt>POI Carriage Cafe</cmt>
-    <desc>POI Carriage Cafe</desc>
+    <name>Carriage Cafe</name>
+    <cmt>Carriage Cafe</cmt>
+    <desc>Carriage Cafe</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -536,9 +564,9 @@
   <wpt lat="-37.754638893529773" lon="145.68891674280167">
     <ele>161.16796875</ele>
     <time>2014-08-22T03:59:06Z</time>
-    <name>POI Cog Cafe</name>
-    <cmt>POI Cog Cafe</cmt>
-    <desc>POI Cog Cafe</desc>
+    <name>Cog Cafe</name>
+    <cmt>Cog Cafe</cmt>
+    <desc>Cog Cafe</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -557,9 +585,9 @@
   <wpt lat="-37.777537247166038" lon="145.42615531012416">
     <ele>173</ele>
     <time>2014-08-22T01:25:17Z</time>
-    <name>POI Historical Information</name>
-    <cmt>POI Historical Information</cmt>
-    <desc>POI Historical Information</desc>
+    <name>Historical Information</name>
+    <cmt>Historical Information</cmt>
+    <desc>Historical Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -578,9 +606,9 @@
   <wpt lat="-37.775863045826554" lon="145.58435895480216">
     <ele>108.28267700000001</ele>
     <time>2014-08-22T02:49:36Z</time>
-    <name>POI Home Hotel</name>
-    <cmt>POI Home Hotel</cmt>
-    <desc>POI Home Hotel</desc>
+    <name>Home Hotel</name>
+    <cmt>Home Hotel</cmt>
+    <desc>Home Hotel</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -599,9 +627,9 @@
   <wpt lat="-37.754602851346135" lon="145.68890525959432">
     <ele>161</ele>
     <time>2014-08-22T03:59:06Z</time>
-    <name>POI Information 6</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information 6</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -620,9 +648,9 @@
   <wpt lat="-37.764771021902561" lon="145.51162901334465">
     <ele>93</ele>
     <time>2014-08-22T02:10:30Z</time>
-    <name>POI Long Wooden Bridge</name>
-    <cmt>POI Long Wooden Bridge</cmt>
-    <desc>POI Long Wooden Bridge</desc>
+    <name>Long Wooden Bridge</name>
+    <cmt>Long Wooden Bridge</cmt>
+    <desc>Long Wooden Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -641,9 +669,9 @@
   <wpt lat="-37.758068013936281" lon="145.49297198653221">
     <ele>104</ele>
     <time>2014-08-22T02:00:32Z</time>
-    <name>POI Old Killara Station</name>
-    <cmt>POI Old Killara Station</cmt>
-    <desc>POI Old Killara Station</desc>
+    <name>Old Killara Station</name>
+    <cmt>Old Killara Station</cmt>
+    <desc>Old Killara Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -662,9 +690,9 @@
   <wpt lat="-37.776162028312683" lon="145.58785596862435">
     <ele>108</ele>
     <time>2014-08-22T02:53:55Z</time>
-    <name>POI Old Launching Place Station</name>
-    <cmt>POI Old Launching Place Station</cmt>
-    <desc>POI Old Launching Place Station</desc>
+    <name>Old Launching Place Station</name>
+    <cmt>Old Launching Place Station</cmt>
+    <desc>Old Launching Place Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -683,9 +711,9 @@
   <wpt lat="-37.784530939534307" lon="145.37877216003835">
     <ele>242</ele>
     <time>2014-08-22T00:39:53Z</time>
-    <name>POI Old Mt Evelyn Station</name>
-    <cmt>POI Old Mt Evelyn Station</cmt>
-    <desc>POI Old Mt Evelyn Station</desc>
+    <name>Old Mt Evelyn Station</name>
+    <cmt>Old Mt Evelyn Station</cmt>
+    <desc>Old Mt Evelyn Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -704,9 +732,9 @@
   <wpt lat="-37.766002239659429" lon="145.46064231544733">
     <ele>130</ele>
     <time>2014-08-22T01:44:00Z</time>
-    <name>POI Old Seville Station</name>
-    <cmt>POI Old Seville Station</cmt>
-    <desc>POI Old Seville Station</desc>
+    <name>Old Seville Station</name>
+    <cmt>Old Seville Station</cmt>
+    <desc>Old Seville Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -725,9 +753,9 @@
   <wpt lat="-37.777023268863559" lon="145.42941268533468">
     <ele>174</ele>
     <time>2014-08-22T01:27:42Z</time>
-    <name>POI Old Wandin Station</name>
-    <cmt>POI Old Wandin Station</cmt>
-    <desc>POI Old Wandin Station</desc>
+    <name>Old Wandin Station</name>
+    <cmt>Old Wandin Station</cmt>
+    <desc>Old Wandin Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -746,9 +774,9 @@
   <wpt lat="-37.764526102691889" lon="145.63989291898906">
     <ele>123</ele>
     <time>2014-08-22T03:35:39Z</time>
-    <name>POI Old Wesburn Station</name>
-    <cmt>POI Old Wesburn Station</cmt>
-    <desc>POI Old Wesburn Station</desc>
+    <name>Old Wesburn Station</name>
+    <cmt>Old Wesburn Station</cmt>
+    <desc>Old Wesburn Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -767,9 +795,9 @@
   <wpt lat="-37.775333980098367" lon="145.52806299179792">
     <ele>96</ele>
     <time>2014-08-22T02:20:31Z</time>
-    <name>POI Old Woori Yallock Station</name>
-    <cmt>POI Old Woori Yallock Station</cmt>
-    <desc>POI Old Woori Yallock Station</desc>
+    <name>Old Woori Yallock Station</name>
+    <cmt>Old Woori Yallock Station</cmt>
+    <desc>Old Woori Yallock Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -788,9 +816,9 @@
   <wpt lat="-37.781318156048656" lon="145.61182636767626">
     <ele>113</ele>
     <time>2014-08-22T03:12:56Z</time>
-    <name>POI Playground 1</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 1</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -809,9 +837,9 @@
   <wpt lat="-37.775338757783175" lon="145.52807229571044">
     <ele>96</ele>
     <time>2014-08-22T02:21:22Z</time>
-    <name>POI Playground 2</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 2</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -830,9 +858,9 @@
   <wpt lat="-37.784084938466549" lon="145.37875682115555">
     <ele>242</ele>
     <time>2014-08-22T00:40:20Z</time>
-    <name>POI Playground 3</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 3</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -851,9 +879,9 @@
   <wpt lat="-37.769335890188813" lon="145.37438557483256">
     <ele>199</ele>
     <time>2014-08-22T00:16:06Z</time>
-    <name>POI Tunnel 1</name>
-    <cmt>POI Tunnel</cmt>
-    <desc>POI Tunnel</desc>
+    <name>Tunnel 1</name>
+    <cmt>Tunnel</cmt>
+    <desc>Tunnel</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -872,9 +900,9 @@
   <wpt lat="-37.780823288485408" lon="145.6093049235642">
     <ele>99.819739999999996</ele>
     <time>2014-08-22T03:08:40Z</time>
-    <name>POI Upper Yarra Museum</name>
-    <cmt>POI Upper Yarra Museum</cmt>
-    <desc>POI Upper Yarra Museum</desc>
+    <name>Upper Yarra Museum</name>
+    <cmt>Upper Yarra Museum</cmt>
+    <desc>Upper Yarra Museum</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -999,7 +1027,7 @@
     <name>Lilydale to Warburton Rail Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>cyan</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

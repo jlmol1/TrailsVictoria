@@ -8,10 +8,38 @@
     <bounds maxlat="-37.144516976550221" maxlon="146.4906769618392" minlat="-37.148880092427135" minlon="146.47534201852977" />
   </metadata>
 
+  <wpt lat="-37.144562322646379" lon="146.48906151764095">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Woolybutt</name>
+      <cmt>Track: Woolybutt
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Woolybutt
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 1.7 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.144516976550221" lon="146.49067201651633">
     <ele>1377</ele>
     <time>2014-12-01T01:47:42Z</time>
-    <name>POI Howqua Gap Hut</name>
+    <name>Howqua Gap Hut</name>
     <cmt>Howqua Gap Hut</cmt>
     <desc>Howqua Gap Hut</desc>
     <sym>Scenic Area</sym>
@@ -54,7 +82,7 @@
     <name>Woolybutt</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

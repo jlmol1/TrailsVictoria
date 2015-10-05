@@ -8,6 +8,34 @@
     <bounds maxlat="-37.121129874140024" maxlon="146.45147278904915" minlat="-37.127373637631536" minlon="146.44599454477429" />
   </metadata>
 
+  <wpt lat="-37.121129874140024" lon="146.44599454477429">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Plough Shed Entry</name>
+      <cmt>Track: Plough Shed Entry
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Plough Shed Entry
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 2.7 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.127371039241552" lon="146.44852001219988">
     <ele>1087</ele>
     <time>2014-12-02T22:56:32Z</time>
@@ -33,7 +61,7 @@
     <name>Plough Shed Entry</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

@@ -8,6 +8,34 @@
     <bounds maxlat="-37.95021434314549" maxlon="144.40533623099327" minlat="-37.963517932221293" minlon="144.39780827611685" />
   </metadata>
 
+  <wpt lat="-37.95021434314549" lon="144.39817917533219">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Axemans Track</name>
+      <cmt>Track: Axemans Track
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Axemans Track
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 2.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.963517932221293" lon="144.40516792237759">
     <ele>33</ele>
     <time>2014-08-26T03:00:45Z</time>
@@ -33,7 +61,7 @@
     <name>Axeman's Track (18)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

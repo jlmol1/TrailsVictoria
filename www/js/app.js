@@ -197,11 +197,20 @@ trails_app
                     }
                 }
             })
+
+            .state('tab.starting', {
+                url: '/starting',
+                views: {
+                    'tab-starting' : {
+                        templateUrl: 'templates/starting_page.html'
+                    }
+                }
+            })
             ;
 
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/index');
+        $urlRouterProvider.otherwise('/tab/starting');
 
     });
 

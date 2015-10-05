@@ -8,6 +8,34 @@
     <bounds maxlat="-37.964257886633277" maxlon="147.07947498187423" minlat="-38.180701676756144" minlon="146.56267759390175" />
   </metadata>
 
+    <wpt lat="-37.954257886633277" lon="146.8898887373507">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Gippsland Plains Rail Trail</name>
+      <cmt>Track: Gippsland Plains Rail Trail
+             &#xA; Trail: Gippsland Plains Rail Trail
+      </cmt>
+      <desc>Track: Gippsland Plains Rail Trail
+          &#xA; Trail: Gippsland Plains Rail Trail
+          &#xA; Activities: Cycling, Horse riding, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 63 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.175218990072608" lon="146.5640239790082">
     <ele>40.532524000000002</ele>
     <time>2014-09-06T01:04:10Z</time>
@@ -221,9 +249,9 @@
   <wpt lat="-37.971326010301709" lon="147.07947498187423">
     <ele>11.542066</ele>
     <time>2014-09-06T06:08:44Z</time>
-    <name>POI Apex Park</name>
-    <cmt>POI Apex Park</cmt>
-    <desc>POI Apex Park</desc>
+    <name>Apex Park</name>
+    <cmt>Apex Park</cmt>
+    <desc>Apex Park</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -242,9 +270,9 @@
   <wpt lat="-37.983668027445674" lon="146.72426803037524">
     <ele>59.604461999999998</ele>
     <time>2014-09-06T02:44:43Z</time>
-    <name>POI Dawson Railway Reserve</name>
-    <cmt>POI Dawson Railway Reserve</cmt>
-    <desc>POI Dawson Railway Reserve</desc>
+    <name>Dawson Railway Reserve</name>
+    <cmt>Dawson Railway Reserve</cmt>
+    <desc>Dawson Railway Reserve</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -263,9 +291,9 @@
   <wpt lat="-37.979501970112324" lon="146.78692401386797">
     <ele>63.056815999999998</ele>
     <time>2014-09-06T03:21:57Z</time>
-    <name>POI Hayfield</name>
-    <cmt>POI Hayfield</cmt>
-    <desc>POI Hayfield</desc>
+    <name>Hayfield</name>
+    <cmt>Hayfield</cmt>
+    <desc>Hayfield</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -284,9 +312,9 @@
   <wpt lat="-38.015068983659148" lon="146.69130996800959">
     <ele>56.730606000000002</ele>
     <time>2014-09-06T02:20:28Z</time>
-    <name>POI Old Cowwarr Station</name>
-    <cmt>POI Old Cowwarr Station</cmt>
-    <desc>POI Old Cowwarr Station</desc>
+    <name>Old Cowwarr Station</name>
+    <cmt>Old Cowwarr Station</cmt>
+    <desc>Old Cowwarr Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -305,9 +333,9 @@
   <wpt lat="-37.983777998015285" lon="146.72374600544572">
     <ele>59.483162</ele>
     <time>2014-09-06T02:43:06Z</time>
-    <name>POI Old Dawson Station</name>
-    <cmt>POI Old Dawson Station</cmt>
-    <desc>POI Old Dawson Station</desc>
+    <name>Old Dawson Station</name>
+    <cmt>Old Dawson Station</cmt>
+    <desc>Old Dawson Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -326,9 +354,9 @@
   <wpt lat="-38.125689988955855" lon="146.57445500604808">
     <ele>47.250625999999997</ele>
     <time>2014-09-06T01:22:30Z</time>
-    <name>POI Old Glengarry Station</name>
-    <cmt>POI Old Glengarry Station</cmt>
-    <desc>POI Old Glengarry Station</desc>
+    <name>Old Glengarry Station</name>
+    <cmt>Old Glengarry Station</cmt>
+    <desc>Old Glengarry Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -347,9 +375,9 @@
   <wpt lat="-37.977747973054647" lon="147.03359998762608">
     <ele>37.304107999999999</ele>
     <time>2014-09-06T05:37:28Z</time>
-    <name>POI Old Powerscourt Station</name>
-    <cmt>POI Old Powerscourt Station</cmt>
-    <desc>POI Old Powerscourt Station</desc>
+    <name>Old Powerscourt Station</name>
+    <cmt>Old Powerscourt Station</cmt>
+    <desc>Old Powerscourt Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -368,9 +396,9 @@
   <wpt lat="-37.96460397541523" lon="146.89359496347606">
     <ele>39.226230999999999</ele>
     <time>2014-09-06T03:52:43Z</time>
-    <name>POI Old Tinamba Station</name>
-    <cmt>POI Old Tinamba Station</cmt>
-    <desc>POI Old Tinamba Station</desc>
+    <name>Old Tinamba Station</name>
+    <cmt>Old Tinamba Station</cmt>
+    <desc>Old Tinamba Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -389,9 +417,9 @@
   <wpt lat="-38.060261942446232" lon="146.62597278133035">
     <ele>74.44140625</ele>
     <time>2014-09-06T01:56:41Z</time>
-    <name>POI Old Toongabbie Station</name>
-    <cmt>POI Old Toongabbie Station</cmt>
-    <desc>POI Old Toongabbie Station</desc>
+    <name>Old Toongabbie Station</name>
+    <cmt>Old Toongabbie Station</cmt>
+    <desc>Old Toongabbie Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -474,7 +502,7 @@
     <name>Gippsland Plains Rail Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

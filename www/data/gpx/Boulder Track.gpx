@@ -8,6 +8,34 @@
     <bounds maxlat="-37.924642078578472" maxlon="144.44283032789826" minlat="-37.927265027537942" minlon="144.4371747225523" />
   </metadata>
 
+  <wpt lat="-37.924642078578472" lon="144.43762449547648">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Boulder Track</name>
+      <cmt>Track: Boulder Track
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Boulder Track
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 1.2 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.936088992282748" lon="144.43583495914936">
     <ele>220.02705399999999</ele>
     <time>2014-08-26T05:08:57Z</time>
@@ -33,7 +61,7 @@
     <name>Boulder Track (9)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkBlue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

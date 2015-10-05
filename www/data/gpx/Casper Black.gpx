@@ -8,11 +8,39 @@
     <bounds maxlat="-38.496838063001633" maxlon="143.70775879360735" minlat="-38.503110408782959" minlon="143.70034416206181" />
   </metadata>
 
+  <wpt lat="-38.496838063001633" lon="143.703827932477">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Casper Black</name>
+      <cmt>Track: Casper Black
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Casper Black
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 5.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Casper Black (13)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkGreen</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

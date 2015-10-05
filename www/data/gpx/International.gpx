@@ -8,6 +8,34 @@
     <bounds maxlat="-37.138601113110781" maxlon="146.45075965672731" minlat="-37.142724506556988" minlon="146.44036944955587" />
   </metadata>
 
+  <wpt lat="-37.138601113110781" lon="146.4424211718142">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>International</name>
+      <cmt>Track: International
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: International
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 2 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
 
   <wpt lat="-37.142724506556988" lon="146.44056273624301">
     <ele>1588</ele>
@@ -34,7 +62,7 @@
     <name>International</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

@@ -8,11 +8,39 @@
     <bounds maxlat="-37.929050624370575" maxlon="144.44147740490735" minlat="-37.932972349226475" minlon="144.43228522315621" />
   </metadata>
 
+  <wpt lat="-37.929050624370575" lon="144.4412568770349">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Bandages and Glory</name>
+      <cmt>Track: Bandages and Glory
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Bandages and Glory
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Extremely difficult
+          &#xA; Distance: 1.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Bandages and Glory (12)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>fire brick</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>1293</gpxtrkx:Distance>

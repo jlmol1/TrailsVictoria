@@ -8,11 +8,39 @@
     <bounds maxlat="-37.149066254496574" maxlon="146.4600872900337" minlat="-37.149969907477498" minlon="146.45599516108632" />
   </metadata>
 
+  <wpt lat="-37.149066254496574" lon="146.46007153205574">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Split Rock</name>
+      <cmt>Track: Split Rock
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Split Rock
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 0.9 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Split Rock</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>527</gpxtrkx:Distance>

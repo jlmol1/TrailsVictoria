@@ -8,11 +8,39 @@
     <bounds maxlat="-38.527041245251894" maxlon="143.7109165918082" minlat="-38.532747225835919" minlon="143.70489201508462" />
   </metadata>
 
+  <wpt lat="-38.527041245251894" lon="143.70585937052965">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Follow The Dog</name>
+      <cmt>Track: Follow The Dog
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Follow The Dog
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 4.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Follow The Dog (6)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

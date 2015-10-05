@@ -8,6 +8,34 @@
     <bounds maxlat="-36.765711698681116" maxlon="144.31568381376565" minlat="-37.658240217715502" minlon="143.84445355273783" />
   </metadata>
 
+    <wpt lat="-36.765711698681116" lon="144.31568381376565">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Goldfields Walking Track</name>
+      <cmt>Track: Goldfields Walking Track
+             &#xA; Trail: Goldfields Track
+      </cmt>
+      <desc>Track: Goldfields Walking Track
+          &#xA; Trail: Goldfields Track
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Moderate
+          &#xA; Distance: 210 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.141296984627843" lon="144.2522497382015">
     <ele>348.5</ele>
     <time>2014-10-12T08:37:51Z</time>
@@ -1154,7 +1182,7 @@
   <wpt lat="-37.559129996225238" lon="143.8594579976052">
     <ele>434.60000000000002</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Ballarat Railway Station</name>
+    <name>Ballarat Railway Station</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1173,7 +1201,7 @@
   <wpt lat="-36.765716979280114" lon="144.28324216045439">
     <ele>234.80000000000001</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Bendigo Railway Station</name>
+    <name>Bendigo Railway Station</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1192,7 +1220,7 @@
   <wpt lat="-37.06298821605742" lon="144.21424057334661">
     <ele>285.69999999999999</ele>
     <time>2015-03-24T01:48:48Z</time>
-    <name>POI Castlemaine Railway Station</name>
+    <name>Castlemaine Railway Station</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1211,7 +1239,7 @@
   <wpt lat="-37.42531668394804" lon="143.88829995878041">
     <ele>444.69999999999999</ele>
     <time>2015-03-24T02:48:26Z</time>
-    <name>POI Creswick Railway Station</name>
+    <name>Creswick Railway Station</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1230,7 +1258,7 @@
   <wpt lat="-37.008732911199331" lon="144.3031938560307">
     <ele>638.89999999999998</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Dog Rocks</name>
+    <name>Dog Rocks</name>
     <cmt>Dog Rocks saddle is an impressive mass of granite tors, one of the rocks at the top supposedly resembles a crouching dog.</cmt>
     <desc>Dog Rocks saddle is an impressive mass of granite tors, one of the rocks at the top supposedly resembles a crouching dog.</desc>
     <sym>Scenic Area</sym>
@@ -1251,7 +1279,7 @@
   <wpt lat="-37.097050007432699" lon="144.2401166819036">
     <ele>399.89999999999998</ele>
     <time>2015-03-24T04:56:58Z</time>
-    <name>POI Eureka Reef</name>
+    <name>Eureka Reef</name>
     <cmt>A 400 m side trip, south down the read rewards you with the Eureka Reef interpretive trail including Aboriginal Dja Dja Wurrung wells, a mined chasm, a long hillside Cornish flue, cyanide vats, shafts and ruins.</cmt>
     <desc>A 400 m side trip, south down the read rewards you with the Eureka Reef interpretive trail including Aboriginal Dja Dja Wurrung wells, a mined chasm, a long hillside Cornish flue, cyanide vats, shafts and ruins.</desc>
     <sym>Scenic Area</sym>
@@ -1272,7 +1300,7 @@
   <wpt lat="-37.072083335369825" lon="144.26023333333433">
     <ele>364</ele>
     <time>2015-03-24T03:08:37Z</time>
-    <name>POI Garfield Waterwheel</name>
+    <name>Garfield Waterwheel</name>
     <cmt>Garfield Waterwheel site contains the stone foundations of one of the world's largest water wheels.  The 24 m diameter water wheel had 220 wrought-iron buckets and revolved once every 55 seconds.  It was constructed in 1887.</cmt>
     <desc>Garfield Waterwheel site contains the stone foundations of one of the world's largest water wheels.  The 24 m diameter water wheel had 220 wrought-iron buckets and revolved once every 55 seconds.  It was constructed in 1887.</desc>
     <sym>Scenic Area</sym>
@@ -1293,7 +1321,7 @@
   <wpt lat="-37.441371800377965" lon="143.91205083578825">
     <ele>460.39999999999998</ele>
     <time>2015-04-15T01:57:53Z</time>
-    <name>POI Koala Park</name>
+    <name>Koala Park</name>
     <cmt>This was constructed in 1942 by students from the Creswick School of Forestry (now part of the University of Melbourne) as a breeding area for koalas; they soon, however, learnt how to climb the fence and can be seen anywhere but...</cmt>
     <desc>This was constructed in 1942 by students from the Creswick School of Forestry (now part of the University of Melbourne) as a breeding area for koalas; they soon, however, learnt how to climb the fence and can be seen anywhere but...</desc>
     <sym>Scenic Area</sym>
@@ -1314,7 +1342,7 @@
   <wpt lat="-36.989925010129809" lon="144.30847998708487">
     <ele>724.5</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Langs Lookout</name>
+    <name>Langs Lookout</name>
     <cmt>Langs Lookout at 746 m above sea level, has sweeping views to the north and the first clear sighting of the Coliban Channel.</cmt>
     <desc>Langs Lookout at 746 m above sea level, has sweeping views to the north and the first clear sighting of the Coliban Channel.</desc>
     <sym>Scenic Area</sym>
@@ -1335,7 +1363,7 @@
   <wpt lat="-37.018161965534091" lon="144.30591797456145">
     <ele>650.20000000000005</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Leanganook Picnic Area</name>
+    <name>Leanganook Picnic Area</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1354,7 +1382,7 @@
   <wpt lat="-37.44887201115489" lon="144.07608903944492">
     <ele>692.60000000000002</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Mullens Dam</name>
+    <name>Mullens Dam</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1373,7 +1401,7 @@
   <wpt lat="-36.844510976225138" lon="144.25008796155453">
     <ele>341.60000000000002</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Sandhurst Reservoir</name>
+    <name>Sandhurst Reservoir</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1392,7 +1420,7 @@
   <wpt lat="-37.430863995105028" lon="143.93252497538924">
     <ele>519.89999999999998</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Spence House Site</name>
+    <name>Spence House Site</name>
     <cmt>A plaque can be found at the site of William Spence parents' house. William Spence (1846-1926) was Australia's first full-time trade union organiser and co-founder of the Australian Workers Union.</cmt>
     <desc>A plaque can be found at the site of William Spence parents' house. William Spence (1846-1926) was Australia's first full-time trade union organiser and co-founder of the Australian Workers Union.</desc>
     <sym>Scenic Area</sym>
@@ -1413,7 +1441,7 @@
   <wpt lat="-37.116669025272131" lon="144.24105604179204">
     <ele>351.60000000000002</ele>
     <time>2015-03-24T03:18:49Z</time>
-    <name>POI Spring Gully Junction Mine</name>
+    <name>Spring Gully Junction Mine</name>
     <cmt>Spring Gully Junction Mine is the entry point for one of Victoria's most intact collections of historic quartz mines. The area contains five mines, with well-preserved foundations and mullock heaps.</cmt>
     <desc>Spring Gully Junction Mine is the entry point for one of Victoria's most intact collections of historic quartz mines. The area contains five mines, with well-preserved foundations and mullock heaps.</desc>
     <sym>Scenic Area</sym>
@@ -1434,7 +1462,7 @@
   <wpt lat="-37.433466659858823" lon="143.90748336911201">
     <ele>447.39999999999998</ele>
     <time>2015-03-24T02:53:09Z</time>
-    <name>POI St Georges Lake</name>
+    <name>St Georges Lake</name>
     <cmt>Popular with visitors and wildlife, St Georges Lake was once a mining dam used to supply water. Today, it is a popular summer base for water activities. Free gas barbecues and toilets are provided in the main picnic area. There is no camping at the lake and power boats are not permitted.</cmt>
     <desc>Popular with visitors and wildlife, St Georges Lake was once a mining dam used to supply water. Today, it is a popular summer base for water activities. Free gas barbecues and toilets are provided in the main picnic area. There is no camping at the lake and power boats are not permitted.</desc>
     <sym>Scenic Area</sym>
@@ -1455,7 +1483,7 @@
   <wpt lat="-37.337668212130666" lon="144.12099927663803">
     <ele>490.89999999999998</ele>
     <time>2015-03-24T04:30:02Z</time>
-    <name>POI Tipperary Springs</name>
+    <name>Tipperary Springs</name>
     <cmt>Tipperary Springs is just one of the many natural mineral springs found in the area.</cmt>
     <desc>Tipperary Springs is just one of the many natural mineral springs found in the area.</desc>
     <sym>Scenic Area</sym>
@@ -1476,7 +1504,7 @@
   <wpt lat="-37.161836503073573" lon="144.21478254720569">
     <ele>281.60000000000002</ele>
     <time>2015-03-24T03:24:32Z</time>
-    <name>POI Vaughan Mineral Springs</name>
+    <name>Vaughan Mineral Springs</name>
     <cmt>Vaughan Mineral Springs was formerly a large gold rush township called 'The Junction' and became a favoured alluvial gold and market gardening locality for Chinese miners.  Today, it is a good place to sample the mineral water and for a stroll along the Loddon River.</cmt>
     <desc>Vaughan Mineral Springs was formerly a large gold rush township called 'The Junction' and became a favoured alluvial gold and market gardening locality for Chinese miners.  Today, it is a good place to sample the mineral water and for a stroll along the Loddon River.</desc>
     <sym>Scenic Area</sym>
@@ -1497,7 +1525,7 @@
   <wpt lat="-37.434250032529235" lon="144.07912898808718">
     <ele>656.39999999999998</ele>
     <time>2014-10-12T08:37:51Z</time>
-    <name>POI Wombat Station</name>
+    <name>Wombat Station</name>
     <cmt>No sign of the gold mining town of Wombat exists any longer, however, the highlight of this is section is the railway cutting that follows.  The walls on either side rise imposing to well over 20 m as the cutting carves for 1 km through 500 million year old bedrock.  Also look out for the perfectly intact, red brick culvert running underneath where the first creek crosses.</cmt>
     <desc>No sign of the gold mining town of Wombat exists any longer, however, the highlight of this is section is the railway cutting that follows.  The walls on either side rise imposing to well over 20 m as the cutting carves for 1 km through 500 million year old bedrock.  Also look out for the perfectly intact, red brick culvert running underneath where the first creek crosses.</desc>
     <sym>Scenic Area</sym>

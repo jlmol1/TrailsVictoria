@@ -8,11 +8,39 @@
     <bounds maxlat="-38.481636140495539" maxlon="143.74283513054252" minlat="-38.490601507946849" minlon="143.73466034419835" />
   </metadata>
 
+  <wpt lat="-38.481636140495539" lon="143.73518857173622">
+    <ele>1000</ele>
+    <time>2015-10-28T00:50:27Z</time>
+    <name> Tiger Loop</name>
+    <cmt>Track: Tiger Loop
+           &#xA; Trail: Forrest Mountain Bike Trails
+    </cmt>
+    <desc>Track: Tiger Loop
+        &#xA; Trail: Forrest Mountain Bike Trails
+        &#xA; Activities: Mountain biking
+        &#xA; Difficulty: More difficult
+        &#xA; Distance: 3 Km
+    </desc>
+    <sym>Information</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <trk>
     <name>Tiger Loop (16)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

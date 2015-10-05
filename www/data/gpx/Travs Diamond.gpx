@@ -8,11 +8,39 @@
     <bounds maxlat="-37.93023431673646" maxlon="144.4410758279264" minlat="-37.934056799858809" minlon="144.4340165052563" />
   </metadata>
 
+  <wpt lat="-37.93023431673646" lon="144.44081841968">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Travs Diamond</name>
+      <cmt>Track: Travs Diamond
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Travs Diamond
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 1.8 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Travs Diamond (7)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Green</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>1854</gpxtrkx:Distance>

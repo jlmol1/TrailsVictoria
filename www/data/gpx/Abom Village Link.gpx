@@ -8,10 +8,38 @@
     <bounds maxlat="-37.142121344804764" maxlon="146.44549104385078" minlat="-37.144328467547894" minlon="146.44100555218756" />
   </metadata>
 
+<wpt lat="-37.142121344804764" lon="146.44058587029576">
+    <ele>1000</ele>
+    <time>2015-10-28T00:50:27Z</time>
+    <name>Abom / Village Link</name>
+    <cmt>Track: Abom / Village Link
+           &#xA; Trail: Mt Buller Bike Park
+    </cmt>
+    <desc>Track: Abom / Village Link
+        &#xA; Trail: Mt Buller Bike Park
+        &#xA; Activities: Mountain biking, Walking
+        &#xA; Difficulty: Easy
+        &#xA; Distance: 1.5 Km
+    </desc>
+    <sym>Information</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="-37.142669018357992" lon="146.44051596522331">
     <ele>1636</ele>
     <time>2014-12-01T02:01:07Z</time>
-    <name>POI Northside Discovery Centre</name>
+    <name>Northside Discovery Centre</name>
     <cmt>Northside Discovery Centre</cmt>
     <desc>Northside Discovery Centre</desc>
     <sym>Scenic Area</sym>
@@ -54,7 +82,7 @@
     <name>Abom / Village Link</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>630</gpxtrkx:Distance>

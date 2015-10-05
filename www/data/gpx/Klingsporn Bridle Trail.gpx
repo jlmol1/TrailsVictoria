@@ -8,6 +8,34 @@
     <bounds maxlat="-37.110889283940196" maxlon="146.40076738782227" minlat="-37.110878974199295" minlon="146.4007450081408" />
   </metadata>
 
+  <wpt lat="-37.110889283940196" lon="146.40076738782227">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Klingsporn Bridle Trail </name>
+      <cmt>Track: Klingsporn Bridle Trail
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Klingsporn Bridle Trail
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 8 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.110878974199295" lon="146.4007450081408">
     <ele>678</ele>
     <time>2014-12-01T00:50:27Z</time>
@@ -138,7 +166,7 @@
     <name>Klingsporn Bridle Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>8078</gpxtrkx:Distance>

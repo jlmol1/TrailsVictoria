@@ -8,6 +8,34 @@
     <bounds maxlat="-36.316112112253904" maxlon="146.95698821917176" minlat="-36.729979813098907" minlon="146.32874798029661" />
   </metadata>
 
+    <wpt lat="-36.316112112253904" lon="146.34185635976493">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Murray to Mountains Rail Trail</name>
+      <cmt>Track: Murray to Mountains Rail Trail
+             &#xA; Trail: Murray to Mountains Rail Trail
+      </cmt>
+      <desc>Track: Murray to Mountains Rail Trail
+          &#xA; Trail: Murray to Mountains Rail Trail
+          &#xA; Activities: Cycling, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 100 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-36.351956985890865" lon="146.32874798029661">
     <ele>148</ele>
     <time>2014-08-27T04:27:19Z</time>
@@ -284,9 +312,9 @@
   <wpt lat="-36.351956985890865" lon="146.32874798029661">
     <ele>148</ele>
     <time>2014-08-27T04:27:19Z</time>
-    <name>POI Apex Park Wangaratta</name>
-    <cmt>POI Apex Park Wangaratta</cmt>
-    <desc>POI Apex Park Wangaratta</desc>
+    <name>Apex Park Wangaratta</name>
+    <cmt>Apex Park Wangaratta</cmt>
+    <desc>Apex Park Wangaratta</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -305,9 +333,9 @@
   <wpt lat="-36.58701497130096" lon="146.75941100344062">
     <ele>228</ele>
     <time>2014-08-26T22:56:00Z</time>
-    <name>POI Happy Valley Hotel</name>
-    <cmt>POI Happy Valley Hotel</cmt>
-    <desc>POI Happy Valley Hotel</desc>
+    <name>Happy Valley Hotel</name>
+    <cmt>Happy Valley Hotel</cmt>
+    <desc>Happy Valley Hotel</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -326,9 +354,9 @@
   <wpt lat="-36.55438581481576" lon="146.71251760795712">
     <ele>218</ele>
     <time>2014-08-27T00:20:40Z</time>
-    <name>POI Historic Kiln</name>
-    <cmt>POI Historic Kiln</cmt>
-    <desc>POI Historic Kiln</desc>
+    <name>Historic Kiln</name>
+    <cmt>Historic Kiln</cmt>
+    <desc>Historic Kiln</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -347,9 +375,9 @@
   <wpt lat="-36.453565014526248" lon="146.55425000935793">
     <ele>186</ele>
     <time>2014-08-27T01:36:34Z</time>
-    <name>POI Historical Marker</name>
-    <cmt>POI Historical Marker</cmt>
-    <desc>POI Historical Marker</desc>
+    <name>Historical Marker</name>
+    <cmt>Historical Marker</cmt>
+    <desc>Historical Marker</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -368,9 +396,9 @@
   <wpt lat="-36.317150965332985" lon="146.36770698241889">
     <ele>157</ele>
     <time>2014-08-27T03:57:48Z</time>
-    <name>POI Old Bowser Station</name>
-    <cmt>POI Old Bowser Station</cmt>
-    <desc>POI Old Bowser Station</desc>
+    <name>Old Bowser Station</name>
+    <cmt>Old Bowser Station</cmt>
+    <desc>Old Bowser Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -389,9 +417,9 @@
   <wpt lat="-36.72997310757637" lon="146.9569690246135">
     <ele>320</ele>
     <time>2014-08-26T21:21:25Z</time>
-    <name>POI Old Bright Station</name>
-    <cmt>POI Old Bright Station</cmt>
-    <desc>POI Old Bright Station</desc>
+    <name>Old Bright Station</name>
+    <cmt>Old Bright Station</cmt>
+    <desc>Old Bright Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -410,9 +438,9 @@
   <wpt lat="-36.450904011726379" lon="146.55285098589957">
     <ele>185</ele>
     <time>2014-08-27T01:39:07Z</time>
-    <name>POI Old Brookfield Station</name>
-    <cmt>POI Old Brookfield Station</cmt>
-    <desc>POI Old Brookfield Station</desc>
+    <name>Old Brookfield Station</name>
+    <cmt>Old Brookfield Station</cmt>
+    <desc>Old Brookfield Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -431,9 +459,9 @@
   <wpt lat="-36.639241855591536" lon="146.86347836628556">
     <ele>258</ele>
     <time>2014-08-26T22:16:46Z</time>
-    <name>POI Old Eurobin Station</name>
-    <cmt>POI Old Eurobin Station</cmt>
-    <desc>POI Old Eurobin Station</desc>
+    <name>Old Eurobin Station</name>
+    <cmt>Old Eurobin Station</cmt>
+    <desc>Old Eurobin Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -452,9 +480,9 @@
   <wpt lat="-36.405129851773381" lon="146.54466086067259">
     <ele>249</ele>
     <time>2014-08-27T23:43:49Z</time>
-    <name>POI Old Everton Station</name>
-    <cmt>POI Old Everton Station</cmt>
-    <desc>POI Old Everton Station</desc>
+    <name>Old Everton Station</name>
+    <cmt>Old Everton Station</cmt>
+    <desc>Old Everton Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -473,9 +501,9 @@
   <wpt lat="-36.336473012343049" lon="146.41750697046518">
     <ele>164</ele>
     <time>2014-08-27T03:28:22Z</time>
-    <name>POI Old Londrigan Station</name>
-    <cmt>POI Old Londrigan Station</cmt>
-    <desc>POI Old Londrigan Station</desc>
+    <name>Old Londrigan Station</name>
+    <cmt>Old Londrigan Station</cmt>
+    <desc>Old Londrigan Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -494,9 +522,9 @@
   <wpt lat="-36.351956985890865" lon="146.32874798029661">
     <ele>148</ele>
     <time>2014-08-27T04:27:19Z</time>
-    <name>POI Old Wangaratta Station</name>
-    <cmt>POI Old Wangaratta Station</cmt>
-    <desc>POI Old Wangaratta Station</desc>
+    <name>Old Wangaratta Station</name>
+    <cmt>Old Wangaratta Station</cmt>
+    <desc>Old Wangaratta Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -515,9 +543,9 @@
   <wpt lat="-36.554333344101906" lon="146.71244124881923">
     <ele>218</ele>
     <time>2014-08-27T00:19:22Z</time>
-    <name>POI Playground 1</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 1</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -536,9 +564,9 @@
   <wpt lat="-36.351956985890865" lon="146.32874798029661">
     <ele>148</ele>
     <time>2014-08-27T04:27:19Z</time>
-    <name>POI Playground 2</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 2</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -557,9 +585,9 @@
   <wpt lat="-36.701183365657926" lon="146.9126420840621">
     <ele>283</ele>
     <time>2014-08-26T21:42:00Z</time>
-    <name>POI Rail Trail Cafe</name>
-    <cmt>POI Rail Trail Cafe</cmt>
-    <desc>POI Rail Trail Cafe</desc>
+    <name>Rail Trail Cafe</name>
+    <cmt>Rail Trail Cafe</cmt>
+    <desc>Rail Trail Cafe</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -578,9 +606,9 @@
   <wpt lat="-36.567119602113962" lon="146.7304143961519">
     <ele>219</ele>
     <time>2014-08-26T23:07:34Z</time>
-    <name>POI Reform Hill State Forest Entrance</name>
-    <cmt>POI Reform Hill State Forest Entrance</cmt>
-    <desc>POI Reform Hill State Forest Entrance</desc>
+    <name>Reform Hill State Forest Entrance</name>
+    <cmt>Reform Hill State Forest Entrance</cmt>
+    <desc>Reform Hill State Forest Entrance</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -599,9 +627,9 @@
   <wpt lat="-36.558574000373483" lon="146.72248503193259">
     <ele>220</ele>
     <time>2014-08-27T00:08:18Z</time>
-    <name>POI The Big Tree</name>
-    <cmt>POI The Big Tree</cmt>
-    <desc>POI The Big Tree</desc>
+    <name>The Big Tree</name>
+    <cmt>The Big Tree</cmt>
+    <desc>The Big Tree</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -620,9 +648,9 @@
   <wpt lat="-36.557473037391901" lon="146.7188529856503">
     <ele>218</ele>
     <time>2014-08-27T00:11:47Z</time>
-    <name>POI The Phoenix Tree</name>
-    <cmt>POI The Phoenix Tree</cmt>
-    <desc>POI The Phoenix Tree</desc>
+    <name>The Phoenix Tree</name>
+    <cmt>The Phoenix Tree</cmt>
+    <desc>The Phoenix Tree</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -936,7 +964,7 @@
     <name>Murray to Mountains Rail Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

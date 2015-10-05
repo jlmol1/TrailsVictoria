@@ -85,7 +85,6 @@ trails_app.
         $("#rangeDifficulty").ionRangeSlider({
             hide_min_max: true,
             values: [
-                "Ungraded",
                 "Very easy",
                 "Easy",
                 "Moderate",

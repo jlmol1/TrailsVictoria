@@ -8,11 +8,39 @@
     <bounds maxlat="-37.924179146066308" maxlon="144.43668588995934" minlat="-37.92559920810163" minlon="144.43467029370368" />
   </metadata>
 
+  <wpt lat="-37.924179146066308" lon="144.4348432123661">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Dam View</name>
+      <cmt>Track: Dam View
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Dam View
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 0.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Dam View (3)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>544</gpxtrkx:Distance>

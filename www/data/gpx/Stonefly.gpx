@@ -8,6 +8,34 @@
     <bounds maxlat="-37.123968573287129" maxlon="146.49885660968721" minlat="-37.145725730806589" minlon="146.48324531503022" />
   </metadata>
 
+  <wpt lat="-37.123968573287129" lon="146.48562485352159">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Stonefly</name>
+      <cmt>Track: Stonefly
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Stonefly
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 10 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.12698295712471" lon="146.49268903769553">
     <ele>1618.19397</ele>
     <time>2014-12-01T02:47:57Z</time>
@@ -55,7 +83,7 @@
     <name>Stonefly</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

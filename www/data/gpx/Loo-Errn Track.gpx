@@ -8,6 +8,34 @@
     <bounds maxlat="-39.027592912316322" maxlon="146.32413307204843" minlat="-39.029812691733241" minlon="146.31702915765345" />
   </metadata>
 
+    <wpt lat="-39.027592912316322" lon="146.32318072021008">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Loo-Errn Track</name>
+      <cmt>Track: Loo-Errn Track
+             &#xA; Trail: Wilsons Promontory Southern Circuit
+      </cmt>
+      <desc>Track: Loo-Errn Track
+          &#xA; Trail: Wilsons Promontory Southern Circuit
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 0.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-39.028607960790396" lon="146.32399200461805">
     <ele>6</ele>
     <time>2014-08-26T08:40:53Z</time>
@@ -33,7 +61,7 @@
     <name>Loo-Errn Track</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>1078</gpxtrkx:Distance>

@@ -8,6 +8,34 @@
     <bounds maxlat="-37.13849407620728" maxlon="146.46311039105058" minlat="-37.143727065995336" minlon="146.46084266714752" />
   </metadata>
 
+  <wpt lat="-37.13849407620728" lon="146.46084266714752">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Box Corner Link</name>
+      <cmt>Track: Box Corner Link Link
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Box Corner Link
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 0.7 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.138439929112792" lon="146.46074946038425">
     <ele>1087</ele>
     <time>2014-12-02T22:56:32Z</time>
@@ -33,7 +61,7 @@
     <name>Box Corner Link</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Green</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>695</gpxtrkx:Distance>

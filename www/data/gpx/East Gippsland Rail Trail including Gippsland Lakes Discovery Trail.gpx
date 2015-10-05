@@ -220,7 +220,7 @@
   <wpt lat="-37.827326506376266" lon="147.94243164360523">
     <ele>35.700000000000003</ele>
     <time>2014-10-23T00:25:25Z</time>
-    <name>POI Limestone Box Walk</name>
+    <name>Limestone Box Walk</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -239,7 +239,7 @@
   <wpt lat="-37.724363962188363" lon="148.44682800583541">
     <ele>4.2</ele>
     <time>2014-09-06T22:32:57Z</time>
-    <name>POI Long Wooden Bridge</name>
+    <name>Long Wooden Bridge</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -258,7 +258,7 @@
   <wpt lat="-37.734041372314095" lon="148.08933589607477">
     <ele>12.9</ele>
     <time>2014-09-07T01:37:08Z</time>
-    <name>POI Mingling Waters Cafe</name>
+    <name>Mingling Waters Cafe</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -277,7 +277,7 @@
   <wpt lat="-37.70587801001966" lon="147.82176098786294">
     <ele>17.899999999999999</ele>
     <time>2014-09-07T03:31:02Z</time>
-    <name>POI Old Bruthen Railway Station</name>
+    <name>Old Bruthen Railway Station</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -296,7 +296,7 @@
   <wpt lat="-37.781471963971853" lon="147.9301880300045">
     <ele>75.299999999999997</ele>
     <time>2014-10-23T00:48:39Z</time>
-    <name>POI Old Quarry</name>
+    <name>Old Quarry</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -315,7 +315,7 @@
   <wpt lat="-37.743345033377409" lon="148.04401402361691">
     <ele>37.600000000000001</ele>
     <time>2014-09-07T01:58:10Z</time>
-    <name>POI Stony Creek Trestle Bridge</name>
+    <name>Stony Creek Trestle Bridge</name>
     <cmt>The Stony Creek Trestle Bridge was built in 1916 when the existing rail line from Melbourne to Bairnsdale was extended to Orbost. This 97km Bairnsdale to Orbost extension through rugged terrain was reputed to have been the most difficult rail project undertaken in Victoria. In service for over 60 years the bridge was damaged by bushfire in 1980, with the last train crossing in 1988.
 
 At 247m long and 20m high, it is the largest standing bridge of its kind in the State, and is listed on the Register of Historic Sites. Built of red ironbark and grey box timber, it is a fine example of the early engineering skills that utilised the resources and materials found on site.</cmt>
@@ -440,11 +440,39 @@ At 247m long and 20m high, it is the largest standing bridge of its kind in the 
     </extensions>
   </wpt>
 
+    <wpt lat="-37.754324320703745" lon="147.92284447699785">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>East Gippsland Rail Trail including Gippsland Lakes Discovery Trail</name>
+      <cmt>Track: East Gippsland Rail Trail including Gippsland Lakes Discovery Trail
+             &#xA; Trail: East Gippsland Rail Trail
+      </cmt>
+      <desc>Track: East Gippsland Rail Trail including Gippsland Lakes Discovery Trail
+          &#xA; Trail: East Gippsland Rail Trail
+          &#xA; Activities: Cycling, Mountain biking, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 121 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>East Gippsland Rail Trail including Gippsland Lakes Discovery Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

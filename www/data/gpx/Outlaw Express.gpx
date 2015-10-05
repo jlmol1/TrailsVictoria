@@ -8,6 +8,34 @@
     <bounds maxlat="-37.137557063251734" maxlon="146.44285242073238" minlat="-37.142771948128939" minlon="146.43776544369757" />
   </metadata>
 
+  <wpt lat="-37.137557063251734" lon="146.44281076267362">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Outlaw Express</name>
+      <cmt>Track: Outlaw Express
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Outlaw Express
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 1 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.142724506556988" lon="146.44056273624301">
     <ele>1588</ele>
     <time>2014-12-01T02:54:18Z</time>
@@ -33,7 +61,7 @@
     <name>Outlaw Express</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Green</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>1083</gpxtrkx:Distance>

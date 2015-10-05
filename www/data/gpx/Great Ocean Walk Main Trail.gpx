@@ -8,6 +8,34 @@
     <bounds maxlat="-38.661854518577456" maxlon="143.67203914560378" minlat="-38.854381470009685" minlon="143.10491907410324" />
   </metadata>
 
+    <wpt lat="-38.731854518577456" lon="143.67203914560378">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Great Ocean Walk Main Trail</name>
+      <cmt>Track: Great Ocean Walk Main Trail
+             &#xA; Trail: Great Ocean Walk
+      </cmt>
+      <desc>Track: Great Ocean Walk Main Trail
+          &#xA; Trail: Great Ocean Walk
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Difficult
+          &#xA; Distance: 100 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.800036981701851" lon="143.48150800913572">
     <ele>7.9</ele>
     <time>2014-09-02T05:21:39Z</time>
@@ -1447,7 +1475,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.749444484710693" lon="143.2052777800709">
     <ele>15.699999999999999</ele>
     <time>2015-04-01T01:53:00Z</time>
-    <name>POI 'Fiji' Anchor</name>
+    <name>'Fiji' Anchor</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1466,7 +1494,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.802409982308745" lon="143.47846202552319">
     <ele>2.3</ele>
     <time>2014-09-02T05:19:39Z</time>
-    <name>POI Aire River Bridge</name>
+    <name>Aire River Bridge</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1485,7 +1513,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.854201091453433" lon="143.51485549472272">
     <ele>82.400000000000006</ele>
     <time>2014-09-02T03:34:29Z</time>
-    <name>POI Cape Otway Lighthouse</name>
+    <name>Cape Otway Lighthouse</name>
     <cmt>Cape Otway Lighthouse is Australia's most important lighthouse. The Light established in 1848 is perched on towering sea cliffs 90 metres above where Bass Straight and Southern Ocean collide.</cmt>
     <desc>Cape Otway Lighthouse is Australia's most important lighthouse. The Light established in 1848 is perched on towering sea cliffs 90 metres above where Bass Straight and Southern Ocean collide.</desc>
     <sym>Scenic Area</sym>
@@ -1506,7 +1534,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.849816014990211" lon="143.51121297106147">
     <ele>102.59999999999999</ele>
     <time>2014-09-02T03:59:15Z</time>
-    <name>POI Cape Otway Lighthouse Cemetery</name>
+    <name>Cape Otway Lighthouse Cemetery</name>
     <cmt>Containing the graves of lightkeeper's families and shipwrecked sailors.</cmt>
     <desc>Containing the graves of lightkeeper's families and shipwrecked sailors.</desc>
     <sym>Scenic Area</sym>
@@ -1527,7 +1555,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.851199364289641" lon="143.51418921723962">
     <ele>98.599999999999994</ele>
     <time>2015-04-01T02:18:31Z</time>
-    <name>POI Cape Otway Lookout</name>
+    <name>Cape Otway Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1546,7 +1574,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.778480989858508" lon="143.66481402888894">
     <ele>6</ele>
     <time>2014-09-01T23:15:20Z</time>
-    <name>POI Caravan Park</name>
+    <name>Caravan Park</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1565,7 +1593,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.78209300339222" lon="143.42776299454272">
     <ele>26</ele>
     <time>2014-09-02T06:20:58Z</time>
-    <name>POI Castle Cove Lookout</name>
+    <name>Castle Cove Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1584,7 +1612,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.810346974059939" lon="143.46726397052407">
     <ele>45.600000000000001</ele>
     <time>2014-09-02T04:54:47Z</time>
-    <name>POI Escarpment Lookout</name>
+    <name>Escarpment Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1603,7 +1631,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.668634975329041" lon="143.11208602041006">
     <ele>25</ele>
     <time>2014-09-04T02:07:53Z</time>
-    <name>POI Gibson Steps</name>
+    <name>Gibson Steps</name>
     <cmt>Take 86 steps down to the beach below to be dwarfed by the 70-metre high vertical cliffline. Walk along the beach to the enormous offshore rock stacks</cmt>
     <desc>Take 86 steps down to the beach below to be dwarfed by the 70-metre high vertical cliffline. Walk along the beach to the enormous offshore rock stacks</desc>
     <sym>Scenic Area</sym>
@@ -1624,7 +1652,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.668761877343059" lon="143.11889271251857">
     <ele>40.299999999999997</ele>
     <time>2015-04-01T01:51:00Z</time>
-    <name>POI Glenample Homestead</name>
+    <name>Glenample Homestead</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1643,7 +1671,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.754736902192235" lon="143.66931888274848">
     <ele>2</ele>
     <time>2014-09-01T22:39:03Z</time>
-    <name>POI Great Ocean Road Visitor Inforamtion Centre</name>
+    <name>Great Ocean Road Visitor Inforamtion Centre</name>
     <cmt>Great Ocean Road Visitor Inforamtion Centre and the Official Start of the Great Ocean Walk</cmt>
     <desc>Great Ocean Road Visitor Inforamtion Centre and the Official Start of the Great Ocean Walk</desc>
     <sym>Scenic Area</sym>
@@ -1664,7 +1692,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.777596028521657" lon="143.66433600895107">
     <ele>4.6</ele>
     <time>2014-09-01T23:11:51Z</time>
-    <name>POI Hayley Point Lookout</name>
+    <name>Hayley Point Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1683,7 +1711,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.76254397444427" lon="143.37852199561894">
     <ele>11.800000000000001</ele>
     <time>2014-09-03T00:21:56Z</time>
-    <name>POI Johanna Lookout</name>
+    <name>Johanna Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1702,7 +1730,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.78059197217226" lon="143.41484002768993">
     <ele>50.299999999999997</ele>
     <time>2014-09-02T23:36:09Z</time>
-    <name>POI Lookout</name>
+    <name>Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1721,7 +1749,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.758341958746314" lon="143.67066803388298">
     <ele>5.4</ele>
     <time>2014-09-01T22:48:25Z</time>
-    <name>POI Playground</name>
+    <name>Playground</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1740,7 +1768,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.84111107327044" lon="143.4936111420393">
     <ele>8.300000000000001</ele>
     <time>2015-04-01T01:53:00Z</time>
-    <name>POI Rainbow Falls</name>
+    <name>Rainbow Falls</name>
     <cmt>Rainbow Falls is a left turn on the beach walking on soft sand, one kilomtre each way.  The Falls are actually a colourful spring-fed algae-covered cliff.</cmt>
     <desc>Rainbow Falls is a left turn on the beach walking on soft sand, one kilomtre each way.  The Falls are actually a colourful spring-fed algae-covered cliff.</desc>
     <sym>Scenic Area</sym>
@@ -1761,7 +1789,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.798844488337636" lon="143.44941143877804">
     <ele>46.5</ele>
     <time>2015-04-01T01:45:53Z</time>
-    <name>POI Sentinel Rock Lookout</name>
+    <name>Sentinel Rock Lookout</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1780,7 +1808,7 @@ Advance bookings and payment are required year round see http://www.parkstay.vic
   <wpt lat="-38.662053002044559" lon="143.10499400831759">
     <ele>54.600000000000001</ele>
     <time>2014-09-04T02:19:41Z</time>
-    <name>POI Twelve Apostles</name>
+    <name>Twelve Apostles</name>
     <cmt>Created by constant erosion of the limestone cliffs of the mainland beginning 10-20 million years ago, the stormy Southern Ocean and blasting winds gradually eroded the softer limestone, forming caves in the cliffs.
 
 The caves eventually became arches and when they collapsed rock stacks up to 45 metres high were left isolated from the shore. View the 12 Apostles at sunrise and sunset as they change colour from dark and foreboding in shadow to brilliant sandy yellow under a full sun.</cmt>
@@ -2414,7 +2442,7 @@ The caves eventually became arches and when they collapsed rock stacks up to 45 
     <name>Great Ocean Walk (Main Trail)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+        <gpxx:DisplayColor>blue</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

@@ -8,6 +8,34 @@
     <bounds maxlat="-37.925313552841544" maxlon="144.44348235614598" minlat="-37.92990549467504" minlon="144.43437047302723" />
   </metadata>
 
+  <wpt lat="-37.925313552841544" lon="144.43626528605819">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Inner Loop</name>
+      <cmt>Track: Inner Loop
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Inner Loop
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult
+          &#xA; Distance: 2.1 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.925959965214133" lon="144.4427249673754">
     <ele>118.69573200000001</ele>
     <time>2014-08-26T05:42:58Z</time>
@@ -75,7 +103,7 @@
     <name>Inner Loop (2)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>dark violet</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

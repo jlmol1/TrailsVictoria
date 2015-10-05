@@ -8,6 +8,34 @@
     <bounds maxlat="-39.018504498526454" maxlon="146.4711288549006" minlat="-39.129836959764361" minlon="146.31702915765345" />
   </metadata>
 
+    <wpt lat="-39.018504498526454" lon="146.44555550068617">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Wilsons Promontory Southern Circuit</name>
+      <cmt>Track: Wilsons Promontory Southern Circuit
+             &#xA; Trail: Wilsons Promontory Southern Circuit
+      </cmt>
+      <desc>Track: Wilsons Promontory Southern Circuit
+          &#xA; Trail: Wilsons Promontory Southern Circuit
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Difficult
+          &#xA; Distance: 59 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-39.032585509121418" lon="146.35589746758342">
     <time>2014-09-01T01:45:01Z</time>
     <name>Car park 21</name>
@@ -156,9 +184,9 @@
   <wpt lat="-39.085271973162889" lon="146.38375899754465">
     <ele>133</ele>
     <time>2014-08-26T06:12:36Z</time>
-    <name>POI Halfway Hut</name>
-    <cmt>POI Halfway Hut</cmt>
-    <desc>POI Halfway Hut</desc>
+    <name>Halfway Hut</name>
+    <cmt>Halfway Hut</cmt>
+    <desc>Halfway Hut</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -176,9 +204,9 @@
 
   <wpt lat="-39.030814412981272" lon="146.3213368691504">
     <time>2014-09-01T01:52:30Z</time>
-    <name>POI Information 1</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information 1</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -197,9 +225,9 @@
   <wpt lat="-39.075377974659204" lon="146.3783629797399">
     <ele>67</ele>
     <time>2014-08-26T06:25:52Z</time>
-    <name>POI Junction Little Waterloo Bay Track</name>
-    <cmt>POI Junction Little Waterloo Bay Track</cmt>
-    <desc>POI Junction Little Waterloo Bay Track</desc>
+    <name>Junction Little Waterloo Bay Track</name>
+    <cmt>Junction Little Waterloo Bay Track</cmt>
+    <desc>Junction Little Waterloo Bay Track</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -218,9 +246,9 @@
   <wpt lat="-39.050740962848067" lon="146.46477101370692">
     <ele>196</ele>
     <time>2014-08-26T01:36:33Z</time>
-    <name>POI Kersops Peak Track Junction</name>
-    <cmt>POI Kersops Peak Track Junction</cmt>
-    <desc>POI Kersops Peak Track Junction</desc>
+    <name>Kersops Peak Track Junction</name>
+    <cmt>Kersops Peak Track Junction</cmt>
+    <desc>Kersops Peak Track Junction</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -239,9 +267,9 @@
   <wpt lat="-39.123229002580047" lon="146.41947998665273">
     <ele>97</ele>
     <time>2014-08-26T04:00:52Z</time>
-    <name>POI Lighthouse Track Junction</name>
-    <cmt>POI Lighthouse Track Junction</cmt>
-    <desc>POI Lighthouse Track Junction</desc>
+    <name>Lighthouse Track Junction</name>
+    <cmt>Lighthouse Track Junction</cmt>
+    <desc>Lighthouse Track Junction</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -260,9 +288,9 @@
   <wpt lat="-39.064990030601621" lon="146.43105296418071">
     <ele>31</ele>
     <time>2014-08-26T02:19:15Z</time>
-    <name>POI Little Waterloo Bay</name>
-    <cmt>POI Little Waterloo Bay</cmt>
-    <desc>POI Little Waterloo Bay</desc>
+    <name>Little Waterloo Bay</name>
+    <cmt>Little Waterloo Bay</cmt>
+    <desc>Little Waterloo Bay</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -281,9 +309,9 @@
   <wpt lat="-39.036410674452782" lon="146.46049615927041">
     <ele>68</ele>
     <time>2014-08-26T00:54:09Z</time>
-    <name>POI Refuge Cove</name>
-    <cmt>POI Refuge Cove</cmt>
-    <desc>POI Refuge Cove</desc>
+    <name>Refuge Cove</name>
+    <cmt>Refuge Cove</cmt>
+    <desc>Refuge Cove</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -302,9 +330,9 @@
   <wpt lat="-39.020520010963082" lon="146.43649374134839">
     <ele>3.44140625</ele>
     <time>2014-09-01T02:04:56Z</time>
-    <name>POI Sealers Cove</name>
-    <cmt>POI Sealers Cove</cmt>
-    <desc>POI Sealers Cove</desc>
+    <name>Sealers Cove</name>
+    <cmt>Sealers Cove</cmt>
+    <desc>Sealers Cove</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -323,9 +351,9 @@
   <wpt lat="-39.074467029422522" lon="146.37774095870554">
     <ele>63</ele>
     <time>2014-08-26T06:27:56Z</time>
-    <name>POI Telegraph Track Junction</name>
-    <cmt>POI Telegraph Track Junction</cmt>
-    <desc>POI Telegraph Track Junction</desc>
+    <name>Telegraph Track Junction</name>
+    <cmt>Telegraph Track Junction</cmt>
+    <desc>Telegraph Track Junction</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -344,9 +372,9 @@
   <wpt lat="-39.070839006453753" lon="146.42717700451612">
     <ele>30</ele>
     <time>2014-08-26T02:32:35Z</time>
-    <name>POI Waterloo Bay Track Junction</name>
-    <cmt>POI Waterloo Bay Track Junction</cmt>
-    <desc>POI Waterloo Bay Track Junction</desc>
+    <name>Waterloo Bay Track Junction</name>
+    <cmt>Waterloo Bay Track Junction</cmt>
+    <desc>Waterloo Bay Track Junction</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -365,9 +393,9 @@
   <wpt lat="-39.129823967814445" lon="146.42439102753997">
     <ele>120</ele>
     <time>2014-08-26T04:13:34Z</time>
-    <name>POI Wilsons Promontory Lighthouse</name>
-    <cmt>POI Lighthouse</cmt>
-    <desc>POI Lighthouse</desc>
+    <name>Wilsons Promontory Lighthouse</name>
+    <cmt>Lighthouse</cmt>
+    <desc>Lighthouse</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -763,7 +791,7 @@
     <name>Wilsons Promontory Southern Circuit</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>blue</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

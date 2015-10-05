@@ -8,6 +8,34 @@
     <bounds maxlat="-38.522330112755299" maxlon="143.71359234675765" minlat="-38.529921853914857" minlon="143.71105338446796" />
   </metadata>
 
+    <wpt lat="-38.522330112755299" lon="143.71105338446796">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Rollercoaster</name>
+      <cmt>Track: Rollercoaster
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Rollercoaster
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 2 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.523252792656422" lon="143.71329671703279">
     <ele>210.080536</ele>
     <time>2014-08-28T23:32:50Z</time>
@@ -69,7 +97,7 @@
     <name>Rollercoaster (4)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

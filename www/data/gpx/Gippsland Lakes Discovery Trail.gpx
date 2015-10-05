@@ -8,6 +8,34 @@
     <bounds maxlat="-37.754324320703745" maxlon="148.00797418691218" minlat="-37.878694664686918" minlon="147.92013159021735" />
   </metadata>
 
+    <wpt lat="-37.754324320703745" lon="147.92284447699785">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Gippsland Lakes Discovery Trail</name>
+      <cmt>Track: Gippsland Lakes Discovery Trail
+             &#xA; Trail: East Gippsland Rail Trail
+      </cmt>
+      <desc>Track: Gippsland Lakes Discovery Trail
+          &#xA; Trail: East Gippsland Rail Trail
+          &#xA; Activities: Cycling, Mountain biking, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 13.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.826447747647762" lon="147.94136990793049">
     <ele>42.799999999999997</ele>
     <time>2014-11-10T11:54:25Z</time>
@@ -49,7 +77,7 @@
   <wpt lat="-37.827326506376266" lon="147.94243164360523">
     <ele>35.700000000000003</ele>
     <time>2014-10-23T00:25:25Z</time>
-    <name>POI Limestone Box Walk</name>
+    <name>Limestone Box Walk</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -68,7 +96,7 @@
   <wpt lat="-37.781471963971853" lon="147.9301880300045">
     <ele>75.299999999999997</ele>
     <time>2014-10-23T00:48:39Z</time>
-    <name>POI Old Quarry</name>
+    <name>Old Quarry</name>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -109,7 +137,7 @@
     <name>Gippsland Lakes Discovery Trail</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Blue</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

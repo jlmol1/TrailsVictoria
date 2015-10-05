@@ -84,3 +84,19 @@ div.dg {
     height: 450px;
 }
 
+.ForestGreen {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+    font-size: large;
+}
+
+.Justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.logo {
+    width:350px;
+    height:300px;
+}
+

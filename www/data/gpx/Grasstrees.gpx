@@ -8,11 +8,39 @@
     <bounds maxlat="-38.487189402803779" maxlon="143.7323471903801" minlat="-38.491175249218941" minlon="143.7274740356952" />
   </metadata>
 
+  <wpt lat="-38.487189402803779" lon="143.7293768953532">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Grasstrees</name>
+      <cmt>Track: Grasstrees
+             &#xA; Trail: Forrest Mountain Bike Trails
+      </cmt>
+      <desc>Track: Grasstrees
+          &#xA; Trail: Forrest Mountain Bike Trails
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Very difficult
+          &#xA; Distance: 1.5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <trk>
     <name>Grasstrees (8)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>DarkYellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>red</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

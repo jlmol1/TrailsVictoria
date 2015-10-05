@@ -8,6 +8,34 @@
     <bounds maxlat="-37.953843204304576" maxlon="144.41078974865377" minlat="-37.96403962187469" minlon="144.40082291141152" />
   </metadata>
 
+  <wpt lat="-37.953961305320263" lon="144.40435571596026">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name> Lumberjack Track</name>
+      <cmt>Track: Lumberjack Track
+             &#xA; Trail: You Yangs Mountain Bike Park
+      </cmt>
+      <desc>Track: Lumberjack Track
+          &#xA; Trail: You Yangs Mountain Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: Easy
+          &#xA; Distance:5 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.963049551472068" lon="144.41078974865377">
     <ele>64.922950999999998</ele>
     <time>2014-08-26T02:43:10Z</time>
@@ -95,9 +123,9 @@
   <wpt lat="-37.963128760457039" lon="144.40926206298172">
     <ele>65</ele>
     <time>2014-08-26T02:44:50Z</time>
-    <name>POI Information 14</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information 14</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -116,9 +144,9 @@
   <wpt lat="-37.954241679981351" lon="144.40433962270617">
     <ele>65.193541999999994</ele>
     <time>2014-08-26T01:45:22Z</time>
-    <name>POI Pump Track</name>
-    <cmt>POI Pump Track</cmt>
-    <desc>POI Pump Track</desc>
+    <name>Pump Track</name>
+    <cmt>Pump Track</cmt>
+    <desc>Pump Track</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -201,7 +229,7 @@
     <name>Lumberjack Track (17)</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
       <gpxtrkx:TrackStatsExtension xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1">
         <gpxtrkx:Distance>3047</gpxtrkx:Distance>

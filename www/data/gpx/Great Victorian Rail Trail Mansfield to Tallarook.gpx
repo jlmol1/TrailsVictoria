@@ -8,6 +8,34 @@
     <bounds maxlat="-36.977757336571813" maxlon="146.08301564119756" minlat="-37.23622715100646" minlon="145.10248778387904" />
   </metadata>
 
+    <wpt lat="-36.959757336571813" lon="145.61223754435778">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Great Victorian Rail Trail Mansfield to Tallarook</name>
+      <cmt>Track: Great Victorian Rail Trail Mansfield to Tallarook
+             &#xA; Trail: Great Victorian Rail Trail
+      </cmt>
+      <desc>Track: Great Victorian Rail Trail Mansfield to Tallarook
+          &#xA; Trail: Great Victorian Rail Trail
+          &#xA; Activities: Cycling, Horse riding, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 121 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.227453980594873" lon="145.47155303880572">
     <ele>215</ele>
     <time>2014-09-15T02:51:48Z</time>
@@ -494,9 +522,9 @@
   <wpt lat="-37.020513005554676" lon="145.8907650411129">
     <ele>301</ele>
     <time>2014-09-15T02:14:44Z</time>
-    <name>POI Bonnie Doon</name>
-    <cmt>POI Bonnie Doon</cmt>
-    <desc>POI Bonnie Doon</desc>
+    <name>Bonnie Doon</name>
+    <cmt>Bonnie Doon</cmt>
+    <desc>Bonnie Doon</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -515,9 +543,9 @@
   <wpt lat="-37.027149964123964" lon="145.87329396978021">
     <ele>297</ele>
     <time>2014-09-15T02:21:11Z</time>
-    <name>POI Bonnie Doon Bridge</name>
-    <cmt>POI Bonnie Doon Bridge</cmt>
-    <desc>POI Bonnie Doon Bridge</desc>
+    <name>Bonnie Doon Bridge</name>
+    <cmt>Bonnie Doon Bridge</cmt>
+    <desc>Bonnie Doon Bridge</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -536,9 +564,9 @@
   <wpt lat="-37.150202002376318" lon="145.58334097266197">
     <ele>186.52986100000001</ele>
     <time>2014-09-15T01:53:55Z</time>
-    <name>POI Cathkin Rail Reserve</name>
-    <cmt>POI Cathkin Rail Reserve</cmt>
-    <desc>POI Cathkin Rail Reserve</desc>
+    <name>Cathkin Rail Reserve</name>
+    <cmt>Cathkin Rail Reserve</cmt>
+    <desc>Cathkin Rail Reserve</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -557,9 +585,9 @@
   <wpt lat="-37.206214992329478" lon="145.50119396299124">
     <ele>293.92611699999998</ele>
     <time>2014-09-15T02:40:51Z</time>
-    <name>POI Cheviot Tunnel</name>
-    <cmt>POI Cheviot Tunnel</cmt>
-    <desc>POI Cheviot Tunnel</desc>
+    <name>Cheviot Tunnel</name>
+    <cmt>Cheviot Tunnel</cmt>
+    <desc>Cheviot Tunnel</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -578,9 +606,9 @@
   <wpt lat="-37.227453980594873" lon="145.47155303880572">
     <ele>215.16575599999999</ele>
     <time>2014-09-15T02:51:48Z</time>
-    <name>POI Chevoit</name>
-    <cmt>POI Chevoit</cmt>
-    <desc>POI Chevoit</desc>
+    <name>Chevoit</name>
+    <cmt>Chevoit</cmt>
+    <desc>Chevoit</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -599,9 +627,9 @@
   <wpt lat="-37.118077017366886" lon="145.21473202854395">
     <ele>168.195053</ele>
     <time>2014-09-15T04:43:38Z</time>
-    <name>POI Granite</name>
-    <cmt>POI Granite</cmt>
-    <desc>POI Granite</desc>
+    <name>Granite</name>
+    <cmt>Granite</cmt>
+    <desc>Granite</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -620,9 +648,9 @@
   <wpt lat="-37.050695819780231" lon="146.08299376443028">
     <ele>326</ele>
     <time>2014-09-15T01:08:56Z</time>
-    <name>POI Information</name>
-    <cmt>POI Information</cmt>
-    <desc>POI Information</desc>
+    <name>Information</name>
+    <cmt>Information</cmt>
+    <desc>Information</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -641,9 +669,9 @@
   <wpt lat="-37.028184961527586" lon="145.94126399606466">
     <ele>317</ele>
     <time>2014-09-15T01:58:56Z</time>
-    <name>POI Maindample</name>
-    <cmt>POI Maindample</cmt>
-    <desc>POI Maindample</desc>
+    <name>Maindample</name>
+    <cmt>Maindample</cmt>
+    <desc>Maindample</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -662,9 +690,9 @@
   <wpt lat="-37.050695819780231" lon="146.08299376443028">
     <ele>326</ele>
     <time>2014-09-15T01:08:56Z</time>
-    <name>POI Mansfield</name>
-    <cmt>POI Mansfield</cmt>
-    <desc>POI Mansfield</desc>
+    <name>Mansfield</name>
+    <cmt>Mansfield</cmt>
+    <desc>Mansfield</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -683,9 +711,9 @@
   <wpt lat="-36.978075010702014" lon="145.71218197233975">
     <ele>349.53704800000003</ele>
     <time>2014-09-15T03:32:36Z</time>
-    <name>POI Merton</name>
-    <cmt>POI Merton</cmt>
-    <desc>POI Merton</desc>
+    <name>Merton</name>
+    <cmt>Merton</cmt>
+    <desc>Merton</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -704,9 +732,9 @@
   <wpt lat="-37.053411975502968" lon="145.66810799762607">
     <ele>285.72445699999997</ele>
     <time>2014-09-15T04:13:35Z</time>
-    <name>POI Old Kanumbra Railway Station</name>
-    <cmt>POI Old Kanumbra Railway Station</cmt>
-    <desc>POI Old Kanumbra Railway Station</desc>
+    <name>Old Kanumbra Railway Station</name>
+    <cmt>Old Kanumbra Railway Station</cmt>
+    <desc>Old Kanumbra Railway Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -725,9 +753,9 @@
   <wpt lat="-37.213816959410906" lon="145.42821398936212">
     <ele>186.84710699999999</ele>
     <time>2014-09-15T03:10:26Z</time>
-    <name>POI Old Yea Railway Station</name>
-    <cmt>POI Old Yea Railway Station</cmt>
-    <desc>POI Old Yea Railway Station</desc>
+    <name>Old Yea Railway Station</name>
+    <cmt>Old Yea Railway Station</cmt>
+    <desc>Old Yea Railway Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -746,9 +774,9 @@
   <wpt lat="-37.092974977567792" lon="145.10325799696147">
     <ele>185.07427999999999</ele>
     <time>2014-09-15T05:29:22Z</time>
-    <name>POI Playground</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -767,9 +795,9 @@
   <wpt lat="-37.092377012595534" lon="145.10252499952912">
     <ele>187.97612000000001</ele>
     <time>2014-09-15T05:26:41Z</time>
-    <name>POI Tallarook Railway Station</name>
-    <cmt>POI Tallarook Railway Station</cmt>
-    <desc>POI Tallarook Railway Station</desc>
+    <name>Tallarook Railway Station</name>
+    <cmt>Tallarook Railway Station</cmt>
+    <desc>Tallarook Railway Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -788,9 +816,9 @@
   <wpt lat="-37.09700608626008" lon="145.20808241330087">
     <ele>174.34397899999999</ele>
     <time>2014-09-15T04:51:59Z</time>
-    <name>POI Trawool</name>
-    <cmt>POI Trawool</cmt>
-    <desc>POI Trawool</desc>
+    <name>Trawool</name>
+    <cmt>Trawool</cmt>
+    <desc>Trawool</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -809,9 +837,9 @@
   <wpt lat="-37.018203036859632" lon="145.79979800619185">
     <ele>303</ele>
     <time>2014-09-15T02:58:50Z</time>
-    <name>POI Woodfield</name>
-    <cmt>POI Woodfield</cmt>
-    <desc>POI Woodfield</desc>
+    <name>Woodfield</name>
+    <cmt>Woodfield</cmt>
+    <desc>Woodfield</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -830,9 +858,9 @@
   <wpt lat="-37.101358976215124" lon="145.61851797625422">
     <ele>222.62097199999999</ele>
     <time>2014-09-15T04:33:04Z</time>
-    <name>POI Yarck</name>
-    <cmt>POI Yarck</cmt>
-    <desc>POI Yarck</desc>
+    <name>Yarck</name>
+    <cmt>Yarck</cmt>
+    <desc>Yarck</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1167,7 +1195,7 @@
     <name>Great Victorian Rail Trail Mansfield to Tallarook</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

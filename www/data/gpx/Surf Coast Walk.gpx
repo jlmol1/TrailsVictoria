@@ -8,6 +8,34 @@
     <bounds maxlat="-38.3057083748281" maxlon="144.37688243575394" minlat="-38.468316374346614" minlon="144.08451637253165" />
   </metadata>
 
+    <wpt lat="-38.305832426995039" lon="144.35679660506546">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Surf Coast Walk</name>
+      <cmt>Track: Surf Coast Walk
+             &#xA; Trail: Surf Coast Walk
+      </cmt>
+      <desc>Track: Surf Coast Walk
+          &#xA; Trail: Surf Coast Walk
+          &#xA; Activities: Walking
+          &#xA; Difficulty: Very easy, Easy, Moderate, Difficult
+          &#xA; Distance: 44 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-38.318743659183383" lon="144.33932279236615">
     <ele>13.21875</ele>
     <time>2014-08-31T13:20:01Z</time>
@@ -1250,9 +1278,9 @@
   <wpt lat="-38.41455141082406" lon="144.18496233411133">
     <ele>24</ele>
     <time>2014-08-27T04:59:42Z</time>
-    <name>POI Anglesea SLSC</name>
-    <cmt>POI Anglesea SLSC</cmt>
-    <desc>POI Anglesea SLSC</desc>
+    <name>Anglesea SLSC</name>
+    <cmt>Anglesea SLSC</cmt>
+    <desc>Anglesea SLSC</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1271,9 +1299,9 @@
   <wpt lat="-38.367147305980325" lon="144.28473489359021">
     <ele>29.074435999999999</ele>
     <time>2014-08-27T02:22:04Z</time>
-    <name>POI Bells Beach and Lookout</name>
-    <cmt>POI Bells Beach and Lookout</cmt>
-    <desc>POI Bells Beach and Lookout</desc>
+    <name>Bells Beach and Lookout</name>
+    <cmt>Bells Beach and Lookout</cmt>
+    <desc>Bells Beach and Lookout</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1292,9 +1320,9 @@
   <wpt lat="-38.342495039105415" lon="144.31672702543437">
     <ele>-1</ele>
     <time>2014-08-27T01:28:29Z</time>
-    <name>POI Boardwalk</name>
-    <cmt>POI Boardwalk</cmt>
-    <desc>POI Boardwalk</desc>
+    <name>Boardwalk</name>
+    <cmt>Boardwalk</cmt>
+    <desc>Boardwalk</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1313,9 +1341,9 @@
   <wpt lat="-38.468187879770994" lon="144.08506697975099">
     <ele>18.859375</ele>
     <time>2014-08-27T06:53:35Z</time>
-    <name>POI Bus Stop</name>
-    <cmt>POI Bus Stop</cmt>
-    <desc>POI Bus Stop</desc>
+    <name>Bus Stop</name>
+    <cmt>Bus Stop</cmt>
+    <desc>Bus Stop</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1334,9 +1362,9 @@
   <wpt lat="-38.335168166086078" lon="144.32542123831809">
     <ele>14</ele>
     <time>2014-08-27T01:03:37Z</time>
-    <name>POI Cosy Corner Beach</name>
-    <cmt>POI Cosy Corner Beach</cmt>
-    <desc>POI Cosy Corner Beach</desc>
+    <name>Cosy Corner Beach</name>
+    <cmt>Cosy Corner Beach</cmt>
+    <desc>Cosy Corner Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1355,9 +1383,9 @@
   <wpt lat="-38.468316374346614" lon="144.08451637253165">
     <ele>18.829336000000001</ele>
     <time>2014-08-27T06:54:57Z</time>
-    <name>POI Fairhaven SLSC</name>
-    <cmt>POI Fairhaven SLSC</cmt>
-    <desc>POI Fairhaven SLSC</desc>
+    <name>Fairhaven SLSC</name>
+    <cmt>Fairhaven SLSC</cmt>
+    <desc>Fairhaven SLSC</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1376,9 +1404,9 @@
   <wpt lat="-38.327547842636704" lon="144.32747430168092">
     <ele>8</ele>
     <time>2014-08-27T00:17:17Z</time>
-    <name>POI Fishermans Beach</name>
-    <cmt>POI Fisherman's Beach</cmt>
-    <desc>POI Fisherman's Beach</desc>
+    <name>Fishermans Beach</name>
+    <cmt>Fisherman's Beach</cmt>
+    <desc>Fisherman's Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1397,9 +1425,9 @@
   <wpt lat="-38.374051311984658" lon="144.26754704676569">
     <ele>77</ele>
     <time>2014-08-27T02:41:33Z</time>
-    <name>POI Fungus Hygiene Station 124</name>
-    <cmt>POI Fungus Hygiene Station</cmt>
-    <desc>POI Fungus Hygiene Station</desc>
+    <name>Fungus Hygiene Station 124</name>
+    <cmt>Fungus Hygiene Station</cmt>
+    <desc>Fungus Hygiene Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1418,9 +1446,9 @@
   <wpt lat="-38.374825632199645" lon="144.24510357901454">
     <ele>101</ele>
     <time>2014-08-27T02:51:27Z</time>
-    <name>POI Fungus Hygiene Station 126</name>
-    <cmt>POI Fungus Hygiene Station</cmt>
-    <desc>POI Fungus Hygiene Station</desc>
+    <name>Fungus Hygiene Station 126</name>
+    <cmt>Fungus Hygiene Station</cmt>
+    <desc>Fungus Hygiene Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1439,9 +1467,9 @@
   <wpt lat="-38.337430022656918" lon="144.32478899136186">
     <ele>13</ele>
     <time>2014-08-27T01:08:07Z</time>
-    <name>POI Historical Anchor</name>
-    <cmt>POI Historical Anchor</cmt>
-    <desc>POI Historical Anchor</desc>
+    <name>Historical Anchor</name>
+    <cmt>Historical Anchor</cmt>
+    <desc>Historical Anchor</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1460,9 +1488,9 @@
   <wpt lat="-38.410365991294384" lon="144.18720927089453">
     <ele>2</ele>
     <time>2014-08-27T04:49:11Z</time>
-    <name>POI Information</name>
-    <cmt>POI Information Centre</cmt>
-    <desc>POI Information Centre</desc>
+    <name>Information</name>
+    <cmt>Information Centre</cmt>
+    <desc>Information Centre</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1481,9 +1509,9 @@
   <wpt lat="-38.34543532691896" lon="144.31139596737921">
     <ele>4.31078</ele>
     <time>2014-08-27T01:56:27Z</time>
-    <name>POI Jan Juc SLSC</name>
-    <cmt>POI Jan Juc SLSC</cmt>
-    <desc>POI Jan Juc SLSC</desc>
+    <name>Jan Juc SLSC</name>
+    <cmt>Jan Juc SLSC</cmt>
+    <desc>Jan Juc SLSC</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1502,9 +1530,9 @@
   <wpt lat="-38.390941685065627" lon="144.25060235895216">
     <ele>32</ele>
     <time>2014-09-01T00:00:14Z</time>
-    <name>POI Koorie Cultural Walk Access</name>
-    <cmt>POI Koorie Cultural Walk Access</cmt>
-    <desc>POI Koorie Cultural Walk Access</desc>
+    <name>Koorie Cultural Walk Access</name>
+    <cmt>Koorie Cultural Walk Access</cmt>
+    <desc>Koorie Cultural Walk Access</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1523,9 +1551,9 @@
   <wpt lat="-38.384891962632537" lon="144.25048098899424">
     <ele>84.069534000000004</ele>
     <time>2014-08-27T03:15:22Z</time>
-    <name>POI Koorie Cultural Walk Turnaround</name>
-    <cmt>POI Koorie Cultural Walk Turnaround</cmt>
-    <desc>POI Koorie Cultural Walk Turnaround</desc>
+    <name>Koorie Cultural Walk Turnaround</name>
+    <cmt>Koorie Cultural Walk Turnaround</cmt>
+    <desc>Koorie Cultural Walk Turnaround</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1544,9 +1572,9 @@
   <wpt lat="-38.416642025113106" lon="144.18222698383033">
     <ele>53</ele>
     <time>2014-08-27T05:02:49Z</time>
-    <name>POI Lookout 159</name>
-    <cmt>POI Lookout</cmt>
-    <desc>POI Lookout</desc>
+    <name>Lookout 159</name>
+    <cmt>Lookout</cmt>
+    <desc>Lookout</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1565,9 +1593,9 @@
   <wpt lat="-38.421610314399004" lon="144.17893373407423">
     <ele>29</ele>
     <time>2014-08-27T05:07:57Z</time>
-    <name>POI Lookout 160</name>
-    <cmt>POI Lookout</cmt>
-    <desc>POI Lookout</desc>
+    <name>Lookout 160</name>
+    <cmt>Lookout</cmt>
+    <desc>Lookout</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1586,9 +1614,9 @@
   <wpt lat="-38.382060136646032" lon="144.25534659996629">
     <ele>41</ele>
     <time>2014-08-27T03:06:33Z</time>
-    <name>POI Lookout Addiscot Beach 129</name>
-    <cmt>POI Lookout Addiscot Beach</cmt>
-    <desc>POI Lookout Addiscot Beach</desc>
+    <name>Lookout Addiscot Beach 129</name>
+    <cmt>Lookout Addiscot Beach</cmt>
+    <desc>Lookout Addiscot Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1607,9 +1635,9 @@
   <wpt lat="-38.39121988043189" lon="144.2507715895772">
     <ele>24</ele>
     <time>2014-08-27T03:23:40Z</time>
-    <name>POI Lookout Addiscot Beach 132</name>
-    <cmt>POI Lookout Addiscot Beach</cmt>
-    <desc>POI Lookout Addiscot Beach</desc>
+    <name>Lookout Addiscot Beach 132</name>
+    <cmt>Lookout Addiscot Beach</cmt>
+    <desc>Lookout Addiscot Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1628,9 +1656,9 @@
   <wpt lat="-38.349720994010568" lon="144.30204997770488">
     <ele>27</ele>
     <time>2014-08-27T02:09:26Z</time>
-    <name>POI Lookout Bird Rock</name>
-    <cmt>POI Lookout Bird Rock</cmt>
-    <desc>POI Lookout Bird Rock</desc>
+    <name>Lookout Bird Rock</name>
+    <cmt>Lookout Bird Rock</cmt>
+    <desc>Lookout Bird Rock</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1649,9 +1677,9 @@
   <wpt lat="-38.346520029008389" lon="144.30817597545683">
     <ele>8</ele>
     <time>2014-08-27T02:01:10Z</time>
-    <name>POI Lookout Jan Juc Beach</name>
-    <cmt>POI Lookout Jan Juc Beach</cmt>
-    <desc>POI Lookout Jan Juc Beach</desc>
+    <name>Lookout Jan Juc Beach</name>
+    <cmt>Lookout Jan Juc Beach</cmt>
+    <desc>Lookout Jan Juc Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1670,9 +1698,9 @@
   <wpt lat="-38.347585033625364" lon="144.30402399972081">
     <ele>20</ele>
     <time>2014-08-27T02:04:33Z</time>
-    <name>POI Lookout Little Rock</name>
-    <cmt>POI Lookout Little Rock</cmt>
-    <desc>POI Lookout Little Rock</desc>
+    <name>Lookout Little Rock</name>
+    <cmt>Lookout Little Rock</cmt>
+    <desc>Lookout Little Rock</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1691,9 +1719,9 @@
   <wpt lat="-38.394881011918187" lon="144.2533771879971">
     <ele>24</ele>
     <time>2014-08-27T03:29:22Z</time>
-    <name>POI Lookout Point Addis</name>
-    <cmt>POI Lookout Point Addis</cmt>
-    <desc>POI Lookout Point Addis</desc>
+    <name>Lookout Point Addis</name>
+    <cmt>Lookout Point Addis</cmt>
+    <desc>Lookout Point Addis</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1712,9 +1740,9 @@
   <wpt lat="-38.33967100828886" lon="144.32725100778043">
     <ele>10.963563000000001</ele>
     <time>2014-08-27T01:17:04Z</time>
-    <name>POI Lookout Point Danger</name>
-    <cmt>POI Lookout Point Danger</cmt>
-    <desc>POI Lookout Point Danger</desc>
+    <name>Lookout Point Danger</name>
+    <cmt>Lookout Point Danger</cmt>
+    <desc>Lookout Point Danger</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1733,9 +1761,9 @@
   <wpt lat="-38.396624028682709" lon="144.23691898584366">
     <ele>30</ele>
     <time>2014-08-27T03:54:17Z</time>
-    <name>POI Lookout Red Rock</name>
-    <cmt>POI Lookout Eagle Rock</cmt>
-    <desc>POI Lookout Eagle Rock</desc>
+    <name>Lookout Red Rock</name>
+    <cmt>Lookout Eagle Rock</cmt>
+    <desc>Lookout Eagle Rock</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1754,9 +1782,9 @@
   <wpt lat="-38.345286967232823" lon="144.31870901025832">
     <ele>12</ele>
     <time>2014-08-27T01:31:00Z</time>
-    <name>POI Lookout Rocky Point</name>
-    <cmt>POI Lookout Rocky Point</cmt>
-    <desc>POI Lookout Rocky Point</desc>
+    <name>Lookout Rocky Point</name>
+    <cmt>Lookout Rocky Point</cmt>
+    <desc>Lookout Rocky Point</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1775,9 +1803,9 @@
   <wpt lat="-38.372376607730985" lon="144.2775603197515">
     <ele>20</ele>
     <time>2014-08-31T23:46:57Z</time>
-    <name>POI Lookout Southside</name>
-    <cmt>POI Lookout Southside</cmt>
-    <desc>POI Lookout Southside</desc>
+    <name>Lookout Southside</name>
+    <cmt>Lookout Southside</cmt>
+    <desc>Lookout Southside</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1796,9 +1824,9 @@
   <wpt lat="-38.468172037974" lon="144.10484600812197">
     <ele>39</ele>
     <time>2014-08-27T06:34:47Z</time>
-    <name>POI Lookout Split Point</name>
-    <cmt>POI Lookout Split Point</cmt>
-    <desc>POI Lookout Split Point</desc>
+    <name>Lookout Split Point</name>
+    <cmt>Lookout Split Point</cmt>
+    <desc>Lookout Split Point</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1817,9 +1845,9 @@
   <wpt lat="-38.32022599875927" lon="144.33725799433887">
     <ele>18</ele>
     <time>2014-08-27T00:03:58Z</time>
-    <name>POI Playground 062</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 062</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1838,9 +1866,9 @@
   <wpt lat="-38.330325102433562" lon="144.32740422897041">
     <ele>19</ele>
     <time>2014-08-27T00:52:17Z</time>
-    <name>POI Playground 072</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 072</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1859,9 +1887,9 @@
   <wpt lat="-38.33425504155457" lon="144.32532199658453">
     <ele>18.736028999999998</ele>
     <time>2014-08-27T01:02:40Z</time>
-    <name>POI Playground 081</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 081</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1880,9 +1908,9 @@
   <wpt lat="-38.337338995188475" lon="144.32466401718557">
     <ele>13.081630000000001</ele>
     <time>2014-08-27T01:07:32Z</time>
-    <name>POI Playground 085</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 085</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1901,9 +1929,9 @@
   <wpt lat="-38.406634200364351" lon="144.18707381933928">
     <ele>2.258028</ele>
     <time>2014-08-27T04:45:02Z</time>
-    <name>POI Playground 143</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 143</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1922,9 +1950,9 @@
   <wpt lat="-38.41214245185256" lon="144.18931002728641">
     <ele>5.08984375</ele>
     <time>2014-08-27T04:55:06Z</time>
-    <name>POI Playground 154</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 154</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1943,9 +1971,9 @@
   <wpt lat="-38.465979415923357" lon="144.09838892519474">
     <ele>10.879587000000001</ele>
     <time>2014-08-27T06:43:46Z</time>
-    <name>POI Playground 186</name>
-    <cmt>POI Playground</cmt>
-    <desc>POI Playground</desc>
+    <name>Playground 186</name>
+    <cmt>Playground</cmt>
+    <desc>Playground</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1964,9 +1992,9 @@
   <wpt lat="-38.428050549700856" lon="144.18022320605814">
     <ele>6.58203125</ele>
     <time>2014-08-27T05:18:58Z</time>
-    <name>POI Point Roadknight Beach</name>
-    <cmt>POI Point Roadknight Beach</cmt>
-    <desc>POI Point Roadknight Beach</desc>
+    <name>Point Roadknight Beach</name>
+    <cmt>Point Roadknight Beach</cmt>
+    <desc>Point Roadknight Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -1985,9 +2013,9 @@
   <wpt lat="-38.396294871345162" lon="144.24978462047875">
     <ele>3.685623</ele>
     <time>2014-08-27T03:33:42Z</time>
-    <name>POI Red Rock Beach aka Point Addis Beach</name>
-    <cmt>POI Red Rock Beach aka Point Addis Beach</cmt>
-    <desc>POI Red Rock Beach aka Point Addis Beach</desc>
+    <name>Red Rock Beach aka Point Addis Beach</name>
+    <cmt>Red Rock Beach aka Point Addis Beach</cmt>
+    <desc>Red Rock Beach aka Point Addis Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2006,9 +2034,9 @@
   <wpt lat="-38.327848752960563" lon="144.32678237557411">
     <ele>14</ele>
     <time>2014-08-31T13:25:50Z</time>
-    <name>POI Sailing Club</name>
-    <cmt>POI Sailing Club</cmt>
-    <desc>POI Sailing Club</desc>
+    <name>Sailing Club</name>
+    <cmt>Sailing Club</cmt>
+    <desc>Sailing Club</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2027,9 +2055,9 @@
   <wpt lat="-38.458799980580807" lon="144.11350602284074">
     <ele>21.255316000000001</ele>
     <time>2014-08-27T06:21:23Z</time>
-    <name>POI Sandy Gully Beach</name>
-    <cmt>POI Sandy Gully Beach</cmt>
-    <desc>POI Sandy Gully Beach</desc>
+    <name>Sandy Gully Beach</name>
+    <cmt>Sandy Gully Beach</cmt>
+    <desc>Sandy Gully Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2048,9 +2076,9 @@
   <wpt lat="-38.467852771282196" lon="144.10452615469694">
     <ele>40.485874000000003</ele>
     <time>2014-08-27T06:32:59Z</time>
-    <name>POI Split Point Lighthouse</name>
-    <cmt>POI Split Point Lighthouse</cmt>
-    <desc>POI Split Point Lighthouse</desc>
+    <name>Split Point Lighthouse</name>
+    <cmt>Split Point Lighthouse</cmt>
+    <desc>Split Point Lighthouse</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2069,9 +2097,9 @@
   <wpt lat="-38.323336020112038" lon="144.33161898516119">
     <ele>20</ele>
     <time>2014-08-27T00:11:42Z</time>
-    <name>POI Sundial</name>
-    <cmt>POI Sundial</cmt>
-    <desc>POI Sundial</desc>
+    <name>Sundial</name>
+    <cmt>Sundial</cmt>
+    <desc>Sundial</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2090,9 +2118,9 @@
   <wpt lat="-38.448206847533584" lon="144.12073625251651">
     <ele>32</ele>
     <time>2014-08-27T06:08:37Z</time>
-    <name>POI Sunnymead Beach</name>
-    <cmt>POI Sunnymead Beach</cmt>
-    <desc>POI Sunnymead Beach</desc>
+    <name>Sunnymead Beach</name>
+    <cmt>Sunnymead Beach</cmt>
+    <desc>Sunnymead Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2111,9 +2139,9 @@
   <wpt lat="-38.342039482668042" lon="144.31983185000718">
     <ele>8</ele>
     <time>2014-08-27T01:24:30Z</time>
-    <name>POI Torquay Back Beach</name>
-    <cmt>POI Torquay Back Beach</cmt>
-    <desc>POI Torquay Back Beach</desc>
+    <name>Torquay Back Beach</name>
+    <cmt>Torquay Back Beach</cmt>
+    <desc>Torquay Back Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -2132,9 +2160,9 @@
   <wpt lat="-38.435907997190952" lon="144.13161998614669">
     <ele>9.293369</ele>
     <time>2014-08-27T05:48:28Z</time>
-    <name>POI Urquharts Beach</name>
-    <cmt>POI Urquharts Beach</cmt>
-    <desc>POI Urquharts Beach</desc>
+    <name>Urquharts Beach</name>
+    <cmt>Urquharts Beach</cmt>
+    <desc>Urquharts Beach</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>

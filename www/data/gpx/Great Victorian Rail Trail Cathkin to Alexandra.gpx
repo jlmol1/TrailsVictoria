@@ -8,6 +8,34 @@
     <bounds maxlat="-37.142845708876848" maxlon="145.71409899741411" minlat="-37.184474430978298" minlon="145.58269900269806" />
   </metadata>
 
+    <wpt lat="-37.142845708876848" lon="145.62894933857024">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Great Victorian Rail Trail Cathkin to Alexandra</name>
+      <cmt>Track: Great Victorian Rail Trail Cathkin to Alexandra
+             &#xA; Trail: Great Victorian Rail Trail
+      </cmt>
+      <desc>Track: Great Victorian Rail Trail Cathkin to Alexandra
+          &#xA; Trail: Great Victorian Rail Trail
+          &#xA; Activities: Cycling, Horse riding, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 13 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.150132013484836" lon="145.58342998847365">
     <ele>186.865768</ele>
     <time>2014-09-15T01:53:03Z</time>
@@ -116,9 +144,9 @@
   <wpt lat="-37.184258010238409" lon="145.71409899741411">
     <ele>221</ele>
     <time>2014-11-07T03:52:16Z</time>
-    <name>POI Alexandra Timber and Tramway Museum</name>
-    <cmt>POI Alexandra Timber and Tramway Museum</cmt>
-    <desc>POI Alexandra Timber and Tramway Museum</desc>
+    <name>Alexandra Timber and Tramway Museum</name>
+    <cmt>Alexandra Timber and Tramway Museum</cmt>
+    <desc>Alexandra Timber and Tramway Museum</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -137,9 +165,9 @@
   <wpt lat="-37.150202002376318" lon="145.58334097266197">
     <ele>186.52986100000001</ele>
     <time>2014-09-15T01:53:55Z</time>
-    <name>POI Cathkin Rail Reserve</name>
-    <cmt>POI Cathkin Rail Reserve</cmt>
-    <desc>POI Cathkin Rail Reserve</desc>
+    <name>Cathkin Rail Reserve</name>
+    <cmt>Cathkin Rail Reserve</cmt>
+    <desc>Cathkin Rail Reserve</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -158,9 +186,9 @@
   <wpt lat="-37.154620019719005" lon="145.65707900561392">
     <ele>225</ele>
     <time>2014-11-07T03:17:32Z</time>
-    <name>POI Old Koriella Railway Station</name>
-    <cmt>POI Old Koriella Railway Station</cmt>
-    <desc>POI Old Koriella Railway Station</desc>
+    <name>Old Koriella Railway Station</name>
+    <cmt>Old Koriella Railway Station</cmt>
+    <desc>Old Koriella Railway Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -222,7 +250,7 @@
     <name>Great Victorian Rail Trail Cathkin to Alexandra</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Cyan</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

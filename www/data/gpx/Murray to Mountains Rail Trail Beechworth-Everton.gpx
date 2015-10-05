@@ -8,6 +8,34 @@
     <bounds maxlat="-36.373670306056738" maxlon="146.68993852101266" minlat="-36.420487510040402" minlon="146.54465658590198" />
   </metadata>
 
+    <wpt lat="-36.373670306056738" lon="146.66248122557998">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Murray to Mountains Rail Trail Beechworth-Everton</name>
+      <cmt>Track: Murray to Mountains Rail Trail Beechworth-Everton
+             &#xA; Trail: Murray to Mountains Rail Trail
+      </cmt>
+      <desc>Track: Murray to Mountains Rail Trail Beechworth-Everton
+          &#xA; Trail: Murray to Mountains Rail Trail
+          &#xA; Activities: Cycling, Walking
+          &#xA; Difficulty: Easy
+          &#xA; Distance: 16 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-36.363003328442574" lon="146.68923787772655">
     <ele>549</ele>
     <time>2014-08-27T22:55:38Z</time>
@@ -53,9 +81,9 @@
   <wpt lat="-36.409504534676671" lon="146.61498905159533">
     <ele>386</ele>
     <time>2014-08-27T23:27:54Z</time>
-    <name>POI Flame Trees MTB Trail 1</name>
-    <cmt>POI Flame Trees MTB Trail</cmt>
-    <desc>POI Flame Trees MTB Trail</desc>
+    <name>Flame Trees MTB Trail 1</name>
+    <cmt>Flame Trees MTB Trail</cmt>
+    <desc>Flame Trees MTB Trail</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -74,9 +102,9 @@
   <wpt lat="-36.40339957550168" lon="146.63487201556563">
     <ele>438</ele>
     <time>2014-08-27T23:21:38Z</time>
-    <name>POI Flame Trees MTB Trail 2</name>
-    <cmt>POI Flame Trees MTB Trail</cmt>
-    <desc>POI Flame Trees MTB Trail</desc>
+    <name>Flame Trees MTB Trail 2</name>
+    <cmt>Flame Trees MTB Trail</cmt>
+    <desc>Flame Trees MTB Trail</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -95,9 +123,9 @@
   <wpt lat="-36.403269320726395" lon="146.63966772146523">
     <ele>453</ele>
     <time>2014-08-27T23:19:30Z</time>
-    <name>POI Flame Trees MTB Trail 3</name>
-    <cmt>POI Flame Trees MTB Trail</cmt>
-    <desc>POI Flame Trees MTB Trail</desc>
+    <name>Flame Trees MTB Trail 3</name>
+    <cmt>Flame Trees MTB Trail</cmt>
+    <desc>Flame Trees MTB Trail</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -116,9 +144,9 @@
   <wpt lat="-36.397152962163091" lon="146.65237803943455">
     <ele>491</ele>
     <time>2014-08-27T23:12:56Z</time>
-    <name>POI Flame Trees MTB Trail 4</name>
-    <cmt>POI Flame Trees MTB Trail</cmt>
-    <desc>POI Flame Trees MTB Trail</desc>
+    <name>Flame Trees MTB Trail 4</name>
+    <cmt>Flame Trees MTB Trail</cmt>
+    <desc>Flame Trees MTB Trail</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -137,9 +165,9 @@
   <wpt lat="-36.395012140274048" lon="146.65775276720524">
     <ele>495</ele>
     <time>2014-08-27T23:10:32Z</time>
-    <name>POI Old Baarmutha Station</name>
-    <cmt>POI Old Baarmutha Station</cmt>
-    <desc>POI Old Baarmutha Station</desc>
+    <name>Old Baarmutha Station</name>
+    <cmt>Old Baarmutha Station</cmt>
+    <desc>Old Baarmutha Station</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -158,9 +186,9 @@
   <wpt lat="-36.377148879691958" lon="146.68128060176969">
     <ele>566</ele>
     <time>2014-08-27T23:01:23Z</time>
-    <name>POI Pennyweight Winery</name>
-    <cmt>POI Pennyweight Winery</cmt>
-    <desc>POI Pennyweight Winery</desc>
+    <name>Pennyweight Winery</name>
+    <cmt>Pennyweight Winery</cmt>
+    <desc>Pennyweight Winery</desc>
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
@@ -222,7 +250,7 @@
     <name>Murray to Mountains Rail Trail Beechworth-Everton</name>
     <extensions>
       <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+        <gpxx:DisplayColor>lime green</gpxx:DisplayColor>
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>

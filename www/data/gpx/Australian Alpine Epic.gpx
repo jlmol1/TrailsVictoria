@@ -8,6 +8,34 @@
     <bounds maxlat="-37.079732911661267" maxlon="146.49407280609012" minlat="-37.150998115539551" minlon="146.3690070156008" />
   </metadata>
 
+  <wpt lat="-37.079732911661267" lon="146.39986013062298">
+      <ele>1000</ele>
+      <time>2015-10-28T00:50:27Z</time>
+      <name>Australian Alpine Epic</name>
+      <cmt>Track: Australian Alpine Epic
+             &#xA; Trail: Mt Buller Bike Park
+      </cmt>
+      <desc>Track: Australian Alpine Epic
+          &#xA; Trail: Mt Buller Bike Park
+          &#xA; Activities: Mountain biking
+          &#xA; Difficulty: More difficult,Very difficult
+          &#xA; Distance: 40 Km
+      </desc>
+      <sym>Information</sym>
+      <type>user</type>
+      <extensions>
+        <gpxx:WaypointExtension>
+          <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+        <wptx1:WaypointExtension>
+          <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        </wptx1:WaypointExtension>
+        <ctx:CreationTimeExtension>
+          <ctx:CreationTime>2015-10-2T00:50:27Z</ctx:CreationTime>
+        </ctx:CreationTimeExtension>
+      </extensions>
+    </wpt>
+
   <wpt lat="-37.110878974199295" lon="146.4007450081408">
     <ele>678</ele>
     <time>2014-12-01T00:50:27Z</time>
@@ -179,7 +207,7 @@
   <wpt lat="-37.126983962953091" lon="146.49277897551656">
     <ele>1624</ele>
     <time>2014-12-01T02:51:50Z</time>
-    <name>POI Bluff Spur Memorial Hut</name>
+    <name>Bluff Spur Memorial Hut</name>
     <cmt>Bluff Spur Memorial Hut</cmt>
     <desc>Bluff Spur Memorial Hut</desc>
     <sym>Scenic Area</sym>
@@ -200,7 +228,7 @@
   <wpt lat="-37.150455974042416" lon="146.46248904056847">
     <ele>1513</ele>
     <time>2014-12-01T04:54:46Z</time>
-    <name>POI Easy Skills Park</name>
+    <name>Easy Skills Park</name>
     <cmt>Beginner Skills Park</cmt>
     <desc>Beginner Skills Park</desc>
     <sym>Scenic Area</sym>
@@ -221,7 +249,7 @@
   <wpt lat="-37.144516976550221" lon="146.49067201651633">
     <ele>1377</ele>
     <time>2014-12-01T01:47:42Z</time>
-    <name>POI Howqua Gap Hut</name>
+    <name>Howqua Gap Hut</name>
     <cmt>Howqua Gap Hut</cmt>
     <desc>Howqua Gap Hut</desc>
     <sym>Scenic Area</sym>
@@ -242,7 +270,7 @@
   <wpt lat="-37.112815026193857" lon="146.46329797804356">
     <ele>1234</ele>
     <time>2014-12-02T02:03:21Z</time>
-    <name>POI Information</name>
+    <name>Information</name>
     <cmt>Information</cmt>
     <desc>Information</desc>
     <sym>Scenic Area</sym>
@@ -263,7 +291,7 @@
   <wpt lat="-37.145866295322776" lon="146.44920355640352">
     <ele>1588</ele>
     <time>2014-12-01T02:54:07Z</time>
-    <name>POI Information 20</name>
+    <name>Information 20</name>
     <cmt>Information</cmt>
     <desc>Information</desc>
     <sym>Scenic Area</sym>
@@ -284,7 +312,7 @@
   <wpt lat="-37.150482963770628" lon="146.46249800920486">
     <ele>1513</ele>
     <time>2014-12-01T04:54:12Z</time>
-    <name>POI Intermediate Skills Park</name>
+    <name>Intermediate Skills Park</name>
     <cmt>Intermediate Skills Park</cmt>
     <desc>Intermediate Skills Park</desc>
     <sym>Scenic Area</sym>
@@ -305,7 +333,7 @@
   <wpt lat="-37.113013006746769" lon="146.46324299275875">
     <ele>1233</ele>
     <time>2014-12-02T02:01:31Z</time>
-    <name>POI Mt Stirling Resort Management and Ski Patrol</name>
+    <name>Mt Stirling Resort Management and Ski Patrol</name>
     <cmt>Mt Stirling Resort Management and Ski Patrol</cmt>
     <desc>Mt Stirling Resort Management and Ski Patrol</desc>
     <sym>Scenic Area</sym>
@@ -326,7 +354,7 @@
   <wpt lat="-37.109569050371647" lon="146.40234880149364">
     <ele>680</ele>
     <time>2014-12-01T00:30:27Z</time>
-    <name>POI Playground</name>
+    <name>Playground</name>
     <cmt>Playground</cmt>
     <desc>Playground</desc>
     <sym>Scenic Area</sym>
