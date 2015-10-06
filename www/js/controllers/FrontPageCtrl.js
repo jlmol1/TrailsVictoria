@@ -11,11 +11,11 @@ trails_app.
         $scope.search = {
             'time' : {
                 min : 2,
-                max : 8
+                max : 5
             },
             'distance' : {
-                min : 50,
-                max : 300
+                min : 10,
+                max : 50
             },
             'difficulty' : {
                 min : "Moderate",
@@ -31,13 +31,12 @@ trails_app.
         $("#rangeTime").ionRangeSlider({
             hide_min_max: true,
             min: 0,
-            max: 48,
+            max: 10,
             from: 2,
-            to: 8,
+            to: 5,
             type: 'double',
             step: 1,
             postfix: "hrs",
-            grid: true,
             onStart: function (data) {
                 $scope.search.time.min = data.from;
                 $scope.search.time.max = data.to;
@@ -58,13 +57,12 @@ trails_app.
         $("#rangeDistance").ionRangeSlider({
             hide_min_max: true,
             min: 0,
-            max: 500,
-            from: 50,
-            to: 300,
+            max: 250,
+            from: 10,
+            to: 50,
             type: 'double',
             step: 1,
             postfix: "km",
-            grid: true,
             onStart: function (data) {
                 $scope.search.distance.min = data.from;
                 $scope.search.distance.max = data.to;
@@ -96,7 +94,6 @@ trails_app.
             to: 5,
             type: 'double',
             step: 1,
-            grid: true,
             onStart: function (data) {
                 $scope.search.difficulty = getDifficultiesString(data.from_value, data.to_value);
                 console.log("FrontPageCtrl: slider diff initialised, value is", $scope.search.difficulty);
