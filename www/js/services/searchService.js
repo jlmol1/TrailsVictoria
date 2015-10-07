@@ -24,6 +24,11 @@ trails_app
         var search_option = "mul";
 
         // functions
+        function getStraightLineDistance(loc1, loc2) {
+            // 1 degree latitude is 111km
+            return Math.sqrt(Math.pow((loc1.H - loc2.H), 2) + Math.pow((loc1.L - loc2.L), 2)) * 111;
+        }
+
         var getTrailsNearCurrentLocation = function (geoLocationService, googleMapsService, cacheDataService, searchRadius, maxNumTrailsDisplay){
             var q = $q.defer();
             var resTrails = [];
@@ -44,20 +49,44 @@ trails_app
             return q.promise;
         };
 
-        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius) {
+        /**
+         * Algorithm
+         *  1. reduce number of trail before search distance using google service
+         *   1.1 get all trails with its name and lat and lng
+         *   1.2 use a trial's location and destination location to calculate
+         *      straight line distance
+         *   1.3 only choose some trails that has a little distance
+         *  2. use results of above to continue calculate by using google service
+         */
+        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius, overlappingMarkerSpiderfyService) {
 
-            // the reason why trails LatLng with name divided to several parts
-            // is because arguments exceed google map api limitation
+            // get trails with name and lat and lng
             var trailsLatLngWithName = cacheDataService.getAllTrailsLatLngWithTrailName();
 
+            // get des location, lat lng
+            loadingService.startLoading();
+            googleMapsService.getGeocodeByAddress(des_address).then(function(result) {
+                var matchedTrails = [];
+                for (var i = 0; i < trailsLatLngWithName.length; i++) {
+                    // if straight line distance is not less than search radius,
+                    //  then its actual distance must be greater than search radius
+                    if (getStraightLineDistance(trailsLatLngWithName[i].latLng, result) <= searchRadius){
+                        matchedTrails.push(trailsLatLngWithName[i]);
+                    }
+                }
+
+                // some actions must be done if it is still exceed limit
+                //  this is not a good way
+                if (matchedTrails.length > 25){
+                    matchedTrails.length = 25;
+                }
+
+                cacheDataService.setMap(google_map);
+                googleMapsService.clearBounds();
+                cacheDataService.clearRes();
 
 
-            cacheDataService.setMap(google_map);
-            googleMapsService.clearBounds();
-            cacheDataService.clearRes();
-                loadingService.startLoading();
-
-                googleMapsService.getDistancesFromDestination(des_address, trailsLatLngWithName, searchRadius, cacheDataService).then(function(result) {
+                googleMapsService.getDistancesFromDestination(des_address, matchedTrails, searchRadius, cacheDataService).then(function(result) {
                     if (result.length > 0){
                         for (var i = 0; i < result.length; i++){
                             var resTrails = cacheDataService.getTrailsByName(result[i].trailName);
@@ -67,6 +96,11 @@ trails_app
                         }
                         googleMapsService.fitBounds(google_map);
                         $('#address').val(googleMapsService.getDestinationAdress());
+
+                        // add listener for spiderfying
+                        overlappingMarkerSpiderfyService.initial(google_map, cacheDataService.getAllMarkers());
+
+
                         loadingService.finishLoading();
                     } else{
                         loadingService.finishLoading();
@@ -76,7 +110,11 @@ trails_app
                 });
 
 
-            googleMapsService.clearBounds();
+                googleMapsService.clearBounds();
+            });
+
+
+
 
         };
 
@@ -134,16 +172,16 @@ trails_app
             setAct : function(a) {
                 act = a;
             },
-            doSearch : function (CacheData, GeolocationService, loading) {
+            doSearch : function (CacheData, GeolocationService, loading, overlappingMarkerSpiderfyService) {
                 switch (search_option) {
                     case "mul":
                         return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
                             isPrecise, MIN_LENGTH,
-                            GeolocationService, loading);
+                            GeolocationService, loading, overlappingMarkerSpiderfyService);
 
 
                     case "name" :
-                        if (CacheData.getAndDisplayTrailsByName(name, loading)) {
+                        if (CacheData.getAndDisplayTrailsByName(name, loading, overlappingMarkerSpiderfyService)) {
                             return name;
                         } else {
                             return "Nothing found";
@@ -159,7 +197,7 @@ trails_app
                     default :
                         return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
                             isPrecise, MIN_LENGTH,
-                            GeolocationService, loading);
+                            GeolocationService, loading, overlappingMarkerSpiderfyService);
 
                 }
             }

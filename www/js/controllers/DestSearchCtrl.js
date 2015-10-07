@@ -11,7 +11,8 @@ trails_app.controller('DestSearchCtrl', function(
     $ionicActionSheet,
     weatherService,
     geolocationService,
-    preferencesDataService) {
+    preferencesDataService,
+    overlappingMarkerSpiderfyService) {
 
     // collect user input for search, des address
     $scope.keyword = {};
@@ -33,7 +34,8 @@ trails_app.controller('DestSearchCtrl', function(
             googleMapsService,
             cacheDataService,
             loadingService,
-            preferencesDataService.getSeachRadius());
+            preferencesDataService.getSeachRadius(),
+            overlappingMarkerSpiderfyService);
 
         // display markers
         google.maps.event.addListener(google_map, 'zoom_changed', function() {
@@ -44,6 +46,7 @@ trails_app.controller('DestSearchCtrl', function(
                 cacheDataService.clear_markers();
             }
         });
+
     };
 
     // used to show direction from specific location to a trail

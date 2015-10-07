@@ -38,6 +38,20 @@ trails_app
         //var symbols = [];
 
         // functions
+        var getAllMarkers = function() {
+          // title marker normal marker
+            var markers = [];
+
+            for (var i = 0; i < trails.length; i++) {
+                markers.push(trails[i].title_marker);
+                for (var j = 0; j < trails[i].markers.length; j++){
+                    markers.push(trails[i].markers[j]);
+                }
+            }
+
+            return markers;
+        };
+
         var getTrailAt = function(index){
           if (index >= trails.length){ // over bound
               return trails[0];
@@ -194,7 +208,10 @@ trails_app
                             var iw1 = new google.maps.InfoWindow({
                                 content: marker.getTitle()
                             });
-                            google.maps.event.addListener(marker, "mousedown", function (e) { iw1.open(map, this); });
+
+
+
+                            //google.maps.event.addListener(marker, "mousedown", function (e) { iw1.open(map, this); });
                             //google.maps.event.addListener(marker, "mouseout", function (e) {
                             //  iw1.close(map, this);
                             //});
@@ -301,8 +318,11 @@ trails_app
                         trail.title_marker = new google.maps.Marker({
                             position: new google.maps.LatLng(max_lat, trail.mean_lon),
                             animation: google.maps.Animation.DROP,
-                            title: trail.IndividualTrail,
-                            icon: getActivitiesIconUrl(trail.activity)
+                            title: trail.IndividualTrail//,
+                            // since one trail could have more than one activity
+                            //  it becomes hard to choose which one should be used to shown as title
+                            //  plus advise from IM, here only use google marker defaul icon for it
+                            //icon: getActivitiesIconUrl(trail.activity)
                         });
                         var iw1 = new google.maps.InfoWindow({
                             content: trail.IndividualTrail +  '<br/>' +
@@ -310,7 +330,7 @@ trails_app
                             'Activity: ' + trail.activity + '<br/>' +
                             'Difficulty: ' + trail.difficulty + '<br/>'
                         });
-                        google.maps.event.addListener(trail.title_marker, "mousedown", function (e) { iw1.open(map, this); });
+                        //google.maps.event.addListener(trail.title_marker, "mousedown", function (e) { iw1.open(map, this); });
 
                     }
                 });
@@ -385,7 +405,7 @@ trails_app
                 });
 
             },
-            getAndDisplayTrailsByConditions: function (mulSearchConditions, IsPrecise, MIN_LENGTH, GeolocationService, loading){
+            getAndDisplayTrailsByConditions: function (mulSearchConditions, IsPrecise, MIN_LENGTH, GeolocationService, loading, overlappingMarkerSpiderfyService){
                 /**
                  *   MIN_LENGTH has problem
                  * IsPrecise is a trigger, when it is on(true), all results must be precise
@@ -664,6 +684,11 @@ trails_app
                             display_trails(res);
                             fit_bounds();
                             clear_bounds();
+
+                            // add listener for spiderfying
+                            overlappingMarkerSpiderfyService.initial(map, getAllMarkers());
+
+
                             loading.finishLoading();
                             return res.length + " Search Results";
 
@@ -677,7 +702,7 @@ trails_app
             getRes : function() {
                 return res;
             },
-            getAndDisplayTrailsByName : function (name, loading) {
+            getAndDisplayTrailsByName : function (name, loading, overlappingMarkerSpiderfyService) {
 
 
                 res = getTrailsByName(name);
@@ -688,6 +713,11 @@ trails_app
                     display_trails(res);
                     fit_bounds();
                     clear_bounds();
+
+                    // add listener for spiderfying
+                    overlappingMarkerSpiderfyService.initial(map, getAllMarkers());
+
+
                     loading.finishLoading();
                     return true;
                 } else {
@@ -754,7 +784,8 @@ trails_app
             clearRes : clearRes,
             getTrailNamesByNameWithActivity : getTrailNamesByNameWithActivity,
             getActivityIconUrlByTrailName : getActivityIconUrlByTrailName,
-            getTrailAt : getTrailAt
+            getTrailAt : getTrailAt,
+            getAllMarkers : getAllMarkers
 
         };
     });

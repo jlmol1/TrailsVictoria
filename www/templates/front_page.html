@@ -4,64 +4,70 @@
 
   <ion-content class="padding">
 
-    <ul class="list" >
-      <h4>Activities</h4>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="search.walking">
 
-        </label>
-        Walking
-        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Walking.png"/>
-      </li>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="search.cycling">
-          <i class="icon icon-right"></i>
-        </label>
-        Cycling
-        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Cycling.png"/>
+      <ul class="list" >
+        <h4>Activities</h4>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="search.walking">
 
-      </li>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="search.mountain_biking">
-          <i class="icon icon-right"></i>
-        </label>
-        Mountain biking
-        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Mountain biking.png"/>
+          </label>
+          Walking
+          <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Walking.png"/>
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="search.cycling">
+            <i class="icon icon-right"></i>
+          </label>
+          Cycling
+          <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Cycling.png"/>
 
-      </li>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="search.horse_riding">
-          <i class="icon icon-right"></i>
-        </label>
-        Horse riding
-        <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Horse riding.png"/>
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="search.mountain_biking">
+            <i class="icon icon-right"></i>
+          </label>
+          Mountain biking
+          <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Mountain biking.png"/>
 
-      </li>
-    </ul>
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="search.horse_riding">
+            <i class="icon icon-right"></i>
+          </label>
+          Horse riding
+          <img height="25px" width="auto" align="right" class="icon icon-right placeholder-icon" ng-src="img/activities_icons/Horse riding.png"/>
 
-    <div class="list">
+        </li>
+      </ul>
 
-      <div class="item">Time to Trail:
-        <input type="text" id="rangeTime" value="" name="range" />
+      <div class="list padding-bottom">
+
+        <div class="item">Driving Time to Trail:
+          <input type="text" id="rangeTime" value="" name="range" />
+        </div>
+
+        <div class="item">Length of Trail:
+          <input type="text" id="rangeDistance" value="" name="range" />
+        </div>
+
+        <div class="item">Trail Difficulty:
+          <input type="text" id="rangeDifficulty" value="" name="range" />
+        </div>
+
+
       </div>
 
-      <div class="item">Trail Distance:
-        <input type="text" id="rangeDistance" value="" name="range" />
-      </div>
-
-      <div class="item">Trail Difficulty:
-        <input type="text" id="rangeDifficulty" value="" name="range" />
-      </div>
-
-
-    </div>
     <a class="button button-block button-positive" ng-click="searchByMul()" >
-      Search
-    </a>
+        Search
+      </a>
+
+
+
+
 
 
   </ion-content>

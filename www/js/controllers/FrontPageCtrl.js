@@ -6,7 +6,6 @@
 trails_app.
 
     controller('FrontPageCtrl', function($scope, searchService, $state) {
-
         // initial search info
         $scope.search = {
             'time' : {

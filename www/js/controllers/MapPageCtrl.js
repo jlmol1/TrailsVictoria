@@ -20,7 +20,8 @@ trails_app
         googleMapsService,
         $ionicActionSheet,
         weatherService,
-        preferencesDataService) {
+        preferencesDataService,
+        overlappingMarkerSpiderfyService) {
 
 
         // testing purpose
@@ -51,7 +52,7 @@ trails_app
 
         // display trails first and then markers when zoom in at a certain level
         searchService.setIsPrecise(preferencesDataService.getIsPrecise());
-        $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService);
+        $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService, overlappingMarkerSpiderfyService);
 
         // display markers
         google.maps.event.addListener(google_map, 'zoom_changed', function() {
