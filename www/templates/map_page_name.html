@@ -1,19 +1,20 @@
-<ion-view view-title="{{title}}">
+<ion-view view-title="{{title}}" can-swipe-back=false>
 
 
     <ion-content class="bg">
       <div id="name_map" class="google-map" data-tap-disable="true"></div>
 
       <div id="buttons-panel-name" class="buttons-panel">
-        <button  class="button icon ion-map" ng-click="googleDirection()"></button>
 
-        <button  class="button icon ion-pinpoint" ng-click="watchOn()"></button>
+        <button id="map_page_name_button_watchOn"  class="button icon ion-pinpoint" ng-click="watchOn()"></button>
 
-        <button  class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
+        <button id="map_page_name_button_weather" class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
       </div>
 
 
       <!--Testing info, shown means this template is working.-->
+
+
 
     </ion-content>
 </ion-view>

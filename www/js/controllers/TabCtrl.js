@@ -6,13 +6,24 @@
 
 trails_app
 
-    .controller('TabCtrl', function($scope, cacheDataService, $ionicLoading, weatherService, loadingService, geolocationService, $state, $ionicActionSheet, searchService, preferencesDataService) {
+    .controller('TabCtrl', function(
+        $scope,
+        cacheDataService,
+        $ionicLoading,
+        weatherService,
+        loadingService,
+        geolocationService,
+        $state,
+        $ionicActionSheet,
+        searchService,
+        preferencesDataService,
+        $compile) {
 
         // application started, pre-load data from gpx and xml files
         cacheDataService.preload_dis_act_diff();
         var trails = cacheDataService.allTrails();
         for (var i = 0; i < trails.length; i++){
-            cacheDataService.preload_title_marker(trails[i]);
+            cacheDataService.preload_title_marker(trails[i], $compile, $scope);
         }
 
         // initial prefer data
@@ -34,7 +45,9 @@ trails_app
         };
 
 
-
+        $scope.test = function() {
+            alert("alert");
+        }
 
 
     });

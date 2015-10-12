@@ -1,10 +1,17 @@
-<ion-view view-title="Login With Facebook">
+<ion-view view-title="Profile" can-swipe-back=false>
+    <ion-content class="has-header">
 
-    <ion-content class="padding">
-        <div class="card">
-            <p>
-                On My God!! You FIND me! Please contact admins.
-            </p>
+        <div fb-post class="fb-page" data-href="https://www.facebook.com/trailsVictoria" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true">
+        </div>
+
+        <div class="list card">
+            <div class="item">
+                <h2>{{user.name}}</h2>
+                <p>{{user.city}}</p>
+            </div>
+            <div class="item item-body">
+                <img src="http://graph.facebook.com/{{user.id}}/picture?width=270&height=270"/>
+            </div>
         </div>
     </ion-content>
 </ion-view>

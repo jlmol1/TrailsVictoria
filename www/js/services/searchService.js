@@ -26,7 +26,7 @@ trails_app
         // functions
         function getStraightLineDistance(loc1, loc2) {
             // 1 degree latitude is 111km
-            return Math.sqrt(Math.pow((loc1.H - loc2.H), 2) + Math.pow((loc1.L - loc2.L), 2)) * 111;
+            return Math.sqrt(Math.pow((loc1.lat() - loc2.lat()), 2) + Math.pow((loc1.lng() - loc2.lng()), 2)) * 111;
         }
 
         var getTrailsNearCurrentLocation = function (geoLocationService, googleMapsService, cacheDataService, searchRadius, maxNumTrailsDisplay){
@@ -58,7 +58,9 @@ trails_app
          *   1.3 only choose some trails that has a little distance
          *  2. use results of above to continue calculate by using google service
          */
-        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius, overlappingMarkerSpiderfyService) {
+        var searchOnDestination = function (google_map, des_address, googleMapsService, cacheDataService, loadingService, searchRadius, overlappingMarkerSpiderfyService, $scope, $compile) {
+
+            console.log("SearchService: search on destination start on des ", des_address);
 
             // get trails with name and lat and lng
             var trailsLatLngWithName = cacheDataService.getAllTrailsLatLngWithTrailName();
@@ -98,7 +100,8 @@ trails_app
                         $('#address').val(googleMapsService.getDestinationAdress());
 
                         // add listener for spiderfying
-                        overlappingMarkerSpiderfyService.initial(google_map, cacheDataService.getAllMarkers());
+                        overlappingMarkerSpiderfyService.clear();
+                        overlappingMarkerSpiderfyService.initial(google_map, cacheDataService.getAllMarkers(), new google.maps.InfoWindow(), $scope, $compile);
 
 
                         loadingService.finishLoading();
@@ -172,16 +175,16 @@ trails_app
             setAct : function(a) {
                 act = a;
             },
-            doSearch : function (CacheData, GeolocationService, loading, overlappingMarkerSpiderfyService) {
+            doSearch : function (CacheData, GeolocationService, loading, overlappingMarkerSpiderfyService, MarkerClustererService, $scope, $compile) {
                 switch (search_option) {
                     case "mul":
                         return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
                             isPrecise, MIN_LENGTH,
-                            GeolocationService, loading, overlappingMarkerSpiderfyService);
+                            GeolocationService, loading, overlappingMarkerSpiderfyService, MarkerClustererService, $scope, $compile);
 
 
                     case "name" :
-                        if (CacheData.getAndDisplayTrailsByName(name, loading, overlappingMarkerSpiderfyService)) {
+                        if (CacheData.getAndDisplayTrailsByName(name, loading, overlappingMarkerSpiderfyService, $scope, $compile)) {
                             return name;
                         } else {
                             return "Nothing found";
@@ -197,7 +200,7 @@ trails_app
                     default :
                         return CacheData.getAndDisplayTrailsByConditions(mulSearchConditions,
                             isPrecise, MIN_LENGTH,
-                            GeolocationService, loading, overlappingMarkerSpiderfyService);
+                            GeolocationService, loading, overlappingMarkerSpiderfyService, MarkerClustererService, $scope, $compile);
 
                 }
             }

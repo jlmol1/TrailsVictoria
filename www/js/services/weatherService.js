@@ -16,7 +16,7 @@ trails_app
                 var lat = trail.min_lat;
                 var lng = trail.mean_lon;
                 var weather = { temp: {}, clouds: null, lat: null, lng: null };
-                $http.get('http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&units=metric').success(function(data) {
+                $http.get('http://api.openweathermap.org/data/2.5/weather?APPID=4e21edb947657f98fa8634b6823a343a&lat=' + lat + '&lon=' + lng + '&units=metric').success(function(data) {
                     if (data) {
                         if (data.main) {
 

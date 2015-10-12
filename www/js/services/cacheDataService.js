@@ -154,6 +154,16 @@ trails_app
 
 
         var load_data = function(trail) {
+
+            // to avoid redundant loading
+            // this is a simple validation, some more effective should be used in future
+            if (trail.google_poly.length != 0){
+                // there are some polyline in this marker
+                //  which means it has been loaded before
+                //  then stop load again and return
+                return;
+            }
+
             $.ajax({
                 type: "GET",
                 url: "data/gpx/" + trail.IndividualTrail + ".gpx",
@@ -208,7 +218,6 @@ trails_app
                             var iw1 = new google.maps.InfoWindow({
                                 content: marker.getTitle()
                             });
-
 
 
                             //google.maps.event.addListener(marker, "mousedown", function (e) { iw1.open(map, this); });
@@ -299,7 +308,7 @@ trails_app
 
             },
 
-            preload_title_marker: function(trail) {
+            preload_title_marker: function(trail, $compile, $scope) {
                 var src = getGpxUrl(trail.MainTrail, trail.IndividualTrail);
                 $.ajax({
                     type: "GET",
@@ -308,6 +317,7 @@ trails_app
                     async: false,
                     success: function (xml) {
                         // setup title_marker
+                        // the position for title_marker is not very good, need to improve
                         var max_lat = $(xml).find("bounds").attr("maxlat");
                         var max_lon = $(xml).find("bounds").attr("maxlon");
                         var min_lat = $(xml).find("bounds").attr("minlat");
@@ -315,21 +325,46 @@ trails_app
                         trail.max_lat = max_lat;
                         trail.min_lat = min_lat;
                         trail.mean_lon = max_lon - (Math.abs(max_lon) - Math.abs(min_lon))/2;
+
+                        // previous two attempt are that, one used a link to another page and calculate direction ang go back
+                        //  another one tried to give it button onclick and define a function at index
+                        // both are failed. link to another page only work once, function at index is out of angular and cannot go back inside augular
+                        var btn='<a id="' + trail.IndividualTrail + '" class="button button-positive button-small" href="#/tab/direction?trail_name=' + trail.IndividualTrail + '&caller_name=abc">Direct me</a>';
+
+                        // this try will be compile all of content.
+
+                        var markerTitle = "<div id='markerTitle'>" + "<b>" + trail.IndividualTrail +  '</b><br/>' +
+                            '<b>Distance:</b> ' + trail.distance + 'km<br/>' +
+                            '<b>Activity:</b> ' + trail.activity + '<br/>' +
+                            '<b>Difficulty:</b> ' + trail.difficulty + '<br/>'+
+                            '<button class="button button-positive button-small" ng-click="googleDirection(\'' +
+                            trail.IndividualTrail + '\')" >Direct me</button>' + '<br/>' + "</div>";
+                        //var compiled = $compile(document.getElementById("markerTitle"))($scope);
+                        var el = angular.element(markerTitle);
+                        var compiled = $compile(el)($scope);
+
                         trail.title_marker = new google.maps.Marker({
                             position: new google.maps.LatLng(max_lat, trail.mean_lon),
                             animation: google.maps.Animation.DROP,
-                            title: trail.IndividualTrail//,
+                            title: markerTitle/*"<b>" + trail.IndividualTrail +  '</b><br/>' +
+                            '<b>Distance:</b> ' + trail.distance + 'km<br/>' +
+                            '<b>Activity:</b> ' + trail.activity + '<br/>' +
+                            '<b>Difficulty:</b> ' + trail.difficulty + '<br/>' +
+                            btn + '<br/>'//compiled[0]//,*/
                             // since one trail could have more than one activity
                             //  it becomes hard to choose which one should be used to shown as title
                             //  plus advise from IM, here only use google marker defaul icon for it
                             //icon: getActivitiesIconUrl(trail.activity)
                         });
-                        var iw1 = new google.maps.InfoWindow({
-                            content: trail.IndividualTrail +  '<br/>' +
-                            'Distance: ' + trail.distance + 'km<br/>' +
-                            'Activity: ' + trail.activity + '<br/>' +
-                            'Difficulty: ' + trail.difficulty + '<br/>'
-                        });
+
+                        //trail.title_marker.infoWindow = new google.maps.InfoWindow({
+                        //    content : markerTitle
+                        //});
+                        //var iw1 = new google.maps.InfoWindow({
+                        //
+                        //});
+                        // iw1.setContent(
+                        //compiled[0] );
                         //google.maps.event.addListener(trail.title_marker, "mousedown", function (e) { iw1.open(map, this); });
 
                     }
@@ -405,7 +440,7 @@ trails_app
                 });
 
             },
-            getAndDisplayTrailsByConditions: function (mulSearchConditions, IsPrecise, MIN_LENGTH, GeolocationService, loading, overlappingMarkerSpiderfyService){
+            getAndDisplayTrailsByConditions: function (mulSearchConditions, IsPrecise, MIN_LENGTH, GeolocationService, loading, overlappingMarkerSpiderfyService, MarkerClusterer, $scope, $compile){
                 /**
                  *   MIN_LENGTH has problem
                  * IsPrecise is a trigger, when it is on(true), all results must be precise
@@ -592,6 +627,25 @@ trails_app
 
                                     if ((results[j].duration.value/3600 >= mulSearchConditions.time.min)
                                         && (results[j].duration.value/3600 <= mulSearchConditions.time.max)){
+
+                                        // give driving hours data to title marker
+                                        //  if it already have this info, overwrite
+                                        var titleContent = res_trails[j].title_marker.getTitle();
+                                        var drivingHrs = "<b>Driving Hours:</b>";
+                                        if (titleContent.indexOf(drivingHrs) != -1) {
+                                            // this info exists
+                                            var newTitleContent =
+                                                titleContent.slice(0, titleContent.indexOf(drivingHrs) + drivingHrs.length + 1) +
+                                                (Math.round(results[j].duration.value/3600 * 10) / 10) +
+                                                titleContent.slice(titleContent.indexOf(drivingHrs) + drivingHrs.length + 1 + (Math.round(results[j].duration.value/3600 * 10) / 10).toLocaleString().length, titleContent.length + 1);
+                                            res_trails[j].title_marker.setTitle(newTitleContent);
+                                        } else {
+                                            // this info does not exist
+                                            var newTitleContent = titleContent + drivingHrs + " " + (Math.round(results[j].duration.value/3600 * 10) / 10) + "hrs<br/>";
+                                            res_trails[j].title_marker.setTitle(newTitleContent);
+                                        }
+
+
                                         temp_res_trails.push(res_trails[j]);
                                     }
                                 }
@@ -686,8 +740,14 @@ trails_app
                             clear_bounds();
 
                             // add listener for spiderfying
-                            overlappingMarkerSpiderfyService.initial(map, getAllMarkers());
 
+                            overlappingMarkerSpiderfyService.clear();
+                            overlappingMarkerSpiderfyService.initial(map, getAllMarkers(), new google.maps.InfoWindow(), $scope, $compile);
+
+
+                            /*// add marker clusterer
+                            MarkerClusterer.clear();
+                            MarkerClusterer.initial(map, getAllMarkers());*/
 
                             loading.finishLoading();
                             return res.length + " Search Results";
@@ -702,7 +762,7 @@ trails_app
             getRes : function() {
                 return res;
             },
-            getAndDisplayTrailsByName : function (name, loading, overlappingMarkerSpiderfyService) {
+            getAndDisplayTrailsByName : function (name, loading, overlappingMarkerSpiderfyService, $scope, $compile) {
 
 
                 res = getTrailsByName(name);
@@ -715,7 +775,8 @@ trails_app
                     clear_bounds();
 
                     // add listener for spiderfying
-                    overlappingMarkerSpiderfyService.initial(map, getAllMarkers());
+                    overlappingMarkerSpiderfyService.clear();
+                    overlappingMarkerSpiderfyService.initial(map, getAllMarkers(), new google.maps.InfoWindow(), $scope, $compile);
 
 
                     loading.finishLoading();

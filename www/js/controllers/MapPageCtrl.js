@@ -21,7 +21,9 @@ trails_app
         $ionicActionSheet,
         weatherService,
         preferencesDataService,
-        overlappingMarkerSpiderfyService) {
+        overlappingMarkerSpiderfyService,
+        MarkerClusterService,
+        $compile) {
 
 
         // testing purpose
@@ -40,6 +42,7 @@ trails_app
 
 
         var google_map = googleMapsService.createAGoogleMapByName($scope.mapDivID);
+        google_map.setOptions({disableDefaultUI:true});
         cacheDataService.setMap(google_map);
 
 
@@ -52,7 +55,7 @@ trails_app
 
         // display trails first and then markers when zoom in at a certain level
         searchService.setIsPrecise(preferencesDataService.getIsPrecise());
-        $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService, overlappingMarkerSpiderfyService);
+        $scope.title = searchService.doSearch(cacheDataService, geolocationService, loadingService, overlappingMarkerSpiderfyService, MarkerClusterService, $scope, $compile);
 
         // display markers
         google.maps.event.addListener(google_map, 'zoom_changed', function() {
@@ -67,7 +70,7 @@ trails_app
         // used to show direction from current location to a trail
         // it first show every trail's name, user choose one, then
         // a route will display
-        $scope.googleDirection = function () {
+        /*$scope.googleDirection = function () {
             var searchResult = cacheDataService.getRes();
             var buttons = [];
             for (var i = 0; i < searchResult.length; i++){
@@ -87,10 +90,12 @@ trails_app
 
                 }
             });
-        };
+        };*/
 
 
-        var googleDirection = function (trailName){
+        $scope.googleDirection = function (trailName){
+            console.log("MapPageCtrl: direct me button clicked, trail name is " + trailName);
+
             loadingService.startLoading();
             var trail = cacheDataService.getTrailsByName(trailName);
             if (trail.length != 1){
@@ -113,9 +118,11 @@ trails_app
             if (isWatchingOn) {
                 isWatchingOn = false;
                 stop_watchlocation();
+                removeClass($scope.mapDivID, "button-balanced", "watchOn");
             } else {
                 isWatchingOn = true;
                 initiate_watchlocation();
+                addClass($scope.mapDivID, "button-balanced", "watchOn");
             }
         };
 
@@ -126,11 +133,16 @@ trails_app
                 watchProcess = navigator.geolocation.watchPosition(handle_geolocation_query, handle_errors);
             }
         }
+        // for collect marker watch and erase previous one
+        var marker_watch = null;
         function stop_watchlocation() {
             if (watchProcess != null)
             {
                 navigator.geolocation.clearWatch(watchProcess);
                 watchProcess = null;
+                if (marker_watch != null && marker_watch != undefined && typeof marker_watch == typeof new google.maps.Marker()){
+                    marker_watch.setMap(null);
+                }
             }
         }
         function handle_errors(error)
@@ -147,8 +159,7 @@ trails_app
                     break;
             }
         }
-        // for collect marker watch and erase previous one
-        var marker_watch = null;
+
         function handle_geolocation_query(position) {
             if (marker_watch != null){
                 marker_watch.setMap(null);
@@ -164,17 +175,21 @@ trails_app
 
         $scope.display_weather = function() {
             loadingService.startLoading();
+            switchOnOrOffButton($scope.mapDivID, "button-balanced", "weather");
             var trails = cacheDataService.getRes();
             if (trails[0].weather_marker != null) {
                 if (trails[0].weather_marker.getMap() != null){
                     loadingService.finishLoading();
                     for (var j = 0; trails.length; j++){
+                        // weather button is on
                         trails[j].weather_marker.setMap(null);
                     }
                     return;
                 }
 
             }
+            // weather button is off
+            loadingService.finishLoading();
             var map = cacheDataService.getMap();
             for (var i = 0; i < trails.length; i++){
                 // get weather condition
@@ -183,5 +198,42 @@ trails_app
             }
 
         };
+
+        var switchOnOrOffButton = function(id, className, button){
+            switch (id) {
+                case "name_map" :
+                    if ($("#map_page_name_button_" + button).hasClass(className)) {
+                        removeClass(id, className, button);
+                    } else {
+                        addClass(id, className, button);
+                    }
+                    break;
+                case "mul_map" :
+                    if ($("#map_page_mul_button_" + button).hasClass(className)) {
+                        removeClass(id, className, button);
+                    } else {
+                        addClass(id, className, button);
+                    }
+                    break;
+            }
+        };
+
+        var removeClass = function(id, className, button) {
+            switch (id) {
+                case "name_map" : $("#map_page_name_button_" + button).removeClass(className); break;
+                case "mul_map" : $("#map_page_mul_button_" + button).removeClass(className); break;
+            }
+        };
+
+        var addClass = function(id, className, button) {
+            switch (id) {
+                case "name_map" : $("#map_page_name_button_" + button).addClass(className); break;
+                case "mul_map" : $("#map_page_mul_button_" + button).addClass(className); break;
+            }
+        };
+
+        $scope.test1 = function() {
+            alert("alert");
+        }
 
     });

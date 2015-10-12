@@ -1,15 +1,14 @@
-<ion-view view-title="Search Results">
+<ion-view view-title="Search Results" can-swipe-back=false>
 
 
     <ion-content class="bg">
       <div id="mul_map" class="google-map" data-tap-disable="true"></div>
 
       <div id="buttons-panel-mul" class="buttons-panel">
-        <button  class="button icon ion-map" ng-click="googleDirection()"></button>
 
-        <button  class="button icon ion-pinpoint" ng-click="watchOn()"></button>
+        <button id="map_page_mul_button_watchOn" class="button icon ion-pinpoint" ng-click="watchOn()"></button>
 
-        <button  class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
+        <button id="map_page_mul_button_weather" class="button icon ion-ios-partlysunny" ng-click="display_weather()"></button>
       </div>
 
 

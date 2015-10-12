@@ -12,7 +12,8 @@ trails_app.controller('DestSearchCtrl', function(
     weatherService,
     geolocationService,
     preferencesDataService,
-    overlappingMarkerSpiderfyService) {
+    overlappingMarkerSpiderfyService,
+    $compile) {
 
     // collect user input for search, des address
     $scope.keyword = {};
@@ -22,27 +23,33 @@ trails_app.controller('DestSearchCtrl', function(
 
     // initialize google map
     var google_map = googleMapsService.createAGoogleMapByName("dest_search_map");
+    google_map.setOptions({disableDefaultUI:true});
+
 
     // when zoom in level greater than this level, markers will display
     var minFTZoomLevel = 10;
 
     $scope.doSearch = function() {
         $('#buttons-panel-dest').show(100);
-        console.log("starting search on des");
+        console.log("DestSearchCtrl: starting search on des of ", $scope.keyword.address);
         searchService.searchOnDestination(google_map,
             $scope.keyword.address,
             googleMapsService,
             cacheDataService,
             loadingService,
             preferencesDataService.getSeachRadius(),
-            overlappingMarkerSpiderfyService);
+            overlappingMarkerSpiderfyService,
+            $scope,
+            $compile);
 
         // display markers
         google.maps.event.addListener(google_map, 'zoom_changed', function() {
             zoomLevel = google_map.getZoom();
             if (zoomLevel >= minFTZoomLevel) {
+                console.log("DestSearchCtrl: zoom changed to " + zoomLevel.toLocaleString() + ", markers are going to be shown");
                 cacheDataService.display_markers();
             } else {
+                console.log("DestSearchCtrl: zoom changed to " + zoomLevel.toLocaleString() + ", markers are going to be hided");
                 cacheDataService.clear_markers();
             }
         });
@@ -52,7 +59,7 @@ trails_app.controller('DestSearchCtrl', function(
     // used to show direction from specific location to a trail
     // it first show every trail's name, user choose one, then
     // a route will display
-    $scope.googleDirection = function () {
+    /*$scope.googleDirection = function () {
         var searchResult = cacheDataService.getRes();
         var buttons = [];
         for (var i = 0; i < searchResult.length; i++){
@@ -72,10 +79,12 @@ trails_app.controller('DestSearchCtrl', function(
 
             }
         });
-    };
+    };*/
 
 
-    var googleDirection = function (trailName){
+    $scope.googleDirection = function (trailName){
+        console.log("DestSearchCtrl: direct me button clicked, trail name is " + trailName);
+
         loadingService.startLoading();
         var trail = cacheDataService.getTrailsByName(trailName);
         if (trail.length != 1){

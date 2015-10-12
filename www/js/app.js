@@ -212,11 +212,30 @@ trails_app
                 }
             })
 
+            .state('tab.setting_aboutUs', {
+                url: '/settings/aboutUs',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/settings_aboutUs.html'
+                    }
+                }
+            })
+
             .state('tab.starting', {
                 url: '/starting',
                 views: {
                     'tab-starting' : {
                         templateUrl: 'templates/starting_page.html'
+                    }
+                }
+            })
+
+            .state('tab.direction', {
+                url: '/direction?trail_name&caller_name',
+                views: {
+                    'tab-direction' : {
+                        templateUrl: 'templates/direction.html',
+                        controller: 'DirectionCtrl'
                     }
                 }
             })

@@ -40,6 +40,8 @@
     <script src="js/controllers/SettingsDesCtrl.js"></script>
     <script src="js/controllers/FrontPageCtrl.js"></script>
     <script src="js/controllers/SettingLoginFB.js"></script>
+    <script src="js/controllers/DirectionCtrl.js"></script>
+    <script src="js/controllers/googleInfoWindowCtrl.js"></script>
 
     <!-- services -->
     <script src="js/services/cacheDataService.js"></script>
@@ -50,6 +52,11 @@
     <script src="js/services/weatherService.js"></script>
     <script src="js/services/preferencesDataService.js"></script>
     <script src="js/services/overlappingMarkerSpiderfyService.js"></script>
+    <script src="js/services/MarkerClusterer.js"></script>
+
+    <!-- directives -->
+    <script src="js/directives/googleInfoWindowButton.js"></script>
+    <script src="js/directives/fbPostDirective.js"></script>
 
     <!-- slider lib ion.rangeSlider -->
     <link href="lib/Ion.RangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
@@ -66,7 +73,7 @@
   ion-nav-back-button is costumed by different page
 -->
 <ion-nav-bar class="bar-balanced">
-    <ion-nav-back-button>
+    <ion-nav-back-button>Back
     </ion-nav-back-button>
 
     <ion-nav-buttons side="right">
@@ -81,12 +88,15 @@
 <ion-nav-view></ion-nav-view>
 
 <!-- google api-->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyrcRa9qk-yKDOwnAcpgh3eLk7fxuyyg&amp;region=AU"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyrcRa9qk-yKDOwnAcpgh3eLk7fxuyyg&amp;region=AU&amp;sensor=true"></script>
 
 <!-- marker overlapping lib OverlappingMarkerSpiderfier -->
 <script src="js/oms.min.js"></script>
-<script>
-</script>
+
+<!-- marker overlapping lib MarkerCluster-->
+<script src="lib/MarkerClusterer/MarkerClusterer.js"></script>
+
+
 
 </body>
 </html>

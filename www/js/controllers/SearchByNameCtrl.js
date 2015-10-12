@@ -18,33 +18,17 @@ trails_app
         // hide these area when its empty
         $("#normal_display").hide("fast");
         $("#error_display").hide("fast");
-        $("#nearTrails").hide("fast");
 
         $scope.results = [];
         $scope.keyword = {};
         $scope.nearTrails = [];
-        searchService.getTrailsNearCurrentLocation(geolocationService,
-            googleMapsService, cacheDataService, preferencesDataService.getSeachRadius(), 5).then(function(results) {
-                $("#nearTrails").show(100);
-                if (results.length != 0){
-                    for (var i = 0; i < results.length; i++){
-                        $scope.nearTrails.push({
-                            name : results[i],
-                            img : cacheDataService.getActivityIconUrlByTrailName(results[i])
-                        });
-                    }
-
-                } else {
-                    for ( i = 0; i < 5; i++){
-                        var trail = cacheDataService.getTrailAt(Math.floor((Math.random() * (cacheDataService.getTrailsLength() -1))));
-                        $scope.nearTrails.push({
-                            name : trail.IndividualTrail,
-                            img : cacheDataService.getActivityIconUrlByTrailName(trail.IndividualTrail)
-                        });
-                    }
-                }
-
+        for ( var i = 0; i < 5; i++){
+            var trail = cacheDataService.getTrailAt(Math.floor((Math.random() * (cacheDataService.getTrailsLength() -1))));
+            $scope.nearTrails.push({
+                name : trail.IndividualTrail,
+                img : cacheDataService.getActivityIconUrlByTrailName(trail.IndividualTrail)
             });
+        }
 
 
         $scope.doSearch = function() {

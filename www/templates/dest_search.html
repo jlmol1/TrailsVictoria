@@ -1,11 +1,10 @@
-<ion-view view-title="Around Destination">
+<ion-view view-title="Around Destination" can-swipe-back=false >
 
 
-    <ion-content class="padding">
-        <div >
+    <ion-content class="padding" >
 
+    <div id="dest_search_map" class="google-map" ></div>
 
-            <div id="dest_search_map" class="google-map" data-tap-disable="true"></div>
 
             <form ng-submit="doSearch()">
                 <div id="dest-search-panel" class="list list-inset">
@@ -13,7 +12,7 @@
                         <i class="icon ion-search placeholder-icon"></i>
                         <input id="address" type="text" placeholder="Enter an address" ng-model="keyword.address" ng-change="input_changed()">
                     </label>
-                    <div id="suggestion_des">
+                    <div id="suggestion_des" style="z-index: 3">
                         <ion-item  class="item-remove-animate item-avatar item-icon-right" ng-repeat="add in partialMatchedAddresses" ng-click="suggestSearch(add.address)">
                             <span>{{add.address}}</span>
 
@@ -26,7 +25,6 @@
             </form>
 
             <div id="buttons-panel-dest" class="buttons-panel">
-                <button  class="button icon ion-map" ng-click="googleDirection()"></button>
 
                 <button  class="button icon ion-pinpoint" ng-click="watchOn()"></button>
 
@@ -36,6 +34,5 @@
                 <!--<button ng-click="getAddress()"></button>-->
             </div>
 
-        </div>
     </ion-content>
 </ion-view>

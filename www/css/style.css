@@ -81,7 +81,11 @@ div.dg {
 
 .google-map {
     width: calc(100% - 1px);
-    height: 450px;
+    height: 100%;
+}
+
+.scroll {
+    height: 100%;
 }
 
 .ForestGreen {
@@ -101,7 +105,14 @@ div.dg {
     margin: 0 auto;
 }
 
+#suggestion_des {
+    z-index: 100;
+}
 
+.fb-page {
+    width: 100%;
+    height: 100%;
+}
 
 
 
