@@ -7,19 +7,22 @@
 
 trails_app
 
-    .factory('loadingService', function($ionicLoading){
+    .factory('loadingService', function($cordovaProgress, $ionicLoading){
         return {
             startLoading: function () {
-                $ionicLoading.show({
+                /*$ionicLoading.show({
                     content: '<i class="icon ion-loading-d"></i>',
                     animation: 'fade-in',
                     showBackdrop: true,
                     maxWidth: 200,
                     showDelay: 5
-                });
+                });*/
+
+                //$cordovaProgress.showSimple(true);
             },
             finishLoading: function (){
-                $ionicLoading.hide();
+                //$ionicLoading.hide();
+                //$cordovaProgress.hide();
             }
         }
     });

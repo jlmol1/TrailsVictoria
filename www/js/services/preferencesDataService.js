@@ -6,7 +6,7 @@
 
 trails_app.
 
-    factory('preferencesDataService', function($window) {
+    factory('preferencesDataService', function($localStorage) {
         // preferences data
         var preData = {
             isPrecise : false,
@@ -14,12 +14,12 @@ trails_app.
         };
 
         function updateData() {
-            //$window.localStorage.setItem("preData", JSON.stringify(preData));
+            $localStorage.preData = preData;
             console.log("preferencesDataService: store to localStorage prefer data", preData);
         }
 
         function getData() {
-            //preData = JSON.parse($window.localStorage.getItem("preData"));
+            preData = $localStorage.preData;
             console.log("preferencesDataService: get from localStorage prefer data", preData);
         }
 
@@ -45,12 +45,12 @@ trails_app.
                 updateData();
             },
             init : function() {
-                //if (($window.localStorage['preData']).isPrecise == null) {
+                if ($localStorage.hasOwnProperty('preData')) {
+                    getData();
+                } else {
                     console.log("preferencesDataService: initial prefer data", preData);
                     updateData();
-                //} else {
-                //    getData();
-                //}
+                }
 
             }
         }

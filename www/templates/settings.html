@@ -1,4 +1,4 @@
-<ion-view view-title="Settings" can-swipe-back=false>
+<ion-view view-title="Settings" can-swipe-back=false ng-init="init()">
 
     <ion-content class="padding">
         <div class="list">
@@ -35,9 +35,19 @@
         </div>
 
         <div class="list">
-            <a class="item item-icon-left" href="#/tab/settings/loginFB">
+            <a id="settings_facebook_a_login" class="item item-icon-left" ng-click="login()">
                 <i class="icon ion-social-facebook"></i>
                 Login With Facebook
+                <span class="item-note">
+                    {{fbUserName}}
+                </span>
+            </a>
+            <a id="settings_facebook_a_logout" class="item item-icon-left" ng-click="logout()">
+                <i class="icon ion-social-facebook"></i>
+                Logout With Facebook
+                <span class="item-note">
+                    {{fbUserName}}
+                </span>
             </a>
         </div>
     </ion-content>

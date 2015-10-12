@@ -105,10 +105,11 @@ trails_app.controller('DestSearchCtrl', function(
         if (isWatchingOn) {
             isWatchingOn = false;
             stop_watchlocation();
-            alert("Stop watching on.");
+            removeClass("button-balanced", "watchOn");
         } else {
             isWatchingOn = true;
             initiate_watchlocation();
+            addClass("button-balanced", "watchOn");
         }
     };
 
@@ -157,7 +158,7 @@ trails_app.controller('DestSearchCtrl', function(
 
     $scope.display_weather = function() {
         var trails = cacheDataService.getRes();
-
+        switchOnOrOffButton("button-balanced", "weather");
         if (trails.length != 0 && trails[0].weather_marker != null) {
             if (trails[0].weather_marker.getMap() != null){
                 loadingService.finishLoading();
@@ -212,6 +213,26 @@ trails_app.controller('DestSearchCtrl', function(
         $scope.keyword.address = address;
         $('#suggestion_des').hide("fast");
         $scope.doSearch();
-    }
+    };
+
+    var switchOnOrOffButton = function(className, button){
+
+                if ($("#dest_search_button_" + button).hasClass(className)) {
+                    removeClass(className, button);
+                } else {
+                    addClass(className, button);
+                }
+
+
+    };
+
+    var removeClass = function(className, button) {
+        $("#dest_search_button_" + button).removeClass(className);
+    };
+
+    var addClass = function(className, button) {
+             $("#dest_search_button_" + button).addClass(className);
+
+    };
 
 });

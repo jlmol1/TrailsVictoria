@@ -1,17 +1,24 @@
-<ion-view view-title="Profile" can-swipe-back=false>
+<ion-view view-title="Profile" can-swipe-back=false ng-init="init()">
     <ion-content class="has-header">
 
-        <div fb-post class="fb-page" data-href="https://www.facebook.com/trailsVictoria" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true">
-        </div>
-
         <div class="list card">
-            <div class="item">
-                <h2>{{user.name}}</h2>
-                <p>{{user.city}}</p>
+            <div class="item item-avatar">
+                <img ng-src="{{profileData.picture.data.url}}">
+                <h2>{{profileData.name}}</h2>
+                <p>{{profileData.id}}</p>
             </div>
-            <div class="item item-body">
-                <img src="http://graph.facebook.com/{{user.id}}/picture?width=270&height=270"/>
-            </div>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-earth"></i>
+                {{profileData.website}}
+            </a>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                {{profileData.location.name}}
+            </a>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-heart"></i>
+                {{profileData.relationship_status}}
+            </a>
         </div>
     </ion-content>
 </ion-view>

@@ -4,24 +4,18 @@
 
 
 trails_app.
-    controller('SettingLoginFB', function($scope, $ionicModal, $timeout, ngFB) {
-        ngFB.login({scope: 'email,publish_actions'}).then(
-            function (response) {
-                if (response.status === 'connected') {
-                    console.log('Facebook login succeeded');
-                } else {
-                    alert('Facebook login failed');
-                }
-            });
-
-        ngFB.api({
-            path: '/me',
-            params: {fields: 'id,name'}
-        }).then(
-            function (user) {
-                $scope.user = user;
-            },
-            function (error) {
-                alert('Facebook error: ' + error.error_description);
-            });
+    controller('SettingLoginFB', function($scope, $ionicModal, $timeout, $localStorage, $location, $http) {
+        $scope.init = function() {
+            if($localStorage.hasOwnProperty("accessToken") === true) {
+                $http.get("https://graph.facebook.com/v2.2/me", { params: { access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json" }}).then(function(result) {
+                    $scope.profileData = result.data;
+                }, function(error) {
+                    alert("There was a problem getting your profile.  Check the logs for details.");
+                    console.log(error);
+                });
+            } else {
+                alert("Not signed in");
+                $location.path("/settings");
+            }
+        };
     });

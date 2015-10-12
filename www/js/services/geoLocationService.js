@@ -11,6 +11,9 @@ trails_app
             return {
                 getLocation: function(){
                     var q = $q.defer();
+
+                    var latlng;
+
                     navigator.geolocation.getCurrentPosition(function(position) {
                         latlng = {
                             'lat': position.coords.latitude,
@@ -19,9 +22,9 @@ trails_app
                         q.resolve(latlng);
                     }, function(error) {
                         console.log('Got error!');
-                        console.log(error);
+                        console.log(error.toLocaleString());
                         latlng = null;
-                        q.reject('Failed to get coordinates of surrent position');
+                        q.reject('Failed to get coordinates');
                     });
                     return q.promise;
                 }

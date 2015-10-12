@@ -6,13 +6,11 @@
 // services (factories) are in services folder
 // controllers are in controllers folder
 
-var trails_app = angular.module('trails_app', ['ionic', 'ngOpenFB']);
+var trails_app = angular.module('trails_app', ['ionic', 'ngStorage', 'ngCordova']);
 
 trails_app
-    .run(function($ionicPlatform, ngFB) {
+    .run(function($ionicPlatform) {
 
-        // openfb
-        ngFB.init({appId: '1643180689265172'});
 
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -165,7 +163,8 @@ trails_app
                 url: '/settings',
                 views: {
                     'tab-settings' : {
-                        templateUrl : 'templates/settings.html'
+                        templateUrl : 'templates/settings.html',
+                        controller : 'SettingsCtrl'
                     }
                 }
             })
