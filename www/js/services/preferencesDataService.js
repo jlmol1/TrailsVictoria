@@ -9,7 +9,7 @@ trails_app.
     factory('preferencesDataService', function($localStorage) {
         // preferences data
         var preData = {
-            isPrecise : false,
+            isPrecise : true,
             searchRadius : 100
         };
 

@@ -10,33 +10,50 @@ trails_app.
 
 
         var clear = function(){
+            console.log("overlappingMarkerSpiderfyService: Start to clear it");
+
             if (oms != undefined){
                 oms.clearMarkers();
                 oms.clearListeners("mousedown");
                 oms.clearListeners("spiderfy");
                 oms.clearListeners("unspiderfy");
+                console.log("overlappingMarkerSpiderfyService: Succeed to clear it");
+
+            } else{
+                console.log("overlappingMarkerSpiderfyService: Failed to clear it as it is not initialized yet");
+
             }
         };
 
 
         var initial = function(google_map, markers, iw, $scope, $compile){
+            console.log("overlappingMarkerSpiderfyService: Start to initialize it with " + markers.length + " markers");
+
+
             oms = new OverlappingMarkerSpiderfier(google_map);
 
 
 
+            console.log("overlappingMarkerSpiderfyService: Add mouse down event to all marker");
             oms.addListener('mousedown', function(marker) {
-                console.log('mousedown event');
+                console.log('overlappingMarkerSpiderfyService: mousedown event');
                 /*if (marker.getTitle() == "" || marker.getTitle() == undefined){
                     // title is not defined
                     marker.infoWindow.open(google_map, marker);
                 } else {*/
-                    iw.setContent(marker.getTitle());
 
+                console.log('overlappingMarkerSpiderfyService: Initialized google info window');
+
+                iw.setContent(marker.getTitle());
+
+                console.log('overlappingMarkerSpiderfyService: compile content in info window when it is ready to be compiled');
                     google.maps.event.addListener(iw, 'domready', function() {
                         $scope.$apply(function(){
                             $compile(document.getElementById("markerTitle"))($scope);
                         });
                     });
+
+                console.log('overlappingMarkerSpiderfyService: info window open');
 
                     iw.open(google_map, marker);
 
@@ -63,6 +80,8 @@ trails_app.
 
                 }*/
             });
+            console.log("overlappingMarkerSpiderfyService: Add spiderfy event to all marker");
+
             oms.addListener('spiderfy', function(markers) {
                 console.log('spiderfy event');
 
@@ -75,6 +94,7 @@ trails_app.
 
                 iw.close();
             });
+            console.log("overlappingMarkerSpiderfyService: Add unspiderfy event to all marker");
             oms.addListener('unspiderfy', function(markers) {
                 console.log('unspiderfy event');
 
@@ -90,6 +110,8 @@ trails_app.
 
                 oms.addMarker(markers[i]);
             }
+            console.log("overlappingMarkerSpiderfyService: Succeed to initialize it");
+
         };
 
         return{

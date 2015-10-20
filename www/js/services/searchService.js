@@ -25,6 +25,7 @@ trails_app
 
         // functions
         function getStraightLineDistance(loc1, loc2) {
+            console.log("searchService: calculate straight line distance of (" + loc1.lat() + "," + loc1.lng() + ") and (" + loc2.lat() + ", " + loc2.lng() + ")");
             // 1 degree latitude is 111km
             return Math.sqrt(Math.pow((loc1.lat() - loc2.lat()), 2) + Math.pow((loc1.lng() - loc2.lng()), 2)) * 111;
         }

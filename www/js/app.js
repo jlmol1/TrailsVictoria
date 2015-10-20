@@ -215,7 +215,25 @@ trails_app
                 url: '/settings/aboutUs',
                 views: {
                     'tab-settings' : {
-                        templateUrl: 'templates/settings_aboutUs.html'
+                        templateUrl: 'templates/settings_aboutUs99.html'
+                    }
+                }
+            })
+
+            .state('tab.setting_searchName', {
+                url: '/settings/searchName',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/settings_searchName.html'
+                    }
+                }
+            })
+
+            .state('tab.setting_howToUse', {
+                url: '/settings/howToUse',
+                views: {
+                    'tab-settings' : {
+                        templateUrl: 'templates/settings_howToUse.html'
                     }
                 }
             })

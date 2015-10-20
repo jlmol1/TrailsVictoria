@@ -94,11 +94,56 @@ trails_app.controller('DestSearchCtrl', function(
             return;
         }
             var start = $scope.keyword.address;
-            var end = trail[0].google_poly[0].getPath().getAt(0);
+            var end = getEndPosition(start, trail[0])//trail[0].google_poly[0].getPath().getAt(0);
             googleMapsService.calculateAndDisplayRoute(start, end, google_map);
             loadingService.finishLoading();
 
     };
+
+    /**
+     * This function is used to calculate end position.
+     *  because it should be a position in the trail and is the nearest
+     *  position to start position.
+    * */
+    var getEndPosition = function(startAddress, trail){
+        var endPosition;
+        googleMapsService.getGeocodeByAddress(startAddress).then(function(result){
+
+            var positions = trail.google_poly[0].getPath();
+
+            endPosition = getMinDistancePosition(result, positions);
+
+            return endPosition;
+
+        });
+
+    };
+
+    function getMinDistancePosition(fromPosition, toPositions){
+
+        var distances = [];
+        for (var i = 0; i < toPositions.length; i++){
+            distances.push(getStraightLineDistance(fromPosition, toPositions.getAt(i)));
+        }
+
+        var minDistances = distances.getAt(0);
+        var indexOfMinDistances = 0;
+        for (var j = 1; j < distances; j++){
+            if (distances.getAt(i) < minDistances){}
+            minDistances = distances.getAt(i);
+            indexOfMinDistances = i;
+        }
+
+        return toPositions.getAt(indexOfMinDistances);
+    }
+
+    /**
+     * This function is used to calculate straight line distance between two position
+    * */
+    function getStraightLineDistance(loc1, loc2) {
+        // 1 degree latitude is 111km
+        return Math.sqrt(Math.pow((loc1.lat() - loc2.lat()), 2) + Math.pow((loc1.lng() - loc2.lng()), 2)) * 111;
+    }
 
     var isWatchingOn = false;
     $scope.watchOn = function() {
@@ -157,29 +202,32 @@ trails_app.controller('DestSearchCtrl', function(
     }
 
     $scope.display_weather = function() {
+        loadingService.startLoading();
         var trails = cacheDataService.getRes();
-        switchOnOrOffButton("button-balanced", "weather");
-        if (trails.length != 0 && trails[0].weather_marker != null) {
+        if (trails.length == 0){
+            loadingService.finishLoading();
+            alert("No search results, cannot display weather condition");
+            return;
+        }
+        if (trails[0].weather_marker != null) {
             if (trails[0].weather_marker.getMap() != null){
                 loadingService.finishLoading();
-                for (var j = 0; trails.length; j++){
+                for (var j = 0; j < trails.length; j++){
+                    // weather button is on
                     trails[j].weather_marker.setMap(null);
                 }
+                removeClass($scope.mapDivID, "button-balanced", "weather");
                 return;
             }
 
         }
-
+        // weather button is off
+        addClass($scope.mapDivID, "button-balanced", "weather");
         var map = cacheDataService.getMap();
-        if (trails.length != 0){
-            loadingService.startLoading();
-            for (var i = 0; i < trails.length; i++){
-                // get weather condition
-                weatherService.getWeather( map, trails[i], loadingService);
+        for (var i = 0; i < trails.length; i++){
+            // get weather condition
+            weatherService.getWeather( map, trails[i], loadingService);
 
-            }
-        } else {
-            alert("No search results, cannot display weather condition.");
         }
 
 

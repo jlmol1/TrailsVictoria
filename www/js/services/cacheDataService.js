@@ -389,7 +389,8 @@ trails_app
                     for (var j = 0; j < res[i].markers.length; j++){
                         res[i].markers[j].setMap(map);
                     }
-                    res[i].title_marker.setMap(null);
+                    // never hide title marker
+                    //res[i].title_marker.setMap(null);
                 }
             },
             clear_markers: function() {
@@ -421,7 +422,7 @@ trails_app
                     return;
                 }
 
-                GeolocationService.getLocation().then(function(result) {
+                GeolocationService.getLocation(loading).then(function(result) {
                     curr_latLng = new google.maps.LatLng(result.lat, result.lng);
                     map.setCenter(curr_latLng);
                     map.setZoom(14);
@@ -599,7 +600,7 @@ trails_app
                 }
 
                 // get current position here
-                GeolocationService.getLocation().then(function(result) {
+                GeolocationService.getLocation(loading).then(function(result) {
                     var curr_latLng = new google.maps.LatLng(result.lat, result.lng);
                     var service = new google.maps.DistanceMatrixService;
                     var dest_lat_lng = [];
@@ -616,7 +617,7 @@ trails_app
                     }, function(response, status) {
                         if (status !== google.maps.DistanceMatrixStatus.OK) {
                             console.log('cacheDataService: google distance matrix Error was: ', status);
-                            alert("Oops! google api denied...");
+                            alert("These search conditions are too general. Please narrow them.");
                             loading.finishLoading();
                         } else {
                             var originList = response.originAddresses;

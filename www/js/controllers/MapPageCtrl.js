@@ -175,21 +175,26 @@ trails_app
 
         $scope.display_weather = function() {
             loadingService.startLoading();
-            switchOnOrOffButton($scope.mapDivID, "button-balanced", "weather");
             var trails = cacheDataService.getRes();
+            if (trails.length == 0){
+                loadingService.finishLoading();
+                alert("No search results, cannot display weather condition");
+                return;
+            }
             if (trails[0].weather_marker != null) {
                 if (trails[0].weather_marker.getMap() != null){
                     loadingService.finishLoading();
-                    for (var j = 0; trails.length; j++){
+                    for (var j = 0; j < trails.length; j++){
                         // weather button is on
                         trails[j].weather_marker.setMap(null);
                     }
+                    removeClass($scope.mapDivID, "button-balanced", "weather");
                     return;
                 }
 
             }
             // weather button is off
-            loadingService.finishLoading();
+            addClass($scope.mapDivID, "button-balanced", "weather");
             var map = cacheDataService.getMap();
             for (var i = 0; i < trails.length; i++){
                 // get weather condition
